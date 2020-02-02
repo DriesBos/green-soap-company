@@ -20,7 +20,7 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: false,
 
   /*
    ** Global CSS
@@ -28,9 +28,9 @@ module.exports = {
   css: [
     "@/assets/styles/reset.css",
     "@/assets/styles/body.sass",
-    "@/assets/styles/transitions.sass",
+    "@/assets/styles/variables.sass",
     "@/assets/styles/typography.sass",
-    "@/assets/styles/variables.sass"
+    "@/assets/styles/transitions.sass"
   ],
 
   /*
@@ -46,14 +46,14 @@ module.exports = {
     // ["@nuxtjs/google-tag-manager", { id: process.env.GOOGLE_GTM }],
     [
       "@bazzite/nuxt-optimized-images",
-      { optimizedImages: { optimizeImagesInDev: true } } // Test compression by setting to true first
+      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } } // Test compression by setting to true first
     ],
     [
       "storyblok-nuxt",
       {
         accessToken:
           process.env.NODE_ENV === "production" // Generate new token
-            ? process.env.PUBLICKEY
+            ? process.env.PREVIEWKEY
             : process.env.PREVIEWKEY,
         cacheProvider: "memory"
       }

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <transition name="fade">
-      <nav v-if="showHeader" class="header-Content" @click="toggleHeader">
+      <nav v-if="openHeader" class="header-Content" @click="toggleHeader">
         <ul>
           <nuxt-link to="/" tag="li">Home</nuxt-link>
           <nuxt-link to="/brands" tag="li">Brands</nuxt-link>
@@ -12,7 +12,7 @@
         </ul>
       </nav>
     </transition>
-    <div class="header-Main">
+    <div class="header-Main" :class="{ show: showHeader }">
       <nuxt-link to="/">Green Soap Company</nuxt-link>
       <p @click="toggleHeader">toggle</p>
     </div>
@@ -24,12 +24,34 @@ export default {
   name: "TheHeader",
   data() {
     return {
-      showHeader: false
+      openHeader: false,
+      showHeader: true
     }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.retractHeaderOnScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll)
   },
   methods: {
     toggleHeader() {
-      this.showHeader = !this.showHeader
+      this.openHeader = !this.openHeader
+    },
+    retractHeaderOnScroll() {
+      // https://medium.com/@Taha_Shashtari/hide-navbar-on-scroll-down-in-vue-fb85acbdddfe
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 50) {
+        return
+      }
+      if (this.$route.path === "/contact" || this.$route.name === "work-slug")
+        return (this.showHeader = false)
+      this.showHeader = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
     }
   }
 }
@@ -48,6 +70,11 @@ export default {
     background: white
     display: flex
     justify-content: space-between
+    transform: translate3d(0, -101%, 0)
+    transition: 0.3s transform ease
+    will-change: transform
+    &.show
+      transform: translate3d(0, 0%, 0)
     p, a
       text-decoration: none
       cursor: pointer

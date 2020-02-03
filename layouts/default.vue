@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <main>
     <the-header />
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
-  </div>
+  </main>
 </template>
 
 <script>

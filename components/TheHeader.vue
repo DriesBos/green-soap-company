@@ -8,11 +8,11 @@
       <nav v-if="openHeader" class="header-Content" @click="toggleHeader">
         <ul>
           <nuxt-link to="/" tag="li">Home</nuxt-link>
-          <nuxt-link to="/brands" tag="li">Brands</nuxt-link>
-          <nuxt-link to="/about" tag="li">About</nuxt-link>
-          <nuxt-link to="/news" tag="li">News</nuxt-link>
           <nuxt-link to="/retail" tag="li">Retail</nuxt-link>
           <nuxt-link to="/careers" tag="li">Careers</nuxt-link>
+          <nuxt-link to="/brands" tag="li">Brands</nuxt-link>
+          <nuxt-link to="/news" tag="li">News</nuxt-link>
+          <nuxt-link to="/about" tag="li">About</nuxt-link>
         </ul>
       </nav>
     </transition>

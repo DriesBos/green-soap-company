@@ -4,15 +4,18 @@
       <nuxt />
     </transition>
     <the-header />
+    <the-footer />
   </main>
 </template>
 
 <script>
 import TheHeader from "~/components/TheHeader.vue"
+import TheFooter from "~/components/TheFooter.vue"
 
 export default {
   components: {
-    "the-header": TheHeader
+    "the-header": TheHeader,
+    "the-footer": TheFooter
   },
   data() {
     return {

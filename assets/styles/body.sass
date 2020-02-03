@@ -3,18 +3,26 @@ section
   img
     max-width: 100%
 
-header
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  ul
+.header
+  &-Toggle
+    position: fixed
+    top: 0
+    right: 0
+    padding: var(--spacing-one)
+    cursor: pointer
+  &-Content
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
     display: flex
-    justify-content: flex-end
+    justify-content: center
+    align-items: center
+    background: white
     li
-      padding: 1em .5em
+      padding: .5em
       cursor: pointer
-    li:last-child
-      padding-right: 1em
-  .nuxt-link-exact-active
-    text-decoration: underline
+      text-align: center
+      &:hover, &.nuxt-link-exact-active
+        text-decoration: underline

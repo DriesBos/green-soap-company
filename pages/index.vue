@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view-Home">
     <component
       :is="story.content.component | dashify"
       v-if="story.content.component"

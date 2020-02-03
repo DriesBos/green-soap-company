@@ -1,27 +1,26 @@
 <template>
-  <div class="view-About">
-    <component
-      :is="story.content.component | dashify"
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-    ></component>
-  </div>
+  <section class="view view-Brands">
+    <ul>
+      <!-- prettier-ignore -->
+      <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
+        <nuxt-link :to="post.full_slug" tag="div">
+          <h1>{{ post.content.title }}</h1>
+        </nuxt-link>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script>
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-import MarkdownItem from "@/components/MarkdownItem.vue"
 
 export default {
-  components: {
-    "markdown-item": MarkdownItem
-  },
   mixins: [storyblokLivePreview],
   asyncData(context) {
     return context.app.$storyapi
-      .get("cdn/stories/about", {
-        version: "draft"
+      .get("cdn/stories/", {
+        version: "draft",
+        starts_with: "brands"
       })
       .then(res => {
         return res.data
@@ -44,9 +43,15 @@ export default {
   },
   data() {
     return {
-      story: { content: {} }
+      stories: { content: {} }
     }
   },
   mounted() {}
 }
 </script>
+
+<style lang="sass" scoped>
+.view-Brands
+  li
+    padding: var(--spacing-one)
+</style>

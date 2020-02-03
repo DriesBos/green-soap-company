@@ -1,26 +1,20 @@
 <template>
-  <div class="view-About">
-    <component
-      :is="story.content.component | dashify"
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-    ></component>
-  </div>
+  <section class="item brandItem">
+    <h1>{{ story.content.title }}</h1>
+    <p>{{ story.content.text }}</p>
+  </section>
 </template>
 
 <script>
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-import MarkdownItem from "@/components/MarkdownItem.vue"
 
 export default {
-  components: {
-    "markdown-item": MarkdownItem
-  },
   mixins: [storyblokLivePreview],
   asyncData(context) {
+    let endpoint = `cdn/stories/brands/${context.params.slug}`
+
     return context.app.$storyapi
-      .get("cdn/stories/about", {
+      .get(endpoint, {
         version: "draft"
       })
       .then(res => {
@@ -50,3 +44,9 @@ export default {
   mounted() {}
 }
 </script>
+
+<style lang="sass" scoped>
+.brandItem
+  h1, p
+    padding: var(--spacing-one)
+</style>

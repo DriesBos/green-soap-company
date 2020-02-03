@@ -24,7 +24,6 @@ export default {
   },
   watch: {
     $route(from, to) {
-      console.log(from, to)
       if (from.path === "/careers" && to.path === "/") {
         return (this.transitionName = "slideLeft")
       } else if (from.path === "/retail" && to.path === "/") {

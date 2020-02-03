@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="item newsItem">
     <h1>{{ story.content.title }}</h1>
     <p>{{ story.content.text }}</p>
   </section>
@@ -11,7 +11,7 @@ import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 export default {
   mixins: [storyblokLivePreview],
   asyncData(context) {
-    let endpoint = `cdn/stories/blog/${context.params.slug}`
+    let endpoint = `cdn/stories/news/${context.params.slug}`
 
     return context.app.$storyapi
       .get(endpoint, {
@@ -41,8 +41,12 @@ export default {
       story: { content: {} }
     }
   },
-  mounted() {
-    // console.log(this.story)
-  }
+  mounted() {}
 }
 </script>
+
+<style lang="sass" scoped>
+.newsItem
+  h1, p
+    padding: var(--spacing-one)
+</style>

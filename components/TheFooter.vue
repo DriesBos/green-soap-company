@@ -50,7 +50,6 @@ export default {}
     li, a
       color: white
     li.title
-      font-weight: bold
       margin-bottom: 1em
     li.link, a
       cursor: pointer

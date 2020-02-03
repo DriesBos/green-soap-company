@@ -65,7 +65,7 @@ export default {
     left: 0
     width: 100%
     padding: var(--spacing-one)
-    border: 1px solid purple
+    border: 1px solid black
     background: white
     display: flex
     justify-content: space-between
@@ -89,7 +89,7 @@ export default {
     justify-content: center
     align-items: center
     background: white
-    border: 1px solid purple
+    border: 1px solid black
     li
       padding: .5em
       cursor: pointer

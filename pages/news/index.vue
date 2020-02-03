@@ -1,11 +1,10 @@
 <template>
-  <section>
-    <p>Blog List</p>
+  <section class="view view-News">
     <ul>
       <!-- prettier-ignore -->
       <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
         <nuxt-link :to="post.full_slug" tag="div">
-          <h2>{{ post.content.title }}</h2>
+          <h1>{{ post.content.title }}</h1>
         </nuxt-link>
       </li>
     </ul>
@@ -21,7 +20,7 @@ export default {
     return context.app.$storyapi
       .get("cdn/stories/", {
         version: "draft",
-        starts_with: "blog"
+        starts_with: "news"
       })
       .then(res => {
         return res.data
@@ -47,8 +46,12 @@ export default {
       stories: { content: {} }
     }
   },
-  mounted() {
-    // console.log(this.stories)
-  }
+  mounted() {}
 }
 </script>
+
+<style lang="sass" scoped>
+.view-News
+  li
+    padding: var(--spacing-one)
+</style>

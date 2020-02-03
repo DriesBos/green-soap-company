@@ -5,6 +5,20 @@
 .pages-enter, .pages-leave-to
   opacity: 0
 
+// Sliding page transition
+.slideRight-enter-active, .slideRight-leave-active,
+.slideLeft-enter-active, .slideLeft-leave-active
+  transition: transform .5s cubic-bezier(0.55, 0, 0.1, 1), opacity .5s cubic-bezier(0.55, 0, 0.1, 1)
+  overflow: hidden
+
+.slideLeft-enter, .slideLeft-leave-to
+  transform: translate(-2em, 0)
+  opacity: 0
+
+.slideRight-enter, .slideRight-leave-to
+  transform: translate(2em, 0)
+  opacity: 0
+
 // Standard fade transition
 .fade-enter-active, .fade-leave-active
   transition: opacity .3s ease

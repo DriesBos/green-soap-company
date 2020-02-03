@@ -1,5 +1,9 @@
 <template>
   <header class="header">
+    <div class="header-Main" :class="{ show: showHeader }">
+      <nuxt-link to="/">Green Soap Company</nuxt-link>
+      <p @click="toggleHeader">toggle</p>
+    </div>
     <transition name="fade">
       <nav v-if="openHeader" class="header-Content" @click="toggleHeader">
         <ul>
@@ -12,10 +16,6 @@
         </ul>
       </nav>
     </transition>
-    <div class="header-Main" :class="{ show: showHeader }">
-      <nuxt-link to="/">Green Soap Company</nuxt-link>
-      <p @click="toggleHeader">toggle</p>
-    </div>
   </header>
 </template>
 
@@ -59,7 +59,6 @@ export default {
 
 <style lang="sass" scoped>
 .header
-  z-index: 999
   &-Main
     position: fixed
     top: 0
@@ -91,7 +90,6 @@ export default {
     align-items: center
     background: white
     border: 1px solid purple
-    z-index: 999
     li
       padding: .5em
       cursor: pointer

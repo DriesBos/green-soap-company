@@ -1,9 +1,9 @@
 <template>
   <main>
-    <the-header />
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
+    <the-header />
   </main>
 </template>
 

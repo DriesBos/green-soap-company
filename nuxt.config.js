@@ -43,11 +43,11 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    ["@nuxtjs/pwa"],
-    // ["@nuxtjs/google-tag-manager", { id: process.env.GOOGLE_GTM }],
-    [
-      "@bazzite/nuxt-optimized-images",
-      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } } // Test compression by setting to true first
+    "@nuxtjs/pwa",
+    "@nuxtjs/axios"[
+      // ["@nuxtjs/google-tag-manager", { id: process.env.GOOGLE_GTM }],
+      ("@bazzite/nuxt-optimized-images",
+      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } }) // Test compression by setting to true first
     ],
     [
       "storyblok-nuxt",
@@ -63,8 +63,8 @@ module.exports = {
   generate: {
     routes: function(callback) {
       const token = process.env.PREVIEWKEY
-      const per_page = 1000
-      const version = "published"
+      const per_page = 100
+      const version = "draft"
       let cache_version = 0
 
       let page = 1

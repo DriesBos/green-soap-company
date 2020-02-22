@@ -3,9 +3,11 @@
     <!-- prettier-ignore -->
     <ul class="newsCarousel-Container">
       <li v-for="post in blok" :key="post._uid">
-        <h1>{{ post.content.title }}</h1>
-        <p>{{ post.content.text }}</p>
-        <img :src="post.content.image" />
+        <nuxt-link :to="post.full_slug">
+          <h1>{{ post.content.title }}</h1>
+          <p>{{ post.content.text }}</p>
+          <img :src="post.content.image" />
+        </nuxt-link>
       </li>
     </ul>
   </section>
@@ -17,7 +19,7 @@ export default {
     blok: {}
   },
   mounted() {
-    // console.log("NEWSCAROUSELITEM", this.blok)
+    console.log("NEWSCAROUSELITEM", this.blok)
   }
 }
 </script>

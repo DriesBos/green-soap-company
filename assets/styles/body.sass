@@ -40,8 +40,8 @@ main
         object-fit: cover
 
 .newsCarousel
-  padding: var(--spacing-two)
-  padding-right: 0
+  padding-top: var(--spacing-two)
+  padding-bottom: var(--spacing-two)
   ul
     display: flex
     flex-wrap: nowrap
@@ -52,5 +52,9 @@ main
       margin-right: var(--spacing-two)
       h1, p
         margin-bottom: 1em
+      a
+        text-decoration: none
+    li:first-child
+      margin-left: var(--spacing-two)
   ul::-webkit-scrollbar
     display: none

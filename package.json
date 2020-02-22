@@ -25,6 +25,7 @@
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.3.0",
     "@nuxt/typescript-build": "^0.5.2",
+    "@nuxtjs/google-analytics": "^2.2.3",
     "babel-eslint": "^10.0.3",
     "css-loader": "^3.4.2",
     "dotenv": "^8.2.0",
@@ -33,8 +34,11 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.0.1",
-    "prettier": "^1.19.1",
     "node-sass": "^4.13.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "webp-loader": "^0.6.0"
   }
 }

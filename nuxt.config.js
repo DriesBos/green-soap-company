@@ -44,10 +44,10 @@ module.exports = {
    */
   modules: [
     "@nuxtjs/pwa",
-    "@nuxtjs/axios"[
-      // ["@nuxtjs/google-tag-manager", { id: process.env.GOOGLE_GTM }],
-      ("@bazzite/nuxt-optimized-images",
-      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } }) // Test compression by setting to true first
+    "@nuxtjs/axios",
+    [
+      "@bazzite/nuxt-optimized-images",
+      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } }
     ],
     [
       "storyblok-nuxt",

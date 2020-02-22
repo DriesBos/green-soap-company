@@ -1,6 +1,7 @@
 <template>
   <section class="view view-News">
     <ul>
+      <p>NEWS PAGE</p>
       <!-- prettier-ignore -->
       <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
         <nuxt-link :to="post.full_slug" tag="div">

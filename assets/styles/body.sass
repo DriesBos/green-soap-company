@@ -2,12 +2,9 @@ section
   max-width: 100%
   img
     max-width: 100%
-.item
-  border: 1px solid black
 
 main
   padding-top: 69px
-  border: 1px solid black
 
 .introductionItem
   width: 100%
@@ -42,5 +39,18 @@ main
         height: 100%
         object-fit: cover
 
-.carouselItem
-  border: 1px solid red
+.newsCarousel
+  padding: var(--spacing-two)
+  padding-right: 0
+  ul
+    display: flex
+    flex-wrap: nowrap
+    overflow-x: auto
+    li
+      width: 40vw
+      flex: 0 0 auto
+      margin-right: var(--spacing-two)
+      h1, p
+        margin-bottom: 1em
+  ul::-webkit-scrollbar
+    display: none

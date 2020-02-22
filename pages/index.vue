@@ -1,11 +1,12 @@
 <template>
   <div class="view-Home">
     <component
-      :is="story.content.component | dashify"
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
+      :is="blok.component | dashify"
+      v-for="blok in homeList.body"
+      :key="blok._uid"
+      :blok="blok"
     ></component>
+    <news-carousel :blok="newsList" />
   </div>
 </template>
 
@@ -16,7 +17,7 @@ export default {
   mixins: [storyblokLivePreview],
   asyncData(context) {
     return context.app.$storyapi
-      .get("cdn/stories/home", {
+      .get("cdn/stories/", {
         version: "draft"
       })
       .then(res => {
@@ -40,9 +41,31 @@ export default {
   },
   data() {
     return {
-      story: { content: {} }
+      stories: {
+        content: {}
+      },
+      homeList: {},
+      newsList: {}
     }
   },
-  mounted() {}
+  methods: {
+    arrayLoop(array) {
+      let filteredArray = array.filter(function(el) {
+        if (el.slug === "home") {
+          return true
+        }
+      })
+      this.newsList = array.filter(function(el) {
+        if (el.content.component === "news-item") {
+          return true
+        }
+      })
+      this.homeList = filteredArray[0].content
+    }
+  },
+  mounted() {
+    this.arrayLoop(this.stories)
+    // console.log(this.newsList)
+  }
 }
 </script>

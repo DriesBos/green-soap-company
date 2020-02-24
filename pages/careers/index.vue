@@ -1,11 +1,16 @@
 <template>
   <div class="view-Careers">
-    <!-- <component
-      :is="story.content.component | dashify"
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-    ></component>-->
+    <component
+      :is="blok.component | dashify"
+      v-for="blok in careerList.body"
+      :key="blok._uid"
+      :blok="blok"
+    ></component>
+    <ul>
+      <li v-for="item in vacancyList" :key="item.id">
+        <p>{{ item.content.title }} {{ item.content.subtitle }} read more</p>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -41,11 +46,29 @@ export default {
   },
   data() {
     return {
-      stories: { content: {} }
+      stories: { content: {} },
+      careerList: {},
+      vacancyList: {}
+    }
+  },
+  methods: {
+    arrayLoop(array) {
+      let filteredArray = array.filter(function(el) {
+        if (el.name === "Careers") {
+          return true
+        }
+      })
+      this.vacancyList = array.filter(function(el) {
+        if (el.content.component === "page-vacancy") {
+          return true
+        }
+      })
+      this.careerList = filteredArray[0].content
     }
   },
   mounted() {
-    console.log(this.stories)
+    this.arrayLoop(this.stories)
+    console.log(this.careerList, this.vacancyList)
   }
 }
 </script>

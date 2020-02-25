@@ -1,3 +1,5 @@
+@import '~/assets/styles/variables.sass'
+
 section
   max-width: 100%
   img
@@ -38,6 +40,30 @@ main
         width: 100%
         height: 100%
         object-fit: cover
+
+.vacancyList
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  li
+    background-color: #41C277
+    width: 100%
+    max-width: 1000px
+    margin-left: var(--spacing-one)
+    margin-right: var(--spacing-one)
+    margin-bottom: 1em
+    padding: var(--spacing-two)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-radius: $border-radius
+    cursor: pointer
+    > div:nth-child(2)
+      flex-grow: 1
+      margin-left: var(--spacing-one)
+  li:last-child
+    margin-bottom: var(--spacing-two)
 
 .newsCarousel
   padding-top: var(--spacing-two)
@@ -83,6 +109,7 @@ main
       padding-bottom: 50%
       background-color: #EBDEC1
       cursor: pointer
+      border-radius: $border-radius
       h1, p
         width: 100%
         text-align: center

@@ -6,9 +6,17 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <ul>
+    <ul class="vacancyList">
       <li v-for="item in vacancyList" :key="item.id">
-        <p>{{ item.content.title }} {{ item.content.subtitle }} read more</p>
+        <div>
+          <p>{{ item.content.title }}</p>
+        </div>
+        <div>
+          <p>{{ item.content.subtitle }}</p>
+        </div>
+        <div>
+          <p>read more</p>
+        </div>
       </li>
     </ul>
   </div>

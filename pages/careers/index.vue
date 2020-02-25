@@ -6,19 +6,21 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <ul class="vacancyList">
-      <li v-for="item in vacancyList" :key="item.id">
-        <div>
-          <p>{{ item.content.title }}</p>
-        </div>
-        <div>
-          <p>{{ item.content.subtitle }}</p>
-        </div>
-        <div>
-          <p>read more</p>
-        </div>
-      </li>
-    </ul>
+    <section class="vacancyList">
+      <ul>
+        <li v-for="item in vacancyList" :key="item.id">
+          <div>
+            <p>{{ item.content.title }}</p>
+          </div>
+          <div>
+            <p>{{ item.content.subtitle }}</p>
+          </div>
+          <div>
+            <p>read more</p>
+          </div>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 

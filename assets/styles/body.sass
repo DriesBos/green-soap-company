@@ -2,11 +2,16 @@
 
 section
   max-width: 100%
-  img
-    max-width: 100%
+  margin-top: var(--spacing-four)
+  margin-bottom: var(--spacing-four)
+  &:first-child
+    margin-top: 0
 
 main
   padding-top: 69px
+
+img
+  max-width: 100%
 
 .introductionItem
   width: 100%
@@ -16,9 +21,9 @@ main
   &-Container
     max-width: 1000px
     display: flex
-    margin: var(--spacing-one)
+    justify-content: space-between
     > div
-      flex-basis: 50%
+      flex-basis: calc(50% - #{var(--spacing-one)})
   &-Left
     display: flex
     flex-direction: column
@@ -33,6 +38,8 @@ main
       width: 100%
       height: 0
       padding-top: 100%
+      border-radius: $border-radius
+      overflow: hidden
       img
         position: absolute
         left: 0
@@ -41,49 +48,52 @@ main
         height: 100%
         object-fit: cover
 
-.vacancyList
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  li
-    background-color: #41C277
-    width: 100%
-    max-width: 1000px
-    margin-left: var(--spacing-one)
-    margin-right: var(--spacing-one)
-    margin-bottom: 1em
-    padding: var(--spacing-two)
-    display: flex
-    align-items: center
-    justify-content: space-between
-    border-radius: $border-radius
-    cursor: pointer
-    > div:nth-child(2)
-      flex-grow: 1
-      margin-left: var(--spacing-one)
-  li:last-child
-    margin-bottom: var(--spacing-two)
-
 .newsCarousel
-  padding-top: var(--spacing-two)
-  padding-bottom: var(--spacing-two)
   ul
     display: flex
     flex-wrap: nowrap
+    align-items: flex-start
     overflow-x: auto
     li
       width: 40vw
       flex: 0 0 auto
+      padding: var(--spacing-two)
       margin-right: var(--spacing-two)
-      h1, p
+      background-color: $color-green
+      border-radius: $border-radius
+      h1, img
         margin-bottom: 1em
       a
         text-decoration: none
     li:first-child
-      margin-left: var(--spacing-two)
+      margin-left: var(--spacing-three)
   ul::-webkit-scrollbar
     display: none
+
+.vacancyList
+  ul
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    li
+      background-color: #41C277
+      width: 100%
+      max-width: 1000px
+      margin-left: var(--spacing-one)
+      margin-right: var(--spacing-one)
+      margin-bottom: 1em
+      padding: var(--spacing-two)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-radius: $border-radius
+      cursor: pointer
+      > div:nth-child(2)
+        flex-grow: 1
+        margin-left: var(--spacing-one)
+    li:last-child
+      margin-bottom: 0
 
 .contentblok
   width: 100%
@@ -127,7 +137,7 @@ main
     li:nth-child(3)
       grid-column: 2
       grid-row: 2 / 3
-      background-color: #039D7B
+      background-color: $color-green
   .contentblok-AspectRatio
     position: absolute
     top: 0

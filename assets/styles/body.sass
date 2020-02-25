@@ -4,7 +4,7 @@ section
   max-width: 100%
   margin-top: var(--spacing-four)
   margin-bottom: var(--spacing-four)
-  &:first-child
+  &:first-child.landingItem
     margin-top: 0
 
 main
@@ -54,6 +54,9 @@ img
     flex-wrap: nowrap
     align-items: flex-start
     overflow-x: auto
+    &:after
+      content: ""
+      flex: 0 0 30px
     li
       width: 40vw
       flex: 0 0 auto
@@ -67,6 +70,8 @@ img
         text-decoration: none
     li:first-child
       margin-left: var(--spacing-three)
+    li:last-child
+      margin-right: 100px
   ul::-webkit-scrollbar
     display: none
 

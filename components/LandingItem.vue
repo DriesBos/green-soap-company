@@ -14,23 +14,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-.landingItem
-  position: relative
-  width: 100%
-  &-Buttons
-    position: absolute
-    bottom: 0
-    margin: var(--spacing-one)
-    &.prev
-      left: 0
-    &.next
-      right: 0
-.button
-  padding: var(--spacing-one) var(--spacing-two)
-  background: white
-  border-radius: 100px
-  border: 1px solid black
-  text-decoration: none
-</style>

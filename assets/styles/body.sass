@@ -87,12 +87,15 @@ img
     max-width: 1000px
     display: flex
     justify-content: space-between
+    background-color: $color-lightgrey
+    border-radius: $border-radius
     > div
-      flex-basis: calc(50% - #{var(--spacing-one)})
+      flex-basis: 50%
   &-Left
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: flex-start
+    padding: var(--spacing-two)
     h1, h2
       padding-bottom: 1em
     h1, h2, .markdown

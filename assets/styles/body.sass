@@ -214,3 +214,24 @@ img
     align-items: center
     justify-content: center
     height: 100%
+
+.footer
+  display: flex
+  justify-content: center
+  &-Container
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: 1000px
+    border-top: 1px solid black
+    ul
+      margin-top: var(--spacing-three)
+      margin-bottom: var(--spacing-three)
+      flex-basis: 25%
+      li.title
+        margin-bottom: 1em
+      li.link, a
+        cursor: pointer
+        text-decoration: none
+        &::hover
+          text-decoration: underline

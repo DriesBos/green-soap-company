@@ -1,5 +1,5 @@
 <template>
-  <header class="testheader">
+  <header class="header">
     <div class="menu" :class="{ open: menuOpen }">
       <span class="menu-circle"></span>
       <a href="#" class="menu-link" @click="toggleMenu">

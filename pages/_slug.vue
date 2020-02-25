@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <div>
     <component
       :is="story.content.component | dashify"
       v-if="story.content.component"
       :key="story.content._uid"
       :blok="story.content"
     ></component>
-  </section>
+  </div>
 </template>
 
 <script>

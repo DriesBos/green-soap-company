@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="contentblok">
+  <section v-editable="blok" class="contentblok">
     <ul class="contentblok-Container">
       <component
         :is="blok.component | dashify"
@@ -8,7 +8,7 @@
         :blok="blok"
       ></component>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -14,43 +14,133 @@ img
   max-width: 100%
   border-radius: $border-radius
 
-.header
-  &-Main
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    padding: var(--spacing-one)
-    background: white
-    display: flex
-    justify-content: space-between
-    transform: translate3d(0, -101%, 0)
-    transition: 0.3s transform ease
-    will-change: transform
-    &.show
-      transform: translate3d(0, 0%, 0)
-    p, a
+.testheader
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  .menu
+    position: absolute
+    top: var(--spacing-two)
+    right: var(--spacing-two)
+    height: 50px
+    width: 50px
+    &-circle
+      background-color: $color-green
+      color: white
+      width: 100%
+      height: 100%
+      position: absolute
+      border-radius: 50%
+      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1)
+      z-index: 1000
+    &:hover .menu-circle
+      transform: scale(1.5)
+    &.open .menu-circle
+      transform: scale(60)
+    &-link
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 1002
+    &-icon
+      position: absolute
+      width: 20px
+      height: 14px
+      margin: auto
+      left: 0
+      top: 0
+      right: 0
+      bottom: 1px
+    &-line
+      background-color: white
+      height: 2px
+      width: 100%
+      border-radius: 2px
+      position: absolute
+      left: 0
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    &-line-1
+      top: 0
+    &-line-2
+      top: 0
+      bottom: 0
+      margin: auto
+    &-line-3
+      bottom: 0
+    &.open .menu-line-1
+      transform: translateY(7px) translateY(-50%) rotate(-135deg)
+    &.open .menu-line-2
+      opacity: 0
+    &.open .menu-line-3
+      transform: translateY(-7px) translateY(50%) rotate(135deg)
+    &-overlay
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      background-color: $color-green
+      height: 100vh
+      width: 100vw
+      position: fixed
+      top: 0
+      left: 0
+      opacity: 0
+      visibility: hidden
+      text-align: center
+      transition: opacity 0.2s ease-in-out
+      z-index: 1001
+      overflow: hidden
+    &-overlay.open
+      opacity: 1
+      visibility: visible
+      transition-delay: 0.03s
+    &-overlay a
+      display: inline-block
       text-decoration: none
       cursor: pointer
-      &:hover
-        text-decoration: underline
-  &-Content
-    position: fixed
-    left: 0
-    top: 0
-    right: 0
-    bottom: 0
-    display: flex
-    justify-content: center
-    align-items: center
-    background: white
-    border: 1px solid black
-    li
-      padding: .5em
-      cursor: pointer
-      text-align: center
-      &:hover, &.nuxt-link-exact-active
-        text-decoration: underline
+      color: white
+      margin-bottom: .5em
+
+// .header
+//   &-Main
+//     position: fixed
+//     top: 0
+//     left: 0
+//     width: 100%
+//     padding: var(--spacing-one)
+//     background: white
+//     display: flex
+//     justify-content: space-between
+//     transform: translate3d(0, -101%, 0)
+//     transition: 0.3s transform ease
+//     will-change: transform
+//     &.show
+//       transform: translate3d(0, 0%, 0)
+//     p, a
+//       text-decoration: none
+//       cursor: pointer
+//       &:hover
+//         text-decoration: underline
+//   &-Content
+//     position: fixed
+//     left: 0
+//     top: 0
+//     right: 0
+//     bottom: 0
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     background: white
+//     border: 1px solid black
+//     li
+//       padding: .5em
+//       cursor: pointer
+//       text-align: center
+//       &:hover, &.nuxt-link-exact-active
+//         text-decoration: underline
 
 .landingItem
   position: relative

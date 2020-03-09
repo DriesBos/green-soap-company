@@ -1,5 +1,11 @@
 <template>
   <section class="view view-Brands">
+    <!-- <component
+      :is="stories[0].content.body[0] | dashify"
+      v-if="stories[0].content.component"
+      :key="stories[0].content._uid"
+      :blok="stories[0].content"
+    ></component>-->
     <ul>
       <!-- prettier-ignore -->
       <li v-for="post in stories" :id="post.content.id" :key="post.content.id">
@@ -46,7 +52,9 @@ export default {
       stories: { content: {} }
     }
   },
-  mounted() {}
+  mounted() {
+    // console.log(this.stories, "TEST")
+  }
 }
 </script>
 

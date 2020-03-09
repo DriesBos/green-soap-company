@@ -11,7 +11,7 @@
       </a>
     </div>
 
-    <div class="menu-overlay" :class="{ open: menuOpen }">
+    <div class="menu-overlay" :class="{ open: menuOpen }" @click="toggleMenu">
       <nuxt-link to="/">Home</nuxt-link>
       <nuxt-link to="/retail">Retail</nuxt-link>
       <nuxt-link to="/careers">Careers</nuxt-link>

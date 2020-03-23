@@ -11,7 +11,6 @@
       >
         <!-- prettier-ignore -->
         <slide v-for="(image, index) in images" :key="index" class="carousel-Slide">
-          <!-- View variables.sass for srcset widths source -->
           <picture>
             <img
               :srcset="`${transformImage(image.filename, '2880x0')} 2880w, ${transformImage(image.filename, '2560x0')} 2560w, ${transformImage(image.filename, '1920x0')} 1920w, ${transformImage(image.filename, '1680x0')} 1680w, ${transformImage(image.filename, '1370x0')} 1370w, ${transformImage(image.filename, '900x0')} 900w`"
@@ -19,24 +18,11 @@
               :data-src="image.filename | transformImage('1440x0')"
               :alt="image.name"
             />
-            <!-- <source
-              type="image/webp"
-              :srcset="
-                transformImage(image.filename, '2880x0/filters:format(webp)')
-              "
-            />
-            <source
-              type="image/png"
-              :srcset="
-                transformImage(image.filename, '2880x0/filters:format(png)')
-              "
-            />
-            <img :src="transformImage(image.filename, '2880x0')" :alt="image.name" />-->
           </picture>
         </slide>
       </carousel>
     </client-only>
-    <!-- <div class="carousel-Navigation">
+    <div class="carousel-Navigation">
       <a
         class="carousel-Nav carousel-Nav_Prev"
         :class="{ active: iconPrev }"
@@ -48,22 +34,6 @@
         @click="slideCarousel('next')"
       />
     </div>
-    <div class="carousel-Mobile_Navigation">
-      <a
-        class="carousel-Mobile_Nav carousel-Mobile_Nav_Prev"
-        :class="{ active: iconPrev }"
-        @click="slideCarousel('prev')"
-      >
-        <img src="~/assets/images/arrow-medium.svg" />
-      </a>
-      <a
-        class="carousel-Mobile_Nav carousel-Mobile_Nav_Next"
-        :class="{ active: iconNext }"
-        @click="slideCarousel('next')"
-      >
-        <img src="~/assets/images/arrow-medium.svg" />
-      </a>
-    </div> -->
   </div>
 </template>
 
@@ -146,21 +116,6 @@ export default {
           carousel.goToPage(currentPage + 1)
         }
       }
-    },
-    changeCursorToPrev() {
-      let $cursor = $(".cursor")
-      $cursor.addClass("cursor-Prev")
-      $cursor.removeClass("cursor-Next")
-    },
-    changeCursorToNext() {
-      let $cursor = $(".cursor")
-      $cursor.addClass("cursor-Next")
-      $cursor.removeClass("cursor-Prev")
-    },
-    removeCursor() {
-      let $cursor = $(".cursor")
-      $cursor.removeClass("cursor-Next")
-      $cursor.removeClass("cursor-Prev")
     }
   }
 }
@@ -172,12 +127,11 @@ export default {
   &-Container
     position: relative
     height: 100%
-    background-color: black
     .VueCarousel-wrapper, .VueCarousel-inner, .VueCarousel-slide
       position: relative
       height: 100% !important // Override dep default
   &-Slide
-    picture, img
+    img
       width: 100%
       height: 100%
       max-width: 100%
@@ -189,46 +143,42 @@ export default {
     top: 0
     bottom: 0
     width: 50vw
-    opacity: 0
-    transition: opacity .19s ease
     z-index: +1
     &_Prev
       left: 0
-      display: none
       &.active
         display: block
     &_Next
       right: 0
-      display: none
       &.active
         display: block
-  &-Mobile
-    &_Navigation
-      position: absolute
-      left: var(--side-padding)
-      top: 50%
-      right: var(--side-padding)
-      flex-wrap: nowrap
-      transform: translateY(-50%)
-      mix-blend-mode: difference
-      display: none
-      z-index: +1
-      @media ( hover: none )
-        display: flex
-      a
-        width: 50vw
-        img
-          height: 1em
-      a:last-child
-        text-align: right
-        img
-          transform: rotate(180deg)
-      img
-        padding-left: env(safe-area-inset-left)
-        padding-right: env(safe-area-inset-right)
-    &_Nav_Prev, &_Nav_Next
-      opacity: 0
-      transition: opacity .19s ease
-      &.active
-        opacity: 1
+  // &-Mobile
+  //   &_Navigation
+  //     position: absolute
+  //     left: var(--side-padding)
+  //     top: 50%
+  //     right: var(--side-padding)
+  //     flex-wrap: nowrap
+  //     transform: translateY(-50%)
+  //     mix-blend-mode: difference
+  //     display: none
+  //     z-index: +1
+  //     @media ( hover: none )
+  //       display: flex
+  //     a
+  //       width: 50vw
+  //       img
+  //         height: 1em
+  //     a:last-child
+  //       text-align: right
+  //       img
+  //         transform: rotate(180deg)
+  //     img
+  //       padding-left: env(safe-area-inset-left)
+  //       padding-right: env(safe-area-inset-right)
+  //   &_Nav_Prev, &_Nav_Next
+  //     opacity: 0
+  //     transition: opacity .19s ease
+  //     &.active
+  //       opacity: 1
 </style>

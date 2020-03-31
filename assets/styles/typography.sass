@@ -1,8 +1,14 @@
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: normal
-//   font-style: normal
+@font-face
+  font-family: 'Francois'
+  src: url('~assets/fonts/FrancoisOneRegular.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Merriweather'
+  src: url('~assets/fonts/MerriweatherLight.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
 
 body
   // https://css-tricks.com/snippets/css/fluid-typography/
@@ -16,7 +22,7 @@ h1, h2, h3, p, a
   hyphens: auto
 
 li, h1, h2, h3, p, a, a:link, a:visited, a:hover, a:active, span, input, button
-  font-family: Helvetica, Arial, sans-serif
+  font-family: Merriweather, 'Gorgia', 'Times New Roman', Times, serif
   line-height: 1.5
   color: black
   font-style: normal
@@ -37,7 +43,8 @@ h4
 a
   color: black
   text-decoration: underline
-
+.title
+  font-family: Francois, 'Gorgia', 'Times New Roman', Times, serif  !important
 strong
   font-weight: bold
 

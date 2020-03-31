@@ -1,23 +1,28 @@
 <template>
   <nav class="nav">
-    <div class="menu" :class="{ open: menuOpen }">
-      <span class="menu-circle"></span>
-      <a href="#" class="menu-link" @click="toggleMenu">
-        <span class="menu-icon">
-          <span class="menu-line menu-line-1"></span>
-          <span class="menu-line menu-line-2"></span>
-          <span class="menu-line menu-line-3"></span>
-        </span>
-      </a>
+    <div class="menu-Wrapper">
+      <div class="menu-Wrapper_Content">
+        <div class="menu" :class="{ open: menuOpen }">
+          <span class="menu-circle"></span>
+          <a href="#" class="menu-link" @click="toggleMenu">
+            <span class="menu-icon">
+              <span class="menu-line menu-line-1"></span>
+              <span class="menu-line menu-line-2"></span>
+              <span class="menu-line menu-line-3"></span>
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="menu-overlay" :class="{ open: menuOpen }" @click="toggleMenu">
-      <nuxt-link to="/">Home</nuxt-link>
-      <nuxt-link to="/retail">Retail</nuxt-link>
-      <nuxt-link to="/careers">Careers</nuxt-link>
-      <nuxt-link to="/brands">Brands</nuxt-link>
-      <nuxt-link to="/news">News</nuxt-link>
-      <nuxt-link to="/about">About</nuxt-link>
+      <nuxt-link class="title" to="/">Home</nuxt-link>
+      <nuxt-link class="title" to="/news">News</nuxt-link>
+      <nuxt-link class="title" to="/retail">Retail</nuxt-link>
+      <nuxt-link class="title" to="/brands">Brands</nuxt-link>
+      <nuxt-link class="title" to="/about">About</nuxt-link>
+      <nuxt-link class="title" to="/careers">Careers</nuxt-link>
+      <nuxt-link class="title" to="/history">History</nuxt-link>
     </div>
   </nav>
 </template>
@@ -51,14 +56,25 @@ export default {
   pointer-events: none
   z-index: 999
   .menu
-    position: absolute
-    top: var(--spacing-two)
-    right: var(--spacing-two)
+    position: relative
     height: 50px
     width: 50px
     pointer-events: auto
+    flex-grow: 0
+    flex-shrink: 0
+    &-Wrapper
+      display: flex
+      justify-content: center
+      position: absolute
+      top: var(--spacing-three)
+      width: 100%
+      &_Content
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        max-width: $content-container
     &-circle
-      background-color: $color-green
+      background-color: $color-black
       color: white
       width: 100%
       height: 100%
@@ -107,16 +123,17 @@ export default {
       opacity: 0
     &.open .menu-line-3
       transform: translateY(-7px) translateY(50%) rotate(135deg)
+
     &-overlay
       display: flex
       flex-direction: column
-      justify-content: center
-      align-items: center
-      background-color: $color-green
+      justify-content: flex-start
+      align-items: flex-start
+      background-color: $color-black
+      padding: var(--spacing-six)
       height: 100%
       width: 100%
       max-width: 100vw
-      max-height: 100vh
       position: fixed
       top: 0
       left: 0
@@ -125,7 +142,7 @@ export default {
       text-align: center
       transition: opacity 0.2s ease-in-out
       z-index: 1001
-      overflow: hidden
+      overflow-y: auto
     &-overlay.open
       opacity: 1
       visibility: visible
@@ -135,8 +152,7 @@ export default {
       text-decoration: none
       cursor: pointer
       color: white
-      font-size: 1.618em
-      margin-bottom: .5em
+      font-size: 3.5556em
       pointer-events: auto
       &:hover
         text-decoration: underline

@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <div class="footer-Container">
+  <footer class="footer contentContainer-Center">
+    <div class="footer-Container contentContainer-Center_Wrapper">
       <ul>
         <li class="title">Green Soap Company</li>
       </ul>
@@ -40,3 +40,28 @@
 <script>
 export default {}
 </script>
+
+<style lang="sass">
+@import '~/assets/styles/variables.sass'
+
+.footer
+  background: $color-black
+  li, a
+    color: white
+    font-size: .8889em
+  .title
+    text-transform: uppercase
+  &-Container
+    display: flex
+    ul
+      margin-top: var(--spacing-three)
+      margin-bottom: var(--spacing-three)
+      flex-basis: 25%
+      li.title
+        margin-bottom: 1em
+      li.link, a
+        cursor: pointer
+        text-decoration: none
+        &::hover
+          text-decoration: underline
+</style>

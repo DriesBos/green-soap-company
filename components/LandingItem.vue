@@ -1,14 +1,16 @@
 <template>
   <!-- prettier-ignore -->
   <section v-editable="blok" class="item landingItem">
-    <img :src="blok.image" alt />
-    <nuxt-link class="landingItem-Buttons prev button" to="/careers">
-      <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
-    </nuxt-link>
-    <nuxt-link class="landingItem-Buttons next button" to="/retail">
-      retail
-      <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
-    </nuxt-link>
+    <div class="landingItem-Wrapper">
+      <img :src="blok.image" alt />
+      <nuxt-link class="landingItem-Buttons prev button" to="/careers">
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
+      </nuxt-link>
+      <nuxt-link class="landingItem-Buttons next button" to="/retail">
+        retail
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+      </nuxt-link>
+    </div>
   </section>
 </template>
 
@@ -25,11 +27,14 @@ export default {
 
 .landingItem
   position: relative
+  display: flex
+  justify-content: flex-end
   width: 100%
-  height: 100vh
-  padding: var(--spacing-one)
-  a
-    color: white !important
+  height: calc(100vh - 110px)
+  &-Wrapper
+    position: relative
+    width: calc(50vw + 700px)
+    max-width: 100%
   img
     width: 100%
     height: 100%
@@ -42,7 +47,6 @@ export default {
     color: white
     margin-left: var(--spacing-two)
     margin-right: var(--spacing-two)
-    border-radius: 1000px !important
     margin-bottom: var(--spacing-two)
     &.prev
       left: 0
@@ -59,6 +63,5 @@ export default {
 .button
   padding: .5em 1em
   background-color: $color-green
-  border-radius: $border-radius
   text-decoration: none
 </style>

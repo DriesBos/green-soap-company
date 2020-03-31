@@ -1,7 +1,7 @@
 <template>
   <!-- prettier-ignore -->
-  <section v-editable="blok" class="item landingItem">
-    <div class="landingItem-Wrapper">
+  <section v-editable="blok" class="item landingItem contentContainer-Right">
+    <div class="landingItem-Wrapper contentContainer-Right_Wrapper">
       <img :src="blok.image" alt />
       <nuxt-link class="landingItem-Buttons prev button" to="/careers">
         <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
@@ -26,15 +26,9 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .landingItem
-  position: relative
-  display: flex
-  justify-content: flex-end
-  width: 100%
   height: calc(100vh - 110px)
   &-Wrapper
     position: relative
-    width: calc(50vw + 700px)
-    max-width: 100%
   img
     width: 100%
     height: 100%

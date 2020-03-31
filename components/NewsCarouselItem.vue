@@ -5,7 +5,9 @@
       <ul class="newsCarousel-Container">
         <li v-for="post in blok" :key="post._uid">
           <nuxt-link :to="post.full_slug">
-            <img :src="post.content.image" />
+            <div class="newsCarousel-Image">
+              <img :src="post.content.image" />
+            </div>
             <h3 class="title">{{ post.content.title }}</h3>
             <p>{{ post.content.text }}</p>
           </nuxt-link>
@@ -32,6 +34,28 @@ export default {
 
 .newsCarousel
   overflow-x: auto
+  p
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+  h1, h2, h3
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+    overflow: hidden
+  &-Image
+    position: relative
+    height: 0
+    width: 100%
+    padding-bottom: 75%
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
   h1, h2
     margin-bottom: var(--spacing-four)
   h3
@@ -52,7 +76,7 @@ export default {
       width: 373px
       flex: 0 0 auto
       margin-right: var(--spacing-three)
-      background-color: $color-green
+      background-color: $color-orange
       h1, img
         // margin-bottom: 1em
       a

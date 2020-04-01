@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <div class="header-Logo">
-      <div class="header-Logo_Wrapper">
-        <img src="~/assets/images/logo.png" />
-      </div>
+      <nuxt-link to="/" tag="div" class="header-Logo_Wrapper">
+        <img class="logo" src="~/assets/images/logo.png" />
+      </nuxt-link>
     </div>
   </header>
 </template>
@@ -25,7 +25,4 @@ export default {}
     width: 100%
     padding-top: var(--spacing-three)
     padding-bottom: var(--spacing-three)
-    &_Wrapper
-      img
-        height: 2em
 </style>

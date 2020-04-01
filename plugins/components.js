@@ -8,6 +8,8 @@ import LandingSlider from "~/components/LandingSlider.vue"
 import IntroductionItem from "~/components/IntroductionItem.vue"
 import TextItem from "~/components/TextItem.vue"
 import StatsItem from "~/components/StatsItem.vue"
+import TeamContainer from "~/components/TeamContainer.vue"
+import TeamItem from "~/components/TeamItem.vue"
 import ContentblokItem from "~/components/ContentblokItem.vue"
 import ContentblokWrapper from "~/components/ContentblokWrapper.vue"
 import VueCarouselItem from "~/components/VueCarouselItem.vue"
@@ -21,6 +23,8 @@ Vue.component("blok-landing-slider", LandingSlider)
 Vue.component("blok-introduction-item", IntroductionItem)
 Vue.component("blok-text-item", TextItem)
 Vue.component("blok-stats-item", StatsItem)
+Vue.component("blok-team-container", TeamContainer)
+Vue.component("blok-team-item", TeamItem)
 Vue.component("blok-contentblok-item", ContentblokItem)
 Vue.component("blok-contentblok-wrapper", ContentblokWrapper)
 Vue.component("vue-carousel-item", VueCarouselItem)

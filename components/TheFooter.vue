@@ -3,7 +3,7 @@
     <div class="footer-Container contentContainer-Center_Wrapper">
       <div class="footer-RowOne">
         <ul>
-          <img src="~/assets/images/logo-white.png" />
+          <img class="logo" src="~/assets/images/logo-white.png" />
         </ul>
         <ul>
           <!-- prettier-ignore -->
@@ -89,8 +89,6 @@ export default {}
     display: flex
     justify-content: space-between
     border-bottom: 1px solid white
-    img
-      height: 2rem
   &-RowTwo
     display: flex
 </style>

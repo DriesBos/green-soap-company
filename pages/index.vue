@@ -65,7 +65,7 @@ export default {
   },
   mounted() {
     this.arrayLoop(this.stories)
-    // console.log(this.newsList)
+    console.log("homelist", this.homeList)
   }
 }
 </script>

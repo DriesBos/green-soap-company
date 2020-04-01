@@ -9,15 +9,17 @@
     <section class="vacancyList">
       <ul>
         <li v-for="item in vacancyList" :key="item.id">
-          <div>
-            <p>{{ item.content.title }}</p>
-          </div>
-          <div>
-            <p>{{ item.content.subtitle }}</p>
-          </div>
-          <div>
-            <p>read more</p>
-          </div>
+          <nuxt-link :to="item.full_slug">
+            <div>
+              <p>{{ item.content.title }}</p>
+            </div>
+            <div>
+              <p>{{ item.content.subtitle }}</p>
+            </div>
+            <div>
+              <p>read more</p>
+            </div>
+          </nuxt-link>
         </li>
       </ul>
     </section>
@@ -78,7 +80,8 @@ export default {
   },
   mounted() {
     this.arrayLoop(this.stories)
-    console.log(this.careerList, this.vacancyList)
+    console.log("careerlist", this.careerList)
+    console.log("vacencylist", this.vacancyList)
   }
 }
 </script>

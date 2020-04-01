@@ -1,5 +1,5 @@
 <template>
-  <section class="statsItem contentContainer-Center">
+  <section class="item statsItem contentContainer-Center">
     <ul class="contentContainer-Center_Wrapper">
       <li>
         <p class="stats">{{ blok.value_one }}</p>

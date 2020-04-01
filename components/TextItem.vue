@@ -28,8 +28,4 @@ export default {
   &-Wrapper
     width: 100%
     max-width: $content-container
-  .markdown
-    width: 75%
-    p, h1, h2, h3, h4, h5
-      max-width: $max-text-width
 </style>

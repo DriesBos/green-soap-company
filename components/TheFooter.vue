@@ -11,8 +11,14 @@
             Green Soap Company
             <br />Roelof Hartplein 210,
             <br />1071 TT, Haarlem
-            <br />info@greensoapcompany.com
-            <br />+31 20 799 28 88
+            <br />
+            <a
+              href="mailto:info@greensoapcompany.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >info@greensoapcompany.com</a>
+            <br />
+            <a href="tel:0031207992888" target="_blank" rel="noopener noreferrer">+31 20 799 28 88</a>
           </li>
         </ul>
       </div>
@@ -40,9 +46,9 @@
         </ul>
         <ul>
           <li class="title">Quick Links</li>
-          <li>Start selling our products</li>
-          <li>Join our team</li>
-          <li>Press contact</li>
+          <li class="link">Start selling our products</li>
+          <li class="link">Join our team</li>
+          <li class="link">Press contact</li>
         </ul>
       </div>
     </div>
@@ -60,7 +66,9 @@ export default {}
   background: $color-black
   li, a
     color: white
-    font-size: .8889em
+    font-size: .8889rem
+  a:hover, .link:hover
+    text-decoration: underline
   .title
     text-transform: uppercase
   &-Container
@@ -71,7 +79,7 @@ export default {}
       margin-bottom: var(--spacing-four)
       flex-basis: 25%
       li.title
-        margin-bottom: 1em
+        margin-bottom: 1rem
       li.link, a
         cursor: pointer
         text-decoration: none
@@ -82,7 +90,7 @@ export default {}
     justify-content: space-between
     border-bottom: 1px solid white
     img
-      height: 2em
+      height: 2rem
   &-RowTwo
     display: flex
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section v-editable="blok" class="section textItem">
     <div class="textItem-Wrapper">
-      <markdown :input="blok.title" />
+      <h2 class="title">{{ blok.title }}</h2>
       <markdown :input="blok.text" />
     </div>
   </section>
@@ -28,4 +28,7 @@ export default {
   &-Wrapper
     width: 100%
     max-width: $content-container
+  .title
+    font-size: 3.5556em
+    margin-bottom: var(--spacing-three)
 </style>

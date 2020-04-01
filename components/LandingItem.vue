@@ -26,7 +26,7 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .landingItem
-  height: calc(100vh - 110px)
+  height: calc(100vh - 100px)
   &-Wrapper
     position: relative
   img

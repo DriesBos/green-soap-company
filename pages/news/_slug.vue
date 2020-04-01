@@ -1,8 +1,18 @@
 <template>
-  <section class="item newsItem">
-    <h1>{{ story.content.title }}</h1>
-    <p>{{ story.content.text }}</p>
-  </section>
+  <div class="view-NewsSingle">
+    <component
+      :is="blok.component | dashify"
+      v-for="blok in story.content.body"
+      :key="blok._uid"
+      :blok="blok"
+    ></component>
+    <section class="item newsItem contentContainer-Center">
+      <div class="contentContainer-Center_Wrapper">
+        <h1>{{ story.content.title }}</h1>
+        <markdown :input="story.content.text" />
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

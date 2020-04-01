@@ -3,11 +3,22 @@
   <section v-editable="blok" class="item landingItem contentContainer-Right">
     <div class="landingItem-Wrapper contentContainer-Right_Wrapper">
       <img :src="blok.image" alt />
-      <nuxt-link class="landingItem-Buttons prev button" to="/careers">
+      <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons prev button" to="/retail">
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
+      </nuxt-link>
+      <nuxt-link v-if="this.$route.path === '/retail'" class="landingItem-Buttons prev button" to="/">
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
+      </nuxt-link>
+      <nuxt-link v-if="this.$route.path === '/'" class="landingItem-Buttons prev button" to="/careers">
         <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
       </nuxt-link>
-      <nuxt-link class="landingItem-Buttons next button" to="/retail">
-        retail
+      <nuxt-link v-if="this.$route.path === '/'" class="landingItem-Buttons next button" to="/retail">retail
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+      </nuxt-link>
+      <nuxt-link v-if="this.$route.path === '/retail'" class="landingItem-Buttons next button" to="/careers">careers
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+      </nuxt-link>
+            <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons next button" to="/">news
         <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
       </nuxt-link>
     </div>
@@ -35,13 +46,8 @@ export default {
     object-fit: cover
   &-Buttons
     position: absolute
-    display: inline-flex
-    align-items: center
     bottom: 0
-    color: white
-    margin-left: var(--spacing-two)
-    margin-right: var(--spacing-two)
-    margin-bottom: var(--spacing-two)
+    margin: var(--spacing-three)
     &.prev
       left: 0
       svg
@@ -54,8 +60,4 @@ export default {
         transform: translateY(.18em)
     svg
       width: 1em
-.button
-  padding: .5em 1em
-  background-color: $color-green
-  text-decoration: none
 </style>

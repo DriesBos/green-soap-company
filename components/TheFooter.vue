@@ -28,10 +28,10 @@
           <li class="title">Site</li>
           <nuxt-link to="/" class="link" tag="li">Home</nuxt-link>
           <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
-          <nuxt-link to="/career" class="link" tag="li">Career</nuxt-link>
           <nuxt-link to="/brands" class="link" tag="li">Brands</nuxt-link>
-          <nuxt-link to="/news" class="link" tag="li">News</nuxt-link>
           <nuxt-link to="/about" class="link" tag="li">About</nuxt-link>
+          <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
+          <nuxt-link to="/history" class="link" tag="li">History</nuxt-link>
         </ul>
         <ul>
           <li class="title">Follow Us</li>

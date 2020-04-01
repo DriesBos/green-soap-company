@@ -2,152 +2,53 @@
 
 section
   max-width: 100%
-  margin-top: var(--spacing-four)
   margin-bottom: var(--spacing-four)
   &:first-child.landingItem
     margin-top: 0
+  &:first-child.landingSlider
+    margin-top: 0
+  &:last-child
+    margin-bottom: var(--spacing-six)
 
 img
   max-width: 100%
-  border-radius: $border-radius
+  &.logo
+    height: 2rem
+    cursor: pointer
 
-.header
-  position: fixed
-  left: 0
-  top: 0
-  width: 100vw
-  height: 100vh
-  overflow: hidden
-  pointer-events: none
-  .menu
-    position: absolute
-    top: var(--spacing-two)
-    right: var(--spacing-two)
-    height: 50px
-    width: 50px
-    pointer-events: auto
-    &-circle
-      background-color: $color-green
-      color: white
-      width: 100%
-      height: 100%
-      position: absolute
-      border-radius: 50%
-      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1)
-      z-index: 1000
-      overflow: hidden
-    &:hover .menu-circle
-      transform: scale(1.5)
-    &.open .menu-circle
-      transform: scale(60)
-    &-link
-      width: 100%
-      height: 100%
-      position: absolute
-      z-index: 1002
-    &-icon
-      position: absolute
-      width: 20px
-      height: 14px
-      margin: auto
-      left: 0
-      top: 0
-      right: 0
-      bottom: 1px
-    &-line
-      background-color: white
-      height: 2px
-      width: 100%
-      border-radius: 2px
-      position: absolute
-      left: 0
-      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-    &-line-1
-      top: 0
-    &-line-2
-      top: 0
-      bottom: 0
-      margin: auto
-    &-line-3
-      bottom: 0
-    &.open .menu-line-1
-      transform: translateY(7px) translateY(-50%) rotate(-135deg)
-    &.open .menu-line-2
-      opacity: 0
-    &.open .menu-line-3
-      transform: translateY(-7px) translateY(50%) rotate(135deg)
-    &-overlay
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      background-color: $color-green
-      height: 100%
-      width: 100%
-      max-width: 100vw
-      max-height: 100vh
-      position: fixed
-      top: 0
-      left: 0
-      opacity: 0
-      visibility: hidden
-      text-align: center
-      transition: opacity 0.2s ease-in-out
-      z-index: 999
-      overflow: hidden
-    &-overlay.open
-      opacity: 1
-      visibility: visible
-      transition-delay: 0.03s
-    &-overlay a
-      display: inline-block
-      text-decoration: none
-      cursor: pointer
-      color: white
-      font-size: 1.618em
-      margin-bottom: .5em
-      pointer-events: auto
-      &:hover
-        text-decoration: underline
+.markdown
+  width: 75%
+  p, h1, h2, h3, h4, h5
+    max-width: $max-text-width
 
-.landingItem
-  position: relative
-  width: 100%
-  height: 100vh
-  padding: var(--spacing-one)
-  a
-    color: white !important
-  img
-    width: 100%
-    height: 100%
-    object-fit: cover
-  &-Buttons
-    position: absolute
-    display: inline-flex
-    align-items: center
-    bottom: 0
-    color: white
-    margin-left: var(--spacing-two)
-    margin-right: var(--spacing-two)
-    border-radius: 1000px !important
-    margin-bottom: var(--spacing-two)
-    &.prev
-      left: 0
-      svg
-        transform: rotate(180deg) translateY(-0.18em)
-        margin-right: 1em
-    &.next
-      right: 0
-      svg
-        margin-left: 1em
-        transform: translateY(.18em)
-    svg
-      width: 1em
 .button
+  display: inline-flex
+  align-items: center
   padding: .5em 1em
-  background-color: $color-green
-  border-radius: $border-radius
+  background-color: $color-black
+  color: white !important
   text-decoration: none
+  border-radius: 1000px
+  font-family: Francois, 'Gorgia', 'Times New Roman', Times, serif  !important
+  font-size: 1.25rem
+  letter-spacing: .05rem
+
+.contentContainer
+  &-Center
+    display: flex
+    justify-content: center
+    width: 100%
+    &_Wrapper
+      width: 100%
+      max-width: $content-container
+
+  &-Right
+    display: flex
+    justify-content: flex-end
+    width: 100%
+    &_Wrapper
+      width: calc(50vw + (#{$content-container} / 2)
+      max-width: 100%
 
 .introductionItem
   width: 100%
@@ -159,7 +60,6 @@ img
     display: flex
     justify-content: space-between
     background-color: $color-lightgrey
-    border-radius: $border-radius
     > div
       flex-basis: 50%
   &-Left
@@ -177,7 +77,6 @@ img
       width: 100%
       height: 0
       padding-top: 100%
-      border-radius: $border-radius
       overflow: hidden
       img
         position: absolute
@@ -186,59 +85,6 @@ img
         width: 100%
         height: 100%
         object-fit: cover
-
-.newsCarousel
-  overflow-x: auto
-  ul
-    display: flex
-    flex-wrap: nowrap
-    align-items: flex-start
-    overflow-x: auto
-    &:after
-      content: ""
-      flex: 0 0 30px
-    li
-      width: 40vw
-      flex: 0 0 auto
-      padding: var(--spacing-two)
-      margin-right: var(--spacing-two)
-      background-color: $color-green
-      border-radius: $border-radius
-      h1, img
-        margin-bottom: 1em
-      a
-        text-decoration: none
-    li:first-child
-      margin-left: var(--spacing-three)
-    li:last-child
-      margin-right: 100px
-  ul::-webkit-scrollbar
-    display: none
-
-.vacancyList
-  ul
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    li
-      background-color: #41C277
-      width: 100%
-      max-width: 1000px
-      margin-left: var(--spacing-one)
-      margin-right: var(--spacing-one)
-      margin-bottom: 1em
-      padding: var(--spacing-two)
-      display: flex
-      align-items: center
-      justify-content: space-between
-      border-radius: $border-radius
-      cursor: pointer
-      > div:nth-child(2)
-        flex-grow: 1
-        margin-left: var(--spacing-one)
-    li:last-child
-      margin-bottom: 0
 
 .contentblok
   width: 100%
@@ -263,7 +109,6 @@ img
       padding-bottom: 50%
       background-color: #EBDEC1
       cursor: pointer
-      border-radius: $border-radius
       h1, p
         width: 100%
         text-align: center
@@ -293,24 +138,3 @@ img
     align-items: center
     justify-content: center
     height: 100%
-
-.footer
-  display: flex
-  justify-content: center
-  &-Container
-    display: flex
-    justify-content: space-between
-    width: 100%
-    max-width: 1000px
-    border-top: 1px solid black
-    ul
-      margin-top: var(--spacing-three)
-      margin-bottom: var(--spacing-three)
-      flex-basis: 25%
-      li.title
-        margin-bottom: 1em
-      li.link, a
-        cursor: pointer
-        text-decoration: none
-        &::hover
-          text-decoration: underline

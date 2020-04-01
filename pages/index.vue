@@ -56,7 +56,7 @@ export default {
         }
       })
       this.newsList = array.filter(function(el) {
-        if (el.content.component === "news-item") {
+        if (el.content.component === "page-news") {
           return true
         }
       })
@@ -65,7 +65,7 @@ export default {
   },
   mounted() {
     this.arrayLoop(this.stories)
-    // console.log(this.newsList)
+    console.log("homelist", this.homeList)
   }
 }
 </script>

@@ -1,20 +1,20 @@
 <template>
-  <div class="view-Careers">
+  <div class="view-Retail">
     <component
       :is="blok.component | dashify"
-      v-for="blok in careerList.body"
+      v-for="blok in retailList.body"
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <section class="vacancyList contentContainer-Center">
+    <section class="caseList contentContainer-Center">
       <ul class="contentContainer-Center_Wrapper">
         <!-- prettier-ignore -->
         <nuxt-link
           :to="item.full_slug"
-          v-for="item in vacancyList"
+          v-for="item in caseList"
           :key="item.id"
           tag="li"
-          class="vacancyList-Item"
+          class="caseList-Item"
         >
           <div>
             <p>{{ item.content.title }}</p>
@@ -64,29 +64,30 @@ export default {
   data() {
     return {
       stories: { content: {} },
-      careerList: {},
-      vacancyList: {}
+      retailList: {},
+      caseList: {}
     }
   },
   methods: {
     arrayLoop(array) {
       let filteredArray = array.filter(function(el) {
-        if (el.name === "Careers") {
+        if (el.name === "Retail") {
           return true
         }
       })
-      this.vacancyList = array.filter(function(el) {
-        if (el.content.component === "page-vacancy") {
+      this.caseList = array.filter(function(el) {
+        if (el.content.component === "page-casestudy") {
           return true
         }
       })
-      this.careerList = filteredArray[0].content
+      this.retailList = filteredArray[0].content
     }
   },
   mounted() {
     this.arrayLoop(this.stories)
-    console.log("careerlist", this.careerList)
-    console.log("vacencylist", this.vacancyList)
+    console.log("stories", this.stories)
+    console.log("retailList", this.retailList)
+    console.log("caseList", this.caseList)
   }
 }
 </script>

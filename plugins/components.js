@@ -4,15 +4,32 @@ import NewsCarouselItem from "~/components/NewsCarouselItem.vue"
 
 import Page from "~/components/Page.vue"
 import LandingItem from "~/components/LandingItem.vue"
+import LandingSlider from "~/components/LandingSlider.vue"
 import IntroductionItem from "~/components/IntroductionItem.vue"
+import TextItem from "~/components/TextItem.vue"
+import StatsItem from "~/components/StatsItem.vue"
+import BrandItem from "~/components/BrandItem.vue"
+import TeamContainer from "~/components/TeamContainer.vue"
+import TeamItem from "~/components/TeamItem.vue"
+import HistoryContainer from "~/components/HistoryContainer.vue"
+import HistoryItem from "~/components/HistoryItem.vue"
 import ContentblokItem from "~/components/ContentblokItem.vue"
 import ContentblokWrapper from "~/components/ContentblokWrapper.vue"
+import VueCarouselItem from "~/components/VueCarouselItem.vue"
 
 Vue.component("markdown", MarkdownItem)
 Vue.component("news-carousel", NewsCarouselItem)
-
 Vue.component("blok-page", Page)
 Vue.component("blok-landing-item", LandingItem)
+Vue.component("blok-landing-slider", LandingSlider)
 Vue.component("blok-introduction-item", IntroductionItem)
+Vue.component("blok-text-item", TextItem)
+Vue.component("blok-stats-item", StatsItem)
+Vue.component("blok-brand-item", BrandItem)
+Vue.component("blok-team-container", TeamContainer)
+Vue.component("blok-team-item", TeamItem)
+Vue.component("blok-history-container", HistoryContainer)
+Vue.component("blok-history-item", HistoryItem)
 Vue.component("blok-contentblok-item", ContentblokItem)
 Vue.component("blok-contentblok-wrapper", ContentblokWrapper)
+Vue.component("vue-carousel-item", VueCarouselItem)

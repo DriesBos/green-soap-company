@@ -1,13 +1,19 @@
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: normal
-//   font-style: normal
+@font-face
+  font-family: 'Francois'
+  src: url('~assets/fonts/FrancoisOneRegular.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Merriweather'
+  src: url('~assets/fonts/MerriweatherLight.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
 
 body
   // https://css-tricks.com/snippets/css/fluid-typography/
-  font-size: 17px
-  font-size: calc(19px + (22 - 19) * ((100vw - 700px) / (1400 - 700)))
+  font-size: 18px
+  // font-size: calc(18px + (22 - 18) * ((100vw - 700px) / (1400 - 700)))
 
 h1, h2, h3, p, a
   word-wrap: break-word
@@ -16,8 +22,7 @@ h1, h2, h3, p, a
   hyphens: auto
 
 li, h1, h2, h3, p, a, a:link, a:visited, a:hover, a:active, span, input, button
-  font-family: Helvetica, Arial, sans-serif
-  font-size: 1em
+  font-family: Merriweather, 'Gorgia', 'Times New Roman', Times, serif
   line-height: 1.5
   color: black
   font-style: normal
@@ -25,12 +30,21 @@ li, h1, h2, h3, p, a, a:link, a:visited, a:hover, a:active, span, input, button
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-h1, h2
-  font-size: 1.618em
+h1
+  font-size: 3.5556em
+h2
+  font-size: 3em
+h3
+  font-size: 1.5556em
+p, h5
+  font-size: 1em
+h4
+  font-size: .8889em
 a
   color: black
   text-decoration: underline
-
+.title
+  font-family: Francois, 'Gorgia', 'Times New Roman', Times, serif  !important
 strong
   font-weight: bold
 

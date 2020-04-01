@@ -1,8 +1,12 @@
 <template>
-  <section class="item brandItem">
-    <h1>{{ story.content.title }}</h1>
-    <p>{{ story.content.text }}</p>
-  </section>
+  <div class="view-RetailSingle">
+    <component
+      :is="blok.component | dashify"
+      v-for="blok in story.content.body"
+      :key="blok._uid"
+      :blok="blok"
+    ></component>
+  </div>
 </template>
 
 <script>
@@ -11,7 +15,7 @@ import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 export default {
   mixins: [storyblokLivePreview],
   asyncData(context) {
-    let endpoint = `cdn/stories/brands/${context.params.slug}`
+    let endpoint = `cdn/stories/retail/${context.params.slug}`
 
     return context.app.$storyapi
       .get(endpoint, {
@@ -41,12 +45,18 @@ export default {
       story: { content: {} }
     }
   },
-  mounted() {}
+  mounted() {
+    console.log("retail item", this.story.content.body)
+  }
 }
 </script>
 
-<style lang="sass" scoped>
-.brandItem
-  h1, p
-    padding: var(--spacing-one)
+<style lang="sass">
+@import '~/assets/styles/variables.sass'
+
+.careersItem
+  h1, h5
+    margin-bottom: var(--spacing-three)
+  .markdown
+    margin-bottom: var(--spacing-four)
 </style>

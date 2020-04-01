@@ -1,7 +1,7 @@
 <template>
   <section class="item newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
-      <h2>Latest news.</h2>
+      <h2>Latest news</h2>
       <ul class="newsCarousel-Container">
         <li v-for="post in blok" :key="post._uid">
           <nuxt-link :to="post.full_slug">

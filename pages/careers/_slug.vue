@@ -7,13 +7,16 @@
       :blok="blok"
     ></component>
     <section class="item careersItem contentContainer-Center">
-      <div class="contentContainer-Center_Wrapper">
+      <div class="careersItem-Wrapper contentContainer-Center_Wrapper">
         <h1 class="title">{{ story.content.title }}</h1>
         <markdown :input="story.content.general" />
         <h5 class="title">What we're looking for</h5>
         <markdown :input="story.content.what_we_need" />
         <h5 class="title">What we offer</h5>
         <markdown :input="story.content.what_we_offer" />
+        <a href="mailto:info@greensoapcompany.com" class="button"
+          >Contact & apply !</a
+        >
       </div>
     </section>
   </div>
@@ -69,4 +72,7 @@ export default {
     margin-bottom: var(--spacing-three)
   .markdown
     margin-bottom: var(--spacing-four)
+  &-Wrapper
+    > div:last-child
+      margin-bottom: 0
 </style>

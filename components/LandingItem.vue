@@ -3,6 +3,10 @@
   <section v-editable="blok" class="item landingItem contentContainer-Right">
     <div class="landingItem-Wrapper contentContainer-Right_Wrapper">
       <img :src="blok.image" alt />
+      <div class="landingItem-Buttons_Wrapper">
+      <nuxt-link v-if="this.$route.name === 'careers-slug'" class="landingItem-Buttons prev button" to="/careers">
+        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+      </nuxt-link>
       <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons prev button" to="/retail">
         <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
       </nuxt-link>
@@ -18,9 +22,10 @@
       <nuxt-link v-if="this.$route.path === '/retail'" class="landingItem-Buttons next button" to="/careers">careers
         <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
       </nuxt-link>
-            <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons next button" to="/">news
+      <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons next button" to="/">news
         <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
       </nuxt-link>
+      </div>
     </div>
   </section>
 </template>
@@ -45,16 +50,23 @@ export default {
     height: 100%
     object-fit: cover
   &-Buttons
-    position: absolute
     bottom: 0
     margin: var(--spacing-three)
+    &_Wrapper
+      width: 100%
+      max-width: calc(#{$content-container} + #{var(--spacing-three)})
+      position: absolute
+      bottom: 0
+      display: flex
+      justify-content: space-between
     &.prev
       left: 0
       svg
         transform: rotate(180deg) translateY(-0.18em)
         margin-right: 1em
     &.next
-      right: 0
+      // right: 0
+      right: calc(50vw - (#{$content-container} / 2)
       svg
         margin-left: 1em
         transform: translateY(.18em)

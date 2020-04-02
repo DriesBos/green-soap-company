@@ -54,6 +54,7 @@ export default {
       margin-bottom: var(--spacing-one)
     .function
       margin-bottom: var(--spacing-two)
+
     .function, .description
       font-size: .8889rem
 </style>

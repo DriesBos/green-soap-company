@@ -2,12 +2,17 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="team contentContainer-Center">
     <div class="team-Wrapper contentContainer-Center_Wrapper">
-      <component
-        :is="blok.component | dashify"
-        v-for="blok in blok.body"
-        :key="blok._uid"
-        :blok="blok"
-      ></component>
+      <div class="section-Header team-Header">
+        <h2 class="title">Meet the team</h2>
+      </div>
+      <div class="team-PortraitsWrapper">
+        <component
+          :is="blok.component | dashify"
+          v-for="blok in blok.body"
+          :key="blok._uid"
+          :blok="blok"
+        ></component>
+      </div>
     </div>
   </section>
 </template>
@@ -23,6 +28,9 @@ export default {
 <style lang="sass">
 .team
   &-Wrapper
+    display: flex
+    flex-direction: column
+  &-PortraitsWrapper
     display: flex
     flex-wrap: wrap
     justify-content: flex-start

@@ -24,14 +24,14 @@ img
 .button
   display: inline-flex
   align-items: center
-  padding: .5em 1em
+  padding: .3em 1em
   background-color: $color-black
   color: white !important
   text-decoration: none
   border-radius: 1000px
   font-family: Francois, 'Gorgia', 'Times New Roman', Times, serif  !important
   font-size: 1.25rem
-  letter-spacing: .05rem
+  letter-spacing: .025rem
 
 .contentContainer
   &-Center
@@ -50,6 +50,9 @@ img
       width: calc(50vw + (#{$content-container} / 2)
       max-width: 100%
 
+.section-Header
+  margin-top: var(--spacing-four)
+  margin-bottom: var(--spacing-four)
 .introductionItem
   width: 100%
   display: flex
@@ -138,3 +141,11 @@ img
     align-items: center
     justify-content: center
     height: 100%
+
+.view
+  &-Page
+    section:first-child.textItem
+      margin-top: var(--spacing-six)
+      margin-bottom: var(--spacing-six)
+    .brandItem
+      margin-bottom: var(--spacing-six)

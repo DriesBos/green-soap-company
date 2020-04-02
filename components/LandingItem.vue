@@ -4,27 +4,58 @@
     <div class="landingItem-Wrapper contentContainer-Right_Wrapper">
       <img :src="blok.image" alt />
       <div class="landingItem-Buttons_Wrapper">
-      <nuxt-link v-if="this.$route.name === 'careers-slug'" class="landingItem-Buttons prev button" to="/careers">
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
-      </nuxt-link>
-      <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons prev button" to="/retail">
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
-      </nuxt-link>
-      <nuxt-link v-if="this.$route.path === '/retail'" class="landingItem-Buttons prev button" to="/">
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
-      </nuxt-link>
-      <nuxt-link v-if="this.$route.path === '/'" class="landingItem-Buttons prev button" to="/careers">
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
-      </nuxt-link>
-      <nuxt-link v-if="this.$route.path === '/'" class="landingItem-Buttons next button" to="/retail">retail
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
-      </nuxt-link>
-      <nuxt-link v-if="this.$route.path === '/retail'" class="landingItem-Buttons next button" to="/careers">careers
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
-      </nuxt-link>
-      <nuxt-link v-if="this.$route.path === '/careers'" class="landingItem-Buttons next button" to="/">news
-        <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
-      </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.name === 'careers-slug'"
+          class="landingItem-Buttons prev button"
+          to="/careers"
+        >
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+        </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.path === '/careers'"
+          class="landingItem-Buttons prev button"
+          to="/retail"
+        >
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
+        </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.path === '/retail'"
+          class="landingItem-Buttons prev button"
+          to="/"
+        >
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
+        </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.path === '/'"
+          class="landingItem-Buttons prev button"
+          to="/careers"
+        >
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
+        </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.path === '/'"
+          class="landingItem-Buttons next button"
+          to="/retail"
+        >
+          retail
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+        </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.path === '/retail'"
+          class="landingItem-Buttons next button"
+          to="/careers"
+        >
+          careers
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+        </nuxt-link>
+        <nuxt-link
+          v-if="this.$route.path === '/careers'"
+          class="landingItem-Buttons next button"
+          to="/"
+        >
+          news
+          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+        </nuxt-link>
       </div>
     </div>
   </section>
@@ -51,10 +82,10 @@ export default {
     object-fit: cover
   &-Buttons
     bottom: 0
-    margin: var(--spacing-three)
+    margin: var(--spacing-two)
     &_Wrapper
       width: 100%
-      max-width: calc(#{$content-container} + #{var(--spacing-three)})
+      max-width: calc(#{$content-container} + #{var(--spacing-two)})
       position: absolute
       bottom: 0
       display: flex
@@ -63,12 +94,12 @@ export default {
       left: 0
       svg
         transform: rotate(180deg) translateY(-0.18em)
-        margin-right: 1em
+        margin-right: .5em
     &.next
       // right: 0
       right: calc(50vw - (#{$content-container} / 2)
       svg
-        margin-left: 1em
+        margin-left: .5em
         transform: translateY(.18em)
     svg
       width: 1em

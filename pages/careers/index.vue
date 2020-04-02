@@ -8,6 +8,9 @@
     ></component>
     <section class="vacancyList contentContainer-Center">
       <ul class="contentContainer-Center_Wrapper">
+        <div class="vacancyList-Header section-Header">
+          <h2 class="title">Open Positions</h2>
+        </div>
         <!-- prettier-ignore -->
         <nuxt-link
           :to="item.full_slug"

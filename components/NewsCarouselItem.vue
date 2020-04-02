@@ -1,15 +1,24 @@
 <template>
   <section class="item newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
-      <h2>Latest news</h2>
+      <div class="section-Header newsCarousel-Header">
+        <h2 class="title">Latest news</h2>
+      </div>
       <ul class="newsCarousel-Container">
         <li v-for="post in blok" :key="post._uid">
           <nuxt-link :to="post.full_slug">
             <div class="newsCarousel-Image">
               <img :src="post.content.image" />
             </div>
-            <h3 class="title">{{ post.content.title }}</h3>
-            <p>{{ post.content.text }}</p>
+            <div class="newsCarousel-Title">
+              <h3 class="title">{{ post.content.title }}</h3>
+            </div>
+            <div class="newsCarousel-Excerpt">
+              <p>{{ post.content.text }}</p>
+            </div>
+            <div class="newsCarousel-ReadMore">
+              <p class="title">Read More</p>
+            </div>
           </nuxt-link>
         </li>
       </ul>
@@ -38,7 +47,6 @@ export default {
     display: -webkit-box
     -webkit-line-clamp: 3
     -webkit-box-orient: vertical
-    overflow: hidden
   h1, h2, h3
     display: -webkit-box
     -webkit-line-clamp: 1
@@ -49,6 +57,7 @@ export default {
     height: 0
     width: 100%
     padding-bottom: 75%
+    margin-bottom: var(--spacing-three)
     img
       position: absolute
       top: 0
@@ -56,14 +65,20 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
-  h1, h2
+  &-Title
+    margin-bottom: var(--spacing-one)
+    margin-left: var(--spacing-three)
+    margin-right: var(--spacing-three)
+  &-Excerpt
     margin-bottom: var(--spacing-four)
-  h3
-    padding: var(--spacing-three)
-    padding-bottom: var(--spacing-two)
-  p
-    padding: var(--spacing-three)
-    padding-top: 0
+    margin-left: var(--spacing-three)
+    margin-right: var(--spacing-three)
+    overflow: hidden
+  &-ReadMore
+    text-align: right
+    text-transform: uppercase
+    margin: var(--spacing-two)
+    margin-right: var(--spacing-three)
   ul
     display: flex
     flex-wrap: nowrap
@@ -73,6 +88,7 @@ export default {
       content: ""
       flex: 0 0 var(--spacing-three)
     li
+      position: relative
       width: 373px
       flex: 0 0 auto
       margin-right: var(--spacing-three)

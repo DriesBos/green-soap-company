@@ -1,8 +1,8 @@
 <template>
   <section v-editable="blok" class="section textItem">
     <div class="textItem-Wrapper">
-      <h2 class="title">{{ blok.title }}</h2>
-      <markdown :input="blok.text" />
+      <h2 v-if="blok.title" class="title">{{ blok.title }}</h2>
+      <markdown v-if="blok.text" :input="blok.text" />
     </div>
   </section>
 </template>

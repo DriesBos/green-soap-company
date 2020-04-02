@@ -2,13 +2,13 @@
   <!-- prettier-ignore -->
   <div class="team-Item">
     <div class="team-Item_Portrait">
-      <img class="portrait" :src="blok.portrait" />
-      <img class="portrait-Hover" :src="blok.portrait_on_hover" />
+      <img v-if="blok.portrait" class="portrait" :src="blok.portrait" />
+      <img v-if="blok.portrait_on_hover" class="portrait-Hover" :src="blok.portrait_on_hover" />
     </div>
     <div class="team-Item_Content">
-      <p class="title">{{ blok.name }}</p>
-      <p class="function">{{ blok.function }}</p>
-      <p class="description">{{ blok.text }}</p>
+      <p v-if="blok.name" class="title">{{ blok.name }}</p>
+      <p v-if="blok.function" class="function">{{ blok.function }}</p>
+      <p v-if="blok.text" class="description">{{ blok.text }}</p>
     </div>
   </div>
 </template>
@@ -50,5 +50,7 @@ export default {
     .title
       margin-bottom: var(--spacing-one)
     .function
-      margin-bottom: var(--spacing-one)
+      margin-bottom: var(--spacing-two)
+    .function, .description
+      font-size: .8889rem
 </style>

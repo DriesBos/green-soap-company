@@ -20,11 +20,16 @@ export default {
 
 <style lang="sass">
 .history
+  &-Wrapper
+    margin-top: var(--spacing-four)
   &-Item
     display: flex
     margin-bottom: var(--spacing-five)
     &:nth-child(even)
       flex-direction: row-reverse
+    &:nth-child(odd)
+      .markdown
+        padding-left: var(--spacing-four)
     &:last-child
       margin-bottom: 0
     > div

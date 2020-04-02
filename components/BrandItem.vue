@@ -8,9 +8,12 @@
         <div class="brandItem-Title">
           <h2 class="title">{{ blok.title }}</h2>
         </div>
-        <markdown :input="blok.text" />
+        <div>
+          <markdown :input="blok.text" />
+          <!-- prettier-ignore -->
+          <a class="button" :href="blok.hyperlink.url" target="_blank">visit {{ blok.title }}</a>
+        </div>
       </div>
-      <p>{{ blok.hyperlink.url }}</p>
     </div>
   </section>
 </template>
@@ -45,6 +48,11 @@ export default {
       object-fit: cover
   &-Text
     display: flex
+    .button
+      margin-top: var(--spacing-three)
     > div
       width: 50%
+  &-Title
+    h2
+      line-height: 1
 </style>

@@ -8,7 +8,7 @@
     ></component>
     <section class="item newsItem contentContainer-Center">
       <div class="contentContainer-Center_Wrapper">
-        <h1>{{ story.content.title }}</h1>
+        <h1 class="title">{{ story.content.title }}</h1>
         <markdown :input="story.content.text" />
       </div>
     </section>
@@ -57,6 +57,6 @@ export default {
 
 <style lang="sass" scoped>
 .newsItem
-  h1, p
-    padding: var(--spacing-one)
+  .title
+    margin-bottom: var(--spacing-three)
 </style>

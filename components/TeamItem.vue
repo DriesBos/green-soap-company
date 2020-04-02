@@ -37,7 +37,7 @@ export default {
       position: relative
       height: 0
       padding-top: 133.3333%
-      margin-bottom: var(--spacing-two)
+      margin-bottom: var(--spacing-one)
       img
         position: absolute
         top: 0

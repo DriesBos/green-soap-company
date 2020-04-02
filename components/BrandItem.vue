@@ -55,6 +55,8 @@ export default {
       margin-top: var(--spacing-three)
     > div
       width: 50%
+    .markdown
+      width: 100%
   &-Title
     h2
       line-height: 1

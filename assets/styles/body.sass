@@ -21,6 +21,14 @@ img
   p, h1, h2, h3, h4, h5
     max-width: $max-text-width
 
+.readmore
+  text-transform: uppercase
+  text-decoration: none
+  transition: text-decoration $transition-hover
+.readmore-Wrapper:hover
+  .readmore
+    text-decoration: underline
+
 .button
   position: relative
   display: inline-flex

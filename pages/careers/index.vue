@@ -17,7 +17,7 @@
           v-for="item in vacancyList"
           :key="item.id"
           tag="li"
-          class="vacancyList-Item"
+          class="vacancyList-Item readmore-Wrapper"
         >
           <div>
             <p>{{ item.content.title }}</p>
@@ -26,7 +26,7 @@
             <p>{{ item.content.subtitle }}</p>
           </div>
           <div>
-            <p class="title">read more</p>
+            <p class="title readmore">read more</p>
           </div>
         </nuxt-link>
       </ul>
@@ -115,6 +115,4 @@ export default {
         margin-left: var(--spacing-four)
     li:last-child
       margin-bottom: 0
-    .title
-      text-transform: uppercase
 </style>

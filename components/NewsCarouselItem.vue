@@ -5,7 +5,8 @@
         <h2 class="title">Latest news</h2>
       </div>
       <ul class="newsCarousel-Container">
-        <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item">
+        <!-- prettier-ignore -->
+        <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item readmore-Wrapper">
           <nuxt-link :to="post.full_slug">
             <div class="newsCarousel-Image">
               <img :src="post.content.image" />
@@ -17,7 +18,7 @@
               <p>{{ post.content.text }}</p>
             </div>
             <div class="newsCarousel-ReadMore">
-              <p class="title">Read More</p>
+              <p class="title readmore">Read More</p>
             </div>
           </nuxt-link>
         </li>

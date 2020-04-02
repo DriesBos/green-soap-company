@@ -1,9 +1,9 @@
 <template>
   <!-- prettier-ignore -->
-  <nuxt-link :to="blok.hyperlink.cached_url" tag="div" class="casestudy-Item">
+  <nuxt-link :to="blok.hyperlink.cached_url" tag="div" class="casestudy-Item readmore-Wrapper">
     <div class="casestudy-Content">
       <h3 class="title">{{ blok.title }}</h3>
-      <p class="title">Read More</p>
+      <p class="title readmore">Read More</p>
     </div>
   </nuxt-link>
 </template>

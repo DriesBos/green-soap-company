@@ -7,6 +7,7 @@ import LandingItem from "~/components/LandingItem.vue"
 import LandingSlider from "~/components/LandingSlider.vue"
 import IntroductionItem from "~/components/IntroductionItem.vue"
 import TextItem from "~/components/TextItem.vue"
+import PartnerList from "~/components/PartnerList.vue"
 import StatsItem from "~/components/StatsItem.vue"
 import BrandItem from "~/components/BrandItem.vue"
 import TeamContainer from "~/components/TeamContainer.vue"
@@ -24,6 +25,7 @@ Vue.component("blok-landing-item", LandingItem)
 Vue.component("blok-landing-slider", LandingSlider)
 Vue.component("blok-introduction-item", IntroductionItem)
 Vue.component("blok-text-item", TextItem)
+Vue.component("blok-partner-list", PartnerList)
 Vue.component("blok-stats-item", StatsItem)
 Vue.component("blok-brand-item", BrandItem)
 Vue.component("blok-team-container", TeamContainer)

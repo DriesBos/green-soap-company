@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="item landingItem contentContainer-Right">
     <div class="landingItem-Wrapper contentContainer-Right_Wrapper">
-      <img :src="blok.image" alt />
+      <img :src="blok.image" />
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
           v-if="this.$route.name === 'careers-slug'"

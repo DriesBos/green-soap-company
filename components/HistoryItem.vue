@@ -25,8 +25,12 @@ export default {
   &-Item
     display: flex
     margin-bottom: var(--spacing-five)
+    .markdown
+      width: 100%
     &:nth-child(even)
       flex-direction: row-reverse
+      .markdown
+        padding-right: var(--spacing-four)
     &:nth-child(odd)
       .markdown
         padding-left: var(--spacing-four)

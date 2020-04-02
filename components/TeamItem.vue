@@ -8,7 +8,7 @@
     <div class="team-Item_Content">
       <p v-if="blok.name" class="title">{{ blok.name }}</p>
       <p v-if="blok.function" class="function">{{ blok.function }}</p>
-      <p v-if="blok.text" class="description">{{ blok.text }}</p>
+      <markdown v-if="blok.text" class="description" :input="blok.text" />
     </div>
   </div>
 </template>

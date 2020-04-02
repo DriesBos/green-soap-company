@@ -83,7 +83,7 @@ export default {
       z-index: 1000
       overflow: hidden
     &:hover .menu-circle
-      transform: scale(1.5)
+      transform: scale(1.3)
     &.open .menu-circle
       transform: scale(60)
     &-link

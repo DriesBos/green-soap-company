@@ -11,7 +11,10 @@
         <div>
           <markdown :input="blok.text" />
           <!-- prettier-ignore -->
-          <a class="button" :href="blok.hyperlink.url" target="_blank">visit {{ blok.title }}</a>
+          <a class="button" :href="blok.hyperlink.url" target="_blank">
+            <div class="button-Background"></div>
+            <div class="button-Text">visit {{ blok.title }}</div>
+          </a>
         </div>
       </div>
     </div>

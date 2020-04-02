@@ -9,52 +9,73 @@
           class="landingItem-Buttons prev button"
           to="/careers"
         >
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+          </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/careers'"
           class="landingItem-Buttons prev button"
           to="/retail"
         >
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
+          </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/retail'"
           class="landingItem-Buttons prev button"
           to="/"
         >
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
+          </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/'"
           class="landingItem-Buttons prev button"
           to="/careers"
         >
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
+          </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/'"
           class="landingItem-Buttons next button"
           to="/retail"
         >
-          retail
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            retail
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/retail'"
           class="landingItem-Buttons next button"
           to="/careers"
         >
-          careers
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            careers
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/careers'"
           class="landingItem-Buttons next button"
           to="/"
         >
-          news
-          <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            news
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          </div>
         </nuxt-link>
       </div>
     </div>

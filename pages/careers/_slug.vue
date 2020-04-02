@@ -14,9 +14,10 @@
         <markdown :input="story.content.what_we_need" />
         <h5 class="title">What we offer</h5>
         <markdown :input="story.content.what_we_offer" />
-        <a href="mailto:info@greensoapcompany.com" class="button"
-          >Contact & apply !</a
-        >
+        <a href="mailto:info@greensoapcompany.com" class="button">
+          <div class="button-Background"></div>
+          <div class="button-Text">Contact & apply !</div>
+        </a>
       </div>
     </section>
   </div>

@@ -6,28 +6,6 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <section class="caseList contentContainer-Center">
-      <ul class="contentContainer-Center_Wrapper">
-        <!-- prettier-ignore -->
-        <nuxt-link
-          :to="item.full_slug"
-          v-for="item in caseList"
-          :key="item.id"
-          tag="li"
-          class="caseList-Item"
-        >
-          <div>
-            <p>{{ item.content.title }}</p>
-          </div>
-          <div>
-            <p>{{ item.content.subtitle }}</p>
-          </div>
-          <div>
-            <p class="title">read more</p>
-          </div>
-        </nuxt-link>
-      </ul>
-    </section>
   </div>
 </template>
 

@@ -100,13 +100,16 @@ export default {
 .vacancyList
   ul
     li
-      background-color: $color-green
+      background: $color-green
       margin-bottom: var(--spacing-three)
       padding: var(--spacing-three)
       display: flex
       align-items: center
       justify-content: space-between
       cursor: pointer
+      transition: background $transition-hover
+      &:hover
+        background: $color-green-hover
       > div:nth-child(2)
         flex-grow: 1
         margin-left: var(--spacing-four)

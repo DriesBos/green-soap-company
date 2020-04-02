@@ -5,7 +5,7 @@
         <h2 class="title">Latest news</h2>
       </div>
       <ul class="newsCarousel-Container">
-        <li v-for="post in blok" :key="post._uid">
+        <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item">
           <nuxt-link :to="post.full_slug">
             <div class="newsCarousel-Image">
               <img :src="post.content.image" />
@@ -92,7 +92,10 @@ export default {
       width: 373px
       flex: 0 0 auto
       margin-right: var(--spacing-three)
-      background-color: $color-orange
+      background: $color-orange
+      transition: background $transition-hover
+      &:hover
+        background: $color-orange-hover
       h1, img
         // margin-bottom: 1em
       a

@@ -12,6 +12,8 @@ import StatsItem from "~/components/StatsItem.vue"
 import BrandItem from "~/components/BrandItem.vue"
 import TeamContainer from "~/components/TeamContainer.vue"
 import TeamItem from "~/components/TeamItem.vue"
+import CasestudyContainer from "~/components/CasestudyContainer.vue"
+import CasestudyItem from "~/components/CasestudyItem.vue"
 import HistoryContainer from "~/components/HistoryContainer.vue"
 import HistoryItem from "~/components/HistoryItem.vue"
 import ContentblokItem from "~/components/ContentblokItem.vue"
@@ -30,6 +32,8 @@ Vue.component("blok-stats-item", StatsItem)
 Vue.component("blok-brand-item", BrandItem)
 Vue.component("blok-team-container", TeamContainer)
 Vue.component("blok-team-item", TeamItem)
+Vue.component("blok-casestudy-container", CasestudyContainer)
+Vue.component("blok-casestudy-item", CasestudyItem)
 Vue.component("blok-history-container", HistoryContainer)
 Vue.component("blok-history-item", HistoryItem)
 Vue.component("blok-contentblok-item", ContentblokItem)

@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .team
   &-Item
     width: calc((100% - 64px) / 3)
@@ -45,6 +47,7 @@ export default {
         object-fit: cover
       .portrait-Hover
         opacity: 0
+        transition: opacity $transition-portrait
       &:hover > .portrait-Hover
         opacity: 1
     .title

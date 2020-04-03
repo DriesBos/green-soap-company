@@ -36,6 +36,9 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.startCounting)
   },
+  destroyed() {
+    window.removeEventListener("scroll", this.startCounting)
+  },
   methods: {
     startCounting() {
       var el = document.querySelector(".statsItem")

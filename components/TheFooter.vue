@@ -64,6 +64,7 @@ export default {}
 
 .footer
   background: $color-black
+  padding: var(--spacing-three)
   li, a
     color: white
     font-size: .8889rem

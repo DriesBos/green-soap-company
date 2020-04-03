@@ -67,7 +67,7 @@ export default {
       position: absolute
       top: var(--spacing-three)
       width: 100%
-      padding-right: var(--spacing-three)
+      padding-right: var(--spacing-four)
       &_Content
         display: flex
         justify-content: flex-end

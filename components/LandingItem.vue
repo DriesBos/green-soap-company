@@ -106,7 +106,7 @@ export default {
 .landingItem
   &-Wrapper
     position: relative
-    height: calc(100vh - 144px)
+    height: calc(100vh - (144px + #{var(--spacing-three)}))
   img
     width: 100%
     height: 100%
@@ -114,6 +114,8 @@ export default {
   &-Buttons
     bottom: 0
     margin: var(--spacing-three)
+    @media screen and ( max-width: $content-container)
+      margin: var(--spacing-one)
     &_Wrapper
       width: 100%
       // max-width: calc(#{$content-container} + #{var(--spacing-two)})

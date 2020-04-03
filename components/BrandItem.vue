@@ -4,11 +4,11 @@
       <div class="brandItem-Image">
         <img class="portrait" :src="blok.image" />
       </div>
-      <div class="brandItem-Text">
+      <div class="brandItem-Content">
         <div class="brandItem-Title">
           <h2 class="title">{{ blok.title }}</h2>
         </div>
-        <div>
+        <div class="brandItem-Text">
           <markdown :input="blok.text" />
           <!-- prettier-ignore -->
           <a class="button" :href="blok.hyperlink.url" target="_blank">
@@ -49,7 +49,7 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
-  &-Text
+  &-Content
     display: flex
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
@@ -63,6 +63,8 @@ export default {
     .markdown
       width: 100%
   &-Title
+    @media screen and ( min-width: $breakpoint-mobile)
+      padding-right: var(--spacing-three)
     h2
       line-height: 1
       @media screen and ( max-width: $breakpoint-mobile)

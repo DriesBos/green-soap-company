@@ -22,13 +22,9 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .history
-  &-Wrapper
-    margin-top: var(--spacing-four)
-    @media screen and ( max-width: $breakpoint-mobile)
-      margin-top: 0
   &-Item
     display: flex
-    margin-bottom: var(--spacing-five)
+    margin-bottom: var(--spacing-four)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
       margin-bottom: var(--spacing-three)

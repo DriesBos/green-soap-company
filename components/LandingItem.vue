@@ -5,6 +5,16 @@
       <img :src="blok.image" />
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
+          v-if="this.$route.name === 'retail-slug'"
+          class="landingItem-Buttons prev button"
+          to="/retail"
+        >
+          <div class="button-Background"></div>
+          <div class="button-Text">
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+          </div>
+        </nuxt-link>
+        <nuxt-link
           v-if="this.$route.name === 'news-slug'"
           class="landingItem-Buttons prev button"
           to="/"

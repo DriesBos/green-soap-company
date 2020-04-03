@@ -16,12 +16,15 @@ export default {}
 @import '~/assets/styles/variables.sass'
 
 .header
-  position: relative
+  position: absolute
+  top: 0
+  left: 0
   width: 100%
   display: flex
   justify-content: center
+  z-index: +1
   &-Logo
     // max-width: $content-container
     width: 100%
-    padding: var(--spacing-three)
+    padding: var(--spacing-four)
 </style>

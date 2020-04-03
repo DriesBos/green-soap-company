@@ -116,7 +116,9 @@ export default {
 .landingItem
   &-Wrapper
     position: relative
+    margin-top: var(--spacing-three)
     height: calc(100vh - (144px + #{var(--spacing-three)}))
+    height: calc(100vh - (#{var(--spacing-three)} * 2))
   img
     width: 100%
     height: 100%

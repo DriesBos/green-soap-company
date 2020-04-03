@@ -1,7 +1,7 @@
 <template>
   <!-- prettier-ignore -->
-  <section v-editable="blok" class="item landingItem contentContainer-Right">
-    <div class="landingItem-Wrapper contentContainer-Right_Wrapper">
+  <section v-editable="blok" class="item landingItem">
+    <div class="landingItem-Wrapper">
       <img :src="blok.image" />
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
@@ -104,19 +104,19 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .landingItem
-  height: calc(100vh - 100px)
   &-Wrapper
     position: relative
+    height: calc(100vh - 144px)
   img
     width: 100%
     height: 100%
     object-fit: cover
   &-Buttons
     bottom: 0
-    margin: var(--spacing-two)
+    margin: var(--spacing-three)
     &_Wrapper
       width: 100%
-      max-width: calc(#{$content-container} + #{var(--spacing-two)})
+      // max-width: calc(#{$content-container} + #{var(--spacing-two)})
       position: absolute
       bottom: 0
       display: flex
@@ -127,8 +127,7 @@ export default {
         transform: rotate(180deg) translateY(-0.18em)
         margin-right: .5em
     &.next
-      // right: 0
-      right: calc(50vw - (#{$content-container} / 2)
+      right: 0
       svg
         margin-left: .5em
         transform: translateY(.18em)

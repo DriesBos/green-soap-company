@@ -67,11 +67,12 @@ export default {
       position: absolute
       top: var(--spacing-three)
       width: 100%
+      padding-right: var(--spacing-three)
       &_Content
         display: flex
         justify-content: flex-end
         width: 100%
-        max-width: $content-container
+        // max-width: $content-container
     &-circle
       background-color: $color-black
       color: white

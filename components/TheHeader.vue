@@ -21,8 +21,7 @@ export default {}
   display: flex
   justify-content: center
   &-Logo
-    max-width: $content-container
+    // max-width: $content-container
     width: 100%
-    padding-top: var(--spacing-three)
-    padding-bottom: var(--spacing-three)
+    padding: var(--spacing-three)
 </style>

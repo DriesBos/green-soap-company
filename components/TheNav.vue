@@ -84,7 +84,8 @@ export default {
       z-index: 1000
       overflow: hidden
     &:hover .menu-circle
-      transform: scale(1.3)
+      @media ( hover: hover )
+        transform: scale(1.3)
     &.open .menu-circle
       transform: scale(60)
     &-link
@@ -155,5 +156,6 @@ export default {
       font-size: 3.5556em
       pointer-events: auto
       &:hover
-        text-decoration: underline
+        @media ( hover: hover )
+          text-decoration: underline
 </style>

@@ -29,7 +29,8 @@ img
   transition: text-decoration $transition-hover
 .readmore-Wrapper:hover
   .readmore
-    text-decoration: underline
+    @media ( hover: hover )
+      text-decoration: underline
 
 .button
   position: relative
@@ -52,7 +53,8 @@ img
     background: $color-black
     transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1)
     &:hover
-      transform: scale(1.2)
+      @media ( hover: hover )
+        transform: scale(1.2)
   &-Text
     display: flex
     z-index: +1

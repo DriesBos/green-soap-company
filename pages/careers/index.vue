@@ -109,7 +109,8 @@ export default {
       cursor: pointer
       transition: background $transition-hover
       &:hover
-        background: $color-green-hover
+        @media ( hover: hover )
+          background: $color-green-hover
       > div:nth-child(2)
         flex-grow: 1
         margin-left: var(--spacing-four)

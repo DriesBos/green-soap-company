@@ -103,7 +103,8 @@ export default {
         margin-right: 0
         margin-bottom: var(--spacing-three)
       &:hover
-        background: $color-orange-hover
+        @media ( hover: hover )
+          background: $color-orange-hover
       a
         text-decoration: none
   ul::-webkit-scrollbar

@@ -69,7 +69,8 @@ export default {}
     color: white
     font-size: .8889rem
   a:hover, .link:hover
-    text-decoration: underline
+    @media ( hover: hover )
+      text-decoration: underline
   .title
     text-transform: uppercase
   &-Container
@@ -91,7 +92,8 @@ export default {}
         cursor: pointer
         text-decoration: none
         &::hover
-          text-decoration: underline
+          @media ( hover: hover )
+            text-decoration: underline
   &-RowOne
     display: flex
     justify-content: space-between

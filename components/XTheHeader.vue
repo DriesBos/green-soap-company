@@ -77,7 +77,8 @@ export default {
       text-decoration: none
       cursor: pointer
       &:hover
-        text-decoration: underline
+        @media ( hover: hover )
+          text-decoration: underline
   &-Content
     position: fixed
     left: 0
@@ -94,5 +95,6 @@ export default {
       cursor: pointer
       text-align: center
       &:hover, &.nuxt-link-exact-active
-        text-decoration: underline
+        @media ( hover: hover )
+          text-decoration: underline
 </style>

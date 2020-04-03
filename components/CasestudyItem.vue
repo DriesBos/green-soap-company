@@ -43,7 +43,8 @@ export default {
       @media screen and ( max-width: $breakpoint-mobile)
         padding-top: 75%
     &:hover
-      background: $color-purple-hover
+      @media ( hover: hover )
+        background: $color-purple-hover
   &-Content
     position: absolute
     left: 50%

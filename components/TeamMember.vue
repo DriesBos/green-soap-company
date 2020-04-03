@@ -59,7 +59,8 @@ export default {
         opacity: 0
         transition: opacity $transition-portrait
       &:hover > .portrait-Hover
-        opacity: 1
+        @media ( hover: hover )
+          opacity: 1
     &_Content
       p
         @media screen and ( max-width: $breakpoint-mobile)

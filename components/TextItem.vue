@@ -30,5 +30,8 @@ export default {
     max-width: $content-container
   .title
     font-size: 3.5556em
-    margin-bottom: var(--spacing-three)
+    @media screen and ( min-width: $breakpoint-mobile)
+      margin-bottom: var(--spacing-three)
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-bottom: 1rem
 </style>

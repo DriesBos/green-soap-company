@@ -5,7 +5,8 @@
       <div class="section-Header">
         <h2 v-if="blok.title" class="title">{{ blok.title }}</h2>
       </div>
-      <img :src="blok.image" />
+      <img class="contentDesktop" :src="blok.image" />
+      <img class="contentMobile" :src="blok.image_mobile" />
     </div>
   </section>
 </template>
@@ -33,5 +34,4 @@ export default {
     max-width: $content-container
   .title
     font-size: 3.5556em
-    margin-bottom: var(--spacing-three)
 </style>

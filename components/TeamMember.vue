@@ -41,7 +41,8 @@ export default {
       width: 100%
       margin-right: 0
     &:nth-last-child(2), &:last-child, &:nth-last-child(3)
-      margin-bottom: 0
+      @media screen and ( min-width: $content-container)
+        margin-bottom: 0
     &_Portrait
       position: relative
       height: 0
@@ -66,4 +67,6 @@ export default {
 
     .function, .description
       font-size: .8889rem
+      @media screen and ( max-width: $breakpoint-mobile)
+        font-size: 1rem
 </style>

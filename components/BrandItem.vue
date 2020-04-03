@@ -51,13 +51,20 @@ export default {
       object-fit: cover
   &-Text
     display: flex
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-direction: column
     .button
       margin-top: var(--spacing-three)
+      @media screen and ( max-width: $breakpoint-mobile)
+        margin-top: 1rem
     > div
-      width: 50%
+      @media screen and ( min-width: $breakpoint-mobile)
+        width: 50%
     .markdown
       width: 100%
   &-Title
     h2
       line-height: 1
+      @media screen and ( max-width: $breakpoint-mobile)
+        margin-bottom: 1rem
 </style>

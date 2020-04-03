@@ -19,23 +19,39 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .history
   &-Wrapper
     margin-top: var(--spacing-four)
   &-Item
     display: flex
     margin-bottom: var(--spacing-five)
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-direction: column
+    &_Image
+      img
+        width: 100%
+      @media screen and ( max-width: $breakpoint-mobile)
+        margin-bottom: var(--spacing-three)
     .markdown
       width: 100%
     &:nth-child(even)
-      flex-direction: row-reverse
+      @media screen and ( min-width: $breakpoint-mobile)
+        flex-direction: row-reverse
       .markdown
-        padding-right: var(--spacing-four)
+        @media screen and ( min-width: $breakpoint-mobile)
+          padding-right: var(--spacing-four)
     &:nth-child(odd)
       .markdown
-        padding-left: var(--spacing-four)
+        @media screen and ( min-width: $breakpoint-mobile)
+          padding-left: var(--spacing-four)
     &:last-child
       margin-bottom: 0
+      @media screen and ( max-width: $breakpoint-mobile)
+        margin-bottom: var(--spacing-four)
     > div
       flex-basis: 50%
+      @media screen and ( max-width: $breakpoint-mobile)
+        flex-basis: 100%
 </style>

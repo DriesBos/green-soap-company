@@ -79,6 +79,12 @@ export default {}
       margin-top: var(--spacing-four)
       margin-bottom: var(--spacing-four)
       flex-basis: 25%
+      @media screen and ( max-width: $content-container)
+        flex-basis: 33.3333%
+      @media screen and ( max-width: $breakpoint-mobile)
+        flex-basis: 100% !important
+        width: 100%
+        margin-top: 0
       li.title
         margin-bottom: 1rem
       li.link, a
@@ -90,6 +96,14 @@ export default {}
     display: flex
     justify-content: space-between
     border-bottom: 1px solid white
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-wrap: wrap
+      border-bottom: 0
   &-RowTwo
     display: flex
+    @media screen and ( max-width: $content-container)
+      ul:first-child
+        display: none
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-wrap: wrap
 </style>

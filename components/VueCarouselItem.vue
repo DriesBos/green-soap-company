@@ -126,7 +126,7 @@ export default {
 .carousel
   &-Container
     position: relative
-    height: 100%
+    height: calc(100vh - (144px + #{var(--spacing-three)}))
     .VueCarousel-wrapper, .VueCarousel-inner, .VueCarousel-slide
       position: relative
       height: 100% !important // Override dep default
@@ -143,7 +143,7 @@ export default {
     top: 0
     bottom: 0
     width: 50vw
-    z-index: +1
+    // z-index: +1
     &_Prev
       left: 0
       &.active

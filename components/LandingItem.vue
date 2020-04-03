@@ -122,24 +122,27 @@ export default {
     height: 100%
     object-fit: cover
   &-Buttons
-    bottom: 0
+    // top: 50%
     margin: var(--spacing-three)
     @media screen and ( max-width: $content-container)
       margin: var(--spacing-one)
     &_Wrapper
       width: 100%
-      // max-width: calc(#{$content-container} + #{var(--spacing-two)})
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
       position: absolute
-      bottom: 0
       display: flex
       justify-content: space-between
     &.prev
       left: 0
+      z-index: 999
       svg
         transform: rotate(180deg) translateY(-0.18em)
         margin-right: .5em
     &.next
       right: 0
+      z-index: 999
       svg
         margin-left: .5em
         transform: translateY(.18em)

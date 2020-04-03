@@ -24,11 +24,14 @@ export default {
 .history
   &-Wrapper
     margin-top: var(--spacing-four)
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-top: 0
   &-Item
     display: flex
     margin-bottom: var(--spacing-five)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
+      margin-bottom: var(--spacing-three)
     &_Image
       img
         width: 100%
@@ -48,8 +51,6 @@ export default {
           padding-left: var(--spacing-four)
     &:last-child
       margin-bottom: 0
-      @media screen and ( max-width: $breakpoint-mobile)
-        margin-bottom: var(--spacing-four)
     > div
       flex-basis: 50%
       @media screen and ( max-width: $breakpoint-mobile)

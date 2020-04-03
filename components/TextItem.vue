@@ -13,7 +13,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("text", this.blok)
+    console.log("textItem", this.blok)
   }
 }
 </script>

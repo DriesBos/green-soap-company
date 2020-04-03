@@ -60,11 +60,17 @@ export default {
         transition: opacity $transition-portrait
       &:hover > .portrait-Hover
         opacity: 1
+    &_Content
+      p
+        @media screen and ( max-width: $breakpoint-mobile)
+          display: inline-block
     .title
       margin-bottom: var(--spacing-one)
+    .title::after
+      @media screen and ( max-width: $breakpoint-mobile)
+        content: ","
     .function
       margin-bottom: var(--spacing-two)
-
     .function, .description
       font-size: .8889rem
       @media screen and ( max-width: $breakpoint-mobile)

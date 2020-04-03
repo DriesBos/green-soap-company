@@ -43,7 +43,6 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .newsCarousel
-  overflow-x: auto
   p
     display: -webkit-box
     -webkit-line-clamp: 3
@@ -70,6 +69,8 @@ export default {
     margin-bottom: var(--spacing-one)
     margin-left: var(--spacing-three)
     margin-right: var(--spacing-three)
+  .section-Header
+    padding-left: calc((100vw - #{$content-container}) / 2)
   &-Excerpt
     margin-bottom: var(--spacing-four)
     margin-left: var(--spacing-three)
@@ -85,17 +86,20 @@ export default {
     flex-wrap: nowrap
     align-items: flex-start
     overflow-x: auto
+    padding-left: calc((100vw - #{$content-container}) / 2)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
       overflow-x: hidden
-    &:after
+    &::after
       content: ""
       flex: 0 0 var(--spacing-three)
+      width: 100px
     li
       position: relative
-      width: 373px
+      width: calc(373px + #{var(--spacing-three)}
       flex: 0 0 auto
-      margin-right: var(--spacing-three)
+      // margin-right: var(--spacing-three)
+      border-right: var(--spacing-three) solid white
       background: $color-orange
       transition: background $transition-hover
       @media screen and ( max-width: $breakpoint-mobile)

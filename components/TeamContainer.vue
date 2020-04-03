@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="team contentContainer-Center">
     <div class="team-Wrapper contentContainer-Center_Wrapper">
-      <div class="section-Header team-Header">
+      <div class="section-Header">
         <h2 class="title">Meet the team</h2>
       </div>
       <div class="team-PortraitsWrapper">

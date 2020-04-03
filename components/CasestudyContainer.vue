@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="casestudy contentContainer-Center">
     <div class="casestudy-Wrapper contentContainer-Center_Wrapper">
-      <div class="section-Header casestudy-Header">
+      <div class="section-Header">
         <h2 class="title">{{ blok.title }}</h2>
       </div>
       <div class="casestudy-ContentWrapper">

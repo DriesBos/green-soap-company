@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
-      <div class="section-Header newsCarousel-Header">
+      <div class="section-Header">
         <h2 class="title">Latest news</h2>
       </div>
       <ul class="newsCarousel-Container">

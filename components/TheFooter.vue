@@ -64,7 +64,8 @@ export default {}
 
 .footer
   background: $color-black
-  padding: var(--spacing-three)
+  padding-left: var(--spacing-three)
+  padding-right: var(--spacing-three)
   li, a
     color: white
     font-size: .8889rem
@@ -77,8 +78,6 @@ export default {}
     display: flex
     flex-direction: column
     ul
-      margin-top: var(--spacing-four)
-      margin-bottom: var(--spacing-four)
       flex-basis: 25%
       @media screen and ( max-width: $content-container)
         flex-basis: 33.3333%
@@ -97,12 +96,16 @@ export default {}
   &-RowOne
     display: flex
     justify-content: space-between
+    margin-top: var(--spacing-four)
+    padding-bottom: var(--spacing-three)
     border-bottom: 1px solid white
     @media screen and ( max-width: $breakpoint-mobile)
       flex-wrap: wrap
       border-bottom: 0
   &-RowTwo
     display: flex
+    margin-top: var(--spacing-three)
+    margin-bottom: var(--spacing-four)
     @media screen and ( max-width: $content-container)
       ul:first-child
         display: none

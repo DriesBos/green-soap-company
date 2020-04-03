@@ -16,12 +16,14 @@
     </div>
 
     <div class="menu-overlay" :class="{ open: menuOpen }" @click="toggleMenu">
-      <nuxt-link class="title" to="/">Home</nuxt-link>
-      <nuxt-link class="title" to="/retail">Retail</nuxt-link>
-      <nuxt-link class="title" to="/brands">Brands</nuxt-link>
-      <nuxt-link class="title" to="/about">About</nuxt-link>
-      <nuxt-link class="title" to="/careers">Careers</nuxt-link>
-      <nuxt-link class="title" to="/history">History</nuxt-link>
+      <div class="menu-links">
+        <nuxt-link class="title" to="/">Home</nuxt-link>
+        <nuxt-link class="title" to="/retail">Retail</nuxt-link>
+        <nuxt-link class="title" to="/brands">Brands</nuxt-link>
+        <nuxt-link class="title" to="/about">About</nuxt-link>
+        <nuxt-link class="title" to="/careers">Careers</nuxt-link>
+        <nuxt-link class="title" to="/history">History</nuxt-link>
+      </div>
     </div>
   </nav>
 </template>
@@ -49,6 +51,7 @@ export default {
   position: fixed
   left: 0
   top: 0
+  bottom: 0
   width: 100vw
   height: 100vh
   overflow: hidden
@@ -126,36 +129,53 @@ export default {
       transform: translateY(-7px) translateY(50%) rotate(135deg)
 
     &-overlay
-      display: flex
-      flex-direction: column
-      justify-content: flex-start
-      align-items: flex-start
-      background-color: $color-black
-      padding: var(--spacing-six)
-      height: 100%
+      background: $color-black
       width: 100%
-      max-width: 100vw
-      position: fixed
-      top: 0
-      left: 0
+      height: 100%
+      position: relative
+      padding: var(--spacing-five)
       opacity: 0
       visibility: hidden
-      text-align: center
       transition: opacity 0.2s ease-in-out
       z-index: 1001
       overflow-y: auto
+    &-overlay
+      a
+        display: inline-block
+        text-decoration: none
+        cursor: pointer
+        color: white
+        font-size: 3.5556em
+        pointer-events: auto
+        opacity: 0
+        transform: translateY(100%)
+        &:hover
+          @media ( hover: hover )
+            text-decoration: underline
+      a:nth-child(1)
+        transition: opacity .35s ease-in, transform .35s ease-out
+      a:nth-child(2)
+        transition: opacity .35s ease-in .05s, transform .35s ease-out .05s
+      a:nth-child(3)
+        transition: opacity .35s ease-in .1s, transform .35s ease-out .1s
+      a:nth-child(4)
+        transition: opacity .35s ease-in .15s, transform .35s ease-out .15s
+      a:nth-child(5)
+        transition: opacity .35s ease-in .2s, transform .35s ease-out .2s
+      a:nth-child(6)
+        transition: opacity .35s ease-in .25s, transform .35s ease-out .25s
     &-overlay.open
       opacity: 1
       visibility: visible
       transition-delay: 0.03s
-    &-overlay a
-      display: inline-block
-      text-decoration: none
-      cursor: pointer
-      color: white
-      font-size: 3.5556em
+      overflow: auto
       pointer-events: auto
-      &:hover
-        @media ( hover: hover )
-          text-decoration: underline
+      a
+        opacity: 1
+        transform: translateY(0)
+    &-links
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: flex-start
 </style>

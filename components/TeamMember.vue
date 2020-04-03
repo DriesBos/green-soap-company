@@ -29,7 +29,16 @@ export default {
     width: calc((100% - 64px) / 3)
     margin-bottom: var(--spacing-four)
     margin-right: var(--spacing-three)
+    @media screen and ( max-width: $content-container)
+      width: calc((100% - 32px) / 2)
     &:nth-child(3n)
+      @media screen and ( min-width: $content-container)
+        margin-right: 0
+    &:nth-child(2n)
+      @media screen and ( max-width: $content-container)
+        margin-right: 0
+    @media screen and ( max-width: $breakpoint-mobile)
+      width: 100%
       margin-right: 0
     &:nth-last-child(2), &:last-child, &:nth-last-child(3)
       margin-bottom: 0

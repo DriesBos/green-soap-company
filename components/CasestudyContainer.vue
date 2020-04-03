@@ -38,4 +38,6 @@ export default {
   &-ContentWrapper
     display: flex
     justify-content: space-between
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-direction: column
 </style>

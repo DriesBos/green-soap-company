@@ -1,11 +1,11 @@
 <template>
-  <section class="item newsCarousel contentContainer-Right">
+  <!-- prettier-ignore -->
+  <section v-editable="blok" class="newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
       <div class="section-Header newsCarousel-Header">
         <h2 class="title">Latest news</h2>
       </div>
       <ul class="newsCarousel-Container">
-        <!-- prettier-ignore -->
         <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item readmore-Wrapper">
           <nuxt-link :to="post.full_slug">
             <div class="newsCarousel-Image">
@@ -85,6 +85,9 @@ export default {
     flex-wrap: nowrap
     align-items: flex-start
     overflow-x: auto
+    @media screen and ( max-width: $breakpoint-mobile)
+      flex-direction: column
+      overflow-x: hidden
     &:after
       content: ""
       flex: 0 0 var(--spacing-three)
@@ -95,16 +98,14 @@ export default {
       margin-right: var(--spacing-three)
       background: $color-orange
       transition: background $transition-hover
+      @media screen and ( max-width: $breakpoint-mobile)
+        width: 100%
+        margin-right: 0
+        margin-bottom: var(--spacing-three)
       &:hover
         background: $color-orange-hover
-      h1, img
-        // margin-bottom: 1em
       a
         text-decoration: none
-    // li:first-child
-      // margin-left: var(--spacing-three)
-    // li:last-child
-      // margin-right: 100px
   ul::-webkit-scrollbar
     display: none
 </style>

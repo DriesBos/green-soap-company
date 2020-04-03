@@ -32,9 +32,16 @@ export default {
     padding-top: 20%
     cursor: pointer
     transition: background $transition-hover
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-right: 0
+      margin-bottom: var(--spacing-three)
+      width: 100%
+      padding-top: 75%
     &:last-child
       margin-right: 0
       padding-top: 30%
+      @media screen and ( max-width: $breakpoint-mobile)
+        padding-top: 75%
     &:hover
       background: $color-purple-hover
   &-Content

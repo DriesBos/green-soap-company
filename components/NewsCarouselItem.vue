@@ -69,21 +69,32 @@ export default {
     margin-bottom: var(--spacing-one)
     margin-left: var(--spacing-three)
     margin-right: var(--spacing-three)
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-left: var(--spacing-four)
+      margin-right: var(--spacing-four)
   .section-Header
     @media screen and ( min-width: $breakpoint-mobile)
       padding-left: calc((100vw - #{$content-container}) / 2)
     @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
       padding-left: var(--spacing-sides)
   &-Excerpt
-    margin-bottom: var(--spacing-four)
+    margin-bottom: var(--spacing-three)
     margin-left: var(--spacing-three)
     margin-right: var(--spacing-three)
     overflow: hidden
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-left: var(--spacing-four)
+      margin-right: var(--spacing-four)
+    p
+      font-size: 14px
+      line-height: 24px
   &-ReadMore
     text-align: right
     text-transform: uppercase
     margin: var(--spacing-two)
     margin-right: var(--spacing-three)
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-right: var(--spacing-four)
   ul
     display: flex
     flex-wrap: nowrap

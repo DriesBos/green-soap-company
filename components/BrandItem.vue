@@ -73,8 +73,6 @@ export default {
   &-Title
     @media screen and ( min-width: $breakpoint-mobile)
       padding-right: var(--spacing-three)
-    h2
-      line-height: 1.2
-      @media screen and ( max-width: $breakpoint-mobile)
-        margin-bottom: 1rem
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-bottom: 1rem
 </style>

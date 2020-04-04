@@ -39,11 +39,17 @@ export default {
         flex-direction: row-reverse
       .markdown
         @media screen and ( min-width: $breakpoint-mobile)
-          padding-right: var(--spacing-four)
+          padding-right: var(--spacing-three)
+      img
+        @media screen and ( min-width: $breakpoint-mobile)
+          padding-left: var(--spacing-three)
     &:nth-child(odd)
       .markdown
         @media screen and ( min-width: $breakpoint-mobile)
-          padding-left: var(--spacing-four)
+          padding-left: var(--spacing-three)
+      img
+        @media screen and ( min-width: $breakpoint-mobile)
+          padding-right: var(--spacing-three)
     &:last-child
       margin-bottom: 0
     > div

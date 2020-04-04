@@ -139,6 +139,8 @@ export default {
       position: absolute
       display: flex
       justify-content: space-between
+      @media screen and ( max-width: $breakpoint-mobile)
+        display: none
     &.prev
       left: 0
       z-index: 999

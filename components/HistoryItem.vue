@@ -27,7 +27,6 @@ export default {
     margin-bottom: var(--spacing-four)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
-      margin-bottom: var(--spacing-three)
     &_Image
       img
         width: 100%

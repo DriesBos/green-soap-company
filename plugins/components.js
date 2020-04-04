@@ -6,6 +6,7 @@ import Page from "~/components/Page.vue"
 import LandingItem from "~/components/LandingItem.vue"
 import LandingSlider from "~/components/LandingSlider.vue"
 import TextItem from "~/components/TextItem.vue"
+import ButtonItem from "~/components/ButtonItem.vue"
 import PartnersList from "~/components/PartnersList.vue"
 import StatsItem from "~/components/StatsItem.vue"
 import BrandItem from "~/components/BrandItem.vue"
@@ -25,6 +26,7 @@ Vue.component("blok-page", Page)
 Vue.component("blok-landing-item", LandingItem)
 Vue.component("blok-landing-slider", LandingSlider)
 Vue.component("blok-text-item", TextItem)
+Vue.component("blok-button-item", ButtonItem)
 Vue.component("blok-partners-list", PartnersList)
 Vue.component("blok-stats-item", StatsItem)
 Vue.component("blok-brand-item", BrandItem)

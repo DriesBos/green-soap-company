@@ -2,7 +2,6 @@
   <footer class="footer contentContainer-Center">
     <!-- prettier-ignore -->
     <div class="footer-Container contentContainer-Center_Wrapper">
-      <div class="footer-RowTwo">
         <ul>
           <li class="title">Site</li>
           <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
@@ -61,7 +60,6 @@
           </li>
         </ul>
       </div>
-    </div>
   </footer>
 </template>
 
@@ -108,14 +106,18 @@ export default {}
     line-height: 21px
   &-Container
     display: flex
-    flex-direction: column
+    flex-direction: row
     flex-wrap: wrap
+    @media screen and ( min-width: $breakpoint-mobile)
+      margin-top: var(--spacing-four)
+      margin-bottom: var(--spacing-four)
     ul
-      // flex-basis: 33.3333%
-      margin-right: var(--spacing-three)
-      flex-grow: 1
+      width: calc(100% / 4)
+      padding-right: var(--spacing-three)
+      @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
+        width: calc(100% / 3)
+        margin-bottom: var(--spacing-three)
       @media screen and ( max-width: $breakpoint-mobile)
-        flex-basis: 100% !important
         width: 100%
         margin-top: 0
         margin-bottom: var(--spacing-four)
@@ -125,23 +127,10 @@ export default {}
         &::hover
           @media ( hover: hover )
             text-decoration: underline
-  &-RowOne
-    display: flex
-    justify-content: space-between
-    @media screen and ( min-width: $breakpoint-mobile)
-      margin-top: var(--spacing-four)
-      padding-bottom: var(--spacing-three)
-      border-bottom: 1px solid white
-    @media screen and ( max-width: $breakpoint-mobile)
-      flex-wrap: wrap
-  &-RowTwo
-    display: flex
-    @media screen and ( min-width: $breakpoint-mobile)
-      margin-top: var(--spacing-three)
-      margin-bottom: var(--spacing-four)
-    // @media screen and ( max-width: $content-container)
-    //   ul:first-child
-    //     display: none
-    @media screen and ( max-width: $breakpoint-mobile)
-      flex-wrap: wrap
+    ul:first-child
+      @media screen and ( max-width: $breakpoint-mobile)
+        width: calc(100% / 2)
+    ul:nth-child(2)
+      @media screen and ( max-width: $breakpoint-mobile)
+        width: calc(100% / 2)
 </style>

@@ -64,11 +64,9 @@ export default {
     display: flex
     li
       flex-basis: 33.3333%
-      p
-        font-size: .8889rem
       .stats
         font-size: 3rem
-        margin-bottom: .25rem
+        margin-bottom: 1rem
       .description
         padding-right: .5em
 </style>

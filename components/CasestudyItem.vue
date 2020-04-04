@@ -25,7 +25,7 @@ export default {
 .casestudy
   &-Item
     position: relative
-    background: $color-purple
+    background: $color-blue
     flex-grow: 1
     margin-right: var(--spacing-three)
     height: 0
@@ -42,9 +42,9 @@ export default {
       padding-top: 30%
       @media screen and ( max-width: $breakpoint-mobile)
         padding-top: 75%
-    &:hover
-      @media ( hover: hover )
-        background: $color-purple-hover
+    // &:hover
+    //   @media ( hover: hover )
+    //     background: $color-purple-hover
   &-Content
     position: absolute
     left: 50%

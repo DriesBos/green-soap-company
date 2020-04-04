@@ -33,6 +33,7 @@ p, h1, h2, h3, h4, h5
 
 .readmore
   text-transform: uppercase
+  font-size: 18px
   text-decoration: none
   transition: text-decoration $transition-hover
 .readmore-Wrapper:hover
@@ -40,29 +41,34 @@ p, h1, h2, h3, h4, h5
     @media ( hover: hover )
       text-decoration: underline
 
+.title
+  text-transform: uppercase
+
 .button
   position: relative
   display: inline-flex
   align-items: center
-  padding: .3em 1em
+  padding: 2px 8px
   color: white !important
   text-decoration: none
-  border-radius: 1000px
   font-family: Francois, 'Gorgia', 'Times New Roman', Times, serif  !important
-  font-size: 1.25rem
+  font-size: 18px
+  text-transform: uppercase
   letter-spacing: .025rem
+  &:hover
+    text-decoration: underline
   &-Background
     position: absolute
     top: 0
     left: 0
     width: 100%
     height: 100%
-    border-radius: 1000px
+    border-radius: 2px
     background: $color-black
     transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1)
     &:hover
       @media ( hover: hover )
-        transform: scale(1.2)
+        transform: scale(1.1)
   &-Text
     display: flex
     z-index: +1

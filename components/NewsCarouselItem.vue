@@ -22,6 +22,16 @@
             </div>
           </nuxt-link>
         </li>
+        <nuxt-link
+          class="newsCarousel-Buttons next button"
+          to="/news"
+          tag="li"
+        >
+          <div class="button-Background"></div>
+          <div class="button-Text">read our blog
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+          </div>
+        </nuxt-link>
       </ul>
     </div>
     <!-- prettier-ignore -->
@@ -52,6 +62,12 @@ export default {
     -webkit-line-clamp: 1
     -webkit-box-orient: vertical
     overflow: hidden
+  &-Buttons
+    width: auto !important
+    svg
+      margin-left: .5em
+      transform: translateY(.18em)
+      width: 1em
   &-Image
     position: relative
     height: 0
@@ -98,13 +114,14 @@ export default {
   ul
     display: flex
     flex-wrap: nowrap
-    align-items: flex-start
+    align-items: center
     overflow-x: auto
     @media screen and ( min-width: $content-container)
       padding-left: calc((100vw - #{$content-container}) / 2)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
       overflow-x: hidden
+      align-items: flex-start
     @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
       padding-left: var(--spacing-sides)
     &::after
@@ -129,6 +146,13 @@ export default {
       //     background: $color-green-hover
       a
         text-decoration: none
+    li:nth-child(n+6)
+      display: none
+    li:nth-child(n+4)
+      @media screen and ( max-width: $breakpoint-mobile)
+        display: none
+    li:last-child
+      display: flex
   ul::-webkit-scrollbar
     display: none
 </style>

@@ -43,7 +43,6 @@ export default {
     &:nth-child(2n)
       @media screen and ( max-width: $breakpoint-mobile)
         margin-right: 0
-        border: 1px solid reds
     &_Portrait
       position: relative
       height: 0

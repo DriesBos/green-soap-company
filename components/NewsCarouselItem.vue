@@ -43,10 +43,6 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .newsCarousel
-  @media screen and ( max-width: $breakpoint-mobile)
-    padding-right: var(--spacing-three)
-    padding-left: var(--spacing-three)
-
   p
     display: -webkit-box
     -webkit-line-clamp: 3
@@ -91,7 +87,8 @@ export default {
     flex-wrap: nowrap
     align-items: flex-start
     overflow-x: auto
-    padding-left: calc((100vw - #{$content-container}) / 2)
+    @media screen and ( min-width: $breakpoint-mobile)
+      padding-left: calc((100vw - #{$content-container}) / 2)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
       overflow-x: hidden

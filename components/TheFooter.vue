@@ -98,6 +98,8 @@ export default {}
     margin-bottom: 1rem
     font-size: 28px
     line-height: 38px
+    @media screen and ( max-width: $breakpoint-mobile)
+      margin-bottom: 0
   .address
     a
       text-decoration: underline

@@ -41,7 +41,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>retail
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the revolution
           </div>
         </nuxt-link>
         <nuxt-link
@@ -61,7 +61,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>careers
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the team
           </div>
         </nuxt-link>
         <nuxt-link
@@ -71,7 +71,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            retail
+            join the revolution
             <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
@@ -82,7 +82,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            careers
+            join the team
             <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>

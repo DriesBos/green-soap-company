@@ -36,7 +36,7 @@
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/careers'"
-          class="landingItem-Buttons prev button"
+          class="landingItem-Buttons prev button desktop"
           to="/retail"
         >
           <div class="button-Background"></div>
@@ -46,7 +46,7 @@
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/retail'"
-          class="landingItem-Buttons prev button"
+          class="landingItem-Buttons prev button desktop"
           to="/"
         >
           <div class="button-Background"></div>
@@ -56,7 +56,7 @@
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/'"
-          class="landingItem-Buttons prev button"
+          class="landingItem-Buttons prev button desktop"
           to="/careers"
         >
           <div class="button-Background"></div>
@@ -66,7 +66,7 @@
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/'"
-          class="landingItem-Buttons next button"
+          class="landingItem-Buttons next button desktop"
           to="/retail"
         >
           <div class="button-Background"></div>
@@ -77,7 +77,7 @@
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/retail'"
-          class="landingItem-Buttons next button"
+          class="landingItem-Buttons next button desktop"
           to="/careers"
         >
           <div class="button-Background"></div>
@@ -88,7 +88,7 @@
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/careers'"
-          class="landingItem-Buttons next button"
+          class="landingItem-Buttons next button desktop"
           to="/"
         >
           <div class="button-Background"></div>
@@ -128,9 +128,11 @@ export default {
     object-fit: cover
   &-Buttons
     // top: 50%
-    margin: var(--spacing-three)
     @media screen and ( max-width: $content-container)
       margin: var(--spacing-one)
+    &.desktop
+      @media screen and ( max-width: $breakpoint-mobile)
+        display: none
     &_Wrapper
       width: 100%
       top: 50%
@@ -139,8 +141,7 @@ export default {
       position: absolute
       display: flex
       justify-content: space-between
-      @media screen and ( max-width: $breakpoint-mobile)
-        display: none
+      padding: var(--spacing-sides)
     &.prev
       left: 0
       z-index: 999

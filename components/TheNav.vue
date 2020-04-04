@@ -18,6 +18,7 @@
     <div class="menu-overlay" :class="{ open: menuOpen }" @click="toggleMenu">
       <div class="menu-links">
         <nuxt-link class="title" to="/">Home</nuxt-link>
+        <nuxt-link class="title" to="/news">Blog</nuxt-link>
         <nuxt-link class="title" to="/retail">Retail</nuxt-link>
         <nuxt-link class="title" to="/brands">Brands</nuxt-link>
         <nuxt-link class="title" to="/about">About</nuxt-link>
@@ -155,15 +156,17 @@ export default {
       a:nth-child(1)
         transition: opacity .35s ease-in, transform .35s ease-out
       a:nth-child(2)
-        transition: opacity .35s ease-in .05s, transform .35s ease-out .05s
+        transition: opacity .35s ease-in .04s, transform .35s ease-out .04s
       a:nth-child(3)
-        transition: opacity .35s ease-in .1s, transform .35s ease-out .1s
+        transition: opacity .35s ease-in .07s, transform .35s ease-out .07s
       a:nth-child(4)
-        transition: opacity .35s ease-in .15s, transform .35s ease-out .15s
+        transition: opacity .35s ease-in .10s, transform .35s ease-out .10s
       a:nth-child(5)
-        transition: opacity .35s ease-in .2s, transform .35s ease-out .2s
+        transition: opacity .35s ease-in .13s, transform .35s ease-out .13s
       a:nth-child(6)
-        transition: opacity .35s ease-in .25s, transform .35s ease-out .25s
+        transition: opacity .35s ease-in .16s, transform .35s ease-out .16s
+      a:nth-child(7)
+        transition: opacity .35s ease-in .19s, transform .35s ease-out .19s
     &-overlay.open
       opacity: 1
       visibility: visible

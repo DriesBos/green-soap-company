@@ -64,10 +64,13 @@ export default {
     display: flex
     li
       flex-basis: 33.3333%
+      flex-shrink: 0
+      overflow: visible
       .stats
         font-size: 3rem
         margin-bottom: 1.5rem
         overflow: visible
+        flex-shrink: 0
       .description
         padding-right: .5em
 </style>

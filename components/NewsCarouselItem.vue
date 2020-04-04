@@ -72,6 +72,8 @@ export default {
   .section-Header
     @media screen and ( min-width: $breakpoint-mobile)
       padding-left: calc((100vw - #{$content-container}) / 2)
+    @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
+      padding-left: var(--spacing-sides)
   &-Excerpt
     margin-bottom: var(--spacing-four)
     margin-left: var(--spacing-three)
@@ -87,11 +89,13 @@ export default {
     flex-wrap: nowrap
     align-items: flex-start
     overflow-x: auto
-    @media screen and ( min-width: $breakpoint-mobile)
+    @media screen and ( min-width: $content-container)
       padding-left: calc((100vw - #{$content-container}) / 2)
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
       overflow-x: hidden
+    @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
+      padding-left: var(--spacing-sides)
     &::after
       content: ""
       flex: 0 0 var(--spacing-three)

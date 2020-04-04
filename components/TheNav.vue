@@ -82,6 +82,7 @@ export default {
       height: 100%
       position: absolute
       border-radius: 50%
+      border: 1px solid white
       transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1)
       z-index: 1000
       overflow: hidden

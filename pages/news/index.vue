@@ -6,20 +6,20 @@
       </div>
       <!-- prettier-ignore -->
       <ul class="newsPage-Container">
-        <li v-for="post in newsList" :id="post.content.id" :key="post.content.id">
-          <div class="newsPage-Image">
-            <img :src="post.content.image" />
-          </div>
-          <div class="newsPage-Title">
-            <h3 class="title">{{ post.content.title }}</h3>
-          </div>
-          <div class="newsPage-Excerpt">
-            <p>{{ post.content.text }}</p>
-          </div>
-          <div class="newsPage-ReadMore">
-            <p class="title readmore">Read More</p>
-          </div>
-        </li>
+          <nuxt-link v-for="post in newsList" :id="post.content.id" :key="post.content.id" :to="post.full_slug" tag="li">
+            <div class="newsPage-Image">
+              <img :src="post.content.image" />
+            </div>
+            <div class="newsPage-Title">
+              <h3 class="title">{{ post.content.title }}</h3>
+            </div>
+            <div class="newsPage-Excerpt">
+              <p>{{ post.content.text }}</p>
+            </div>
+            <div class="newsPage-ReadMore">
+              <p class="title readmore">Read More</p>
+            </div>
+          </nuxt-link>
       </ul>
     </div>
   </section>
@@ -61,6 +61,10 @@
       @media screen and ( max-width: $breakpoint-mobile)
         width: 100%
         margin-right: 0
+        margin-bottom: var(--spacing-four)
+      &:hover
+        .readmore
+          text-decoration: underline
   &-Image
     position: relative
     height: 0

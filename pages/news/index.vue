@@ -29,6 +29,7 @@
 @import '~/assets/styles/variables.sass'
 
 .newsPage
+  margin-top: var(--spacing-six)
   p
     display: -webkit-box
     -webkit-line-clamp: 3

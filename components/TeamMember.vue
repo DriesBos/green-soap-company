@@ -32,20 +32,23 @@ export default {
     // Widths and margin on the right
     @media screen and ( max-width: $content-container)
       width: calc((100% - 64px) / 3)
+    @media screen and ( max-width: $breakpoint-mobile)
+      width: calc((100% - 32px) / 2)
     &:nth-child(4n)
       @media screen and ( min-width: $content-container)
         margin-right: 0
     &:nth-child(3n)
-      @media screen and ( max-width: $content-container)
+      @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
         margin-right: 0
-    @media screen and ( max-width: $breakpoint-mobile)
-      width: 100%
-      margin-right: 0
+    &:nth-child(2n)
+      @media screen and ( max-width: $breakpoint-mobile)
+        margin-right: 0
+        border: 1px solid reds
     &_Portrait
       position: relative
       height: 0
       padding-top: 133.3333%
-      margin-bottom: var(--spacing-one)
+      margin-bottom: var(--spacing-two)
       img
         position: absolute
         top: 0
@@ -59,19 +62,15 @@ export default {
       &:hover > .portrait-Hover
         @media ( hover: hover )
           opacity: 1
-    &_Content
-      p
-        @media screen and ( max-width: $breakpoint-mobile)
-          display: inline-block
     .title
       margin-bottom: var(--spacing-two)
-    .title::after
-      @media screen and ( max-width: $breakpoint-mobile)
-        content: ","
+      font-size: 18px
     .function
-      margin-bottom: var(--spacing-one)
-    .function, .description
-      font-size: .8889rem
+      margin-bottom: var(--spacing-two)
+    .function, .description p
+      font-size: 14px
+      line-height: 24px
       @media screen and ( max-width: $breakpoint-mobile)
-        font-size: 1rem
+        font-size: 12px
+        line-height: 21px
 </style>

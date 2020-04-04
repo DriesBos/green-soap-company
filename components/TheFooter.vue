@@ -9,8 +9,8 @@
           <!-- prettier-ignore -->
           <li>
             Green Soap Company
-            <br />Roelof Hartplein 210,
-            <br />1071 TT, Haarlem
+            <br />Eindenhoutstraat 28,
+            <br />2021 ML, Haarlem
             <br />
             <a
               href="mailto:info@greensoapcompany.com"

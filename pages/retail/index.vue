@@ -69,25 +69,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-@import '~/assets/styles/variables.sass'
-
-.vacancyList
-  ul
-    li
-      background-color: $color-green
-      margin-bottom: var(--spacing-three)
-      padding: var(--spacing-three)
-      display: flex
-      align-items: center
-      justify-content: space-between
-      cursor: pointer
-      > div:nth-child(2)
-        flex-grow: 1
-        margin-left: var(--spacing-four)
-    li:last-child
-      margin-bottom: 0
-    .title
-      text-transform: uppercase
-</style>

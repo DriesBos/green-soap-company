@@ -65,11 +65,10 @@ export default {
     li
       flex-basis: 33.3333%
       flex-shrink: 0
-      overflow: visible
       .stats
-        font-size: 3rem
-        margin-bottom: 1.5rem
-        overflow: visible
+        font-size: 40px
+        line-height: 50px
+        margin-bottom: .25rem
         flex-shrink: 0
       .description
         padding-right: .5em

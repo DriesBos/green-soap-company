@@ -9,7 +9,7 @@
     <section class="vacancyList contentContainer-Center">
       <ul class="contentContainer-Center_Wrapper">
         <div class="section-Header">
-          <h2 class="title">Open Positions</h2>
+          <h1 class="title">Open Positions</h1>
         </div>
         <!-- prettier-ignore -->
         <nuxt-link
@@ -19,13 +19,14 @@
           tag="li"
           class="vacancyList-Item readmore-Wrapper"
         >
-          <div>
-            <p>{{ item.content.title }}</p>
+          <div class="name">
+            <p class="contentDesktop">{{ item.content.title }}</p>
+            <h3 class="title contentMobile">{{ item.content.title }}</h3>
           </div>
-          <div>
+          <div class="period">
             <p>{{ item.content.subtitle }}</p>
           </div>
-          <div>
+          <div class="more">
             <p class="title readmore">read more</p>
           </div>
         </nuxt-link>
@@ -108,6 +109,14 @@ export default {
       justify-content: space-between
       cursor: pointer
       transition: background $transition-hover
+      @media screen and ( max-width: $breakpoint-mobile)
+        flex-direction: column
+        padding-top: var(--spacing-five)
+        padding-bottom: var(--spacing-five)
+        .name
+          margin-bottom: var(--spacing-two)
+        .period
+          display: none
       &:hover
         @media ( hover: hover )
           background: $color-green-hover

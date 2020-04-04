@@ -3,19 +3,15 @@
     <ul class="contentContainer-Center_Wrapper">
       <li v-if="blok.value_one && blok.description_one">
         <p id="numbers" :data-count="blok.value_one" class="stats"></p>
-        <p>{{ blok.description_one }}</p>
+        <p class="description">{{ blok.description_one }}</p>
       </li>
       <li v-if="blok.value_two && blok.description_two">
         <p id="numbers" :data-count="blok.value_two" class="stats"></p>
-        <p>{{ blok.description_two }}</p>
+        <p class="description">{{ blok.description_two }}</p>
       </li>
       <li v-if="blok.value_three && blok.description_three">
         <p id="numbers" :data-count="blok.value_three" class="stats"></p>
-        <p>{{ blok.description_three }}</p>
-      </li>
-      <li v-if="blok.value_four && blok.description_four">
-        <p id="numbers" :data-count="blok.value_four" class="stats"></p>
-        <p>{{ blok.description_four }}</p>
+        <p class="description">{{ blok.description_three }}</p>
       </li>
     </ul>
   </section>
@@ -67,10 +63,12 @@ export default {
   ul
     display: flex
     li
-      flex-basis: 25%
+      flex-basis: 33.3333%
       p
         font-size: .8889rem
       .stats
         font-size: 3rem
         margin-bottom: .25rem
+      .description
+        padding-right: .5em
 </style>

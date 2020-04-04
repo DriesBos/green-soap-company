@@ -3,7 +3,7 @@
   <section v-editable="blok" class="casestudy contentContainer-Center">
     <div class="casestudy-Wrapper contentContainer-Center_Wrapper">
       <div class="section-Header">
-        <h2 class="title">{{ blok.title }}</h2>
+        <h1 class="title">{{ blok.title }}</h1>
       </div>
       <div class="casestudy-ContentWrapper">
         <component
@@ -40,4 +40,6 @@ export default {
     justify-content: space-between
     @media screen and ( max-width: $breakpoint-mobile)
       flex-direction: column
+  &-Item:last-child
+    margin-bottom: 0
 </style>

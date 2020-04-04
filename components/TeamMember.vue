@@ -41,16 +41,6 @@ export default {
     @media screen and ( max-width: $breakpoint-mobile)
       width: 100%
       margin-right: 0
-    // Bottom paddings
-    &:nth-last-child(2), &:last-child, &:nth-last-child(3), &:nth-last-child(4)
-      @media screen and ( min-width: $content-container)
-        margin-bottom: 0
-    &:nth-last-child(2), &:last-child, &:nth-last-child(3)
-      @media screen and ( max-width: $content-container)
-        margin-bottom: 0
-    &:last-child
-      @media screen and ( max-width: $breakpoint-mobile)
-        margin-bottom: 0
     &_Portrait
       position: relative
       height: 0
@@ -74,12 +64,12 @@ export default {
         @media screen and ( max-width: $breakpoint-mobile)
           display: inline-block
     .title
-      margin-bottom: var(--spacing-one)
+      margin-bottom: var(--spacing-two)
     .title::after
       @media screen and ( max-width: $breakpoint-mobile)
         content: ","
     .function
-      margin-bottom: var(--spacing-two)
+      margin-bottom: var(--spacing-one)
     .function, .description
       font-size: .8889rem
       @media screen and ( max-width: $breakpoint-mobile)

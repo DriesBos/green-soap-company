@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .team
   &-Wrapper
     display: flex
@@ -34,4 +36,7 @@ export default {
     display: flex
     flex-wrap: wrap
     justify-content: flex-start
+    margin-bottom: -64px
+    @media screen and ( max-width: $content-container)
+      margin-bottom: -7vmin
 </style>

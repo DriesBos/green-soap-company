@@ -26,5 +26,5 @@ export default {}
   &-Logo
     // max-width: $content-container
     width: 100%
-    padding: var(--spacing-four)
+    padding: var(--spacing-three)
 </style>

@@ -41,6 +41,7 @@
     overflow: hidden
   &-Container
     display: flex
+    justify-content: flex-start
     flex-wrap: wrap
     width: 100%
     li
@@ -50,11 +51,11 @@
       margin-bottom: var(--spacing-three)
       background: $color-orange
       cursor: pointer
-      @media screen and ( max-width: $content-container)
-        width: calc((100% - 32px) / 2)
       &:nth-child(3n)
         @media screen and ( min-width: $content-container)
           margin-right: 0
+      @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
+        width: calc((99% - 32px) / 2)
       &:nth-child(2n)
         @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
           margin-right: 0

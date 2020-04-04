@@ -43,16 +43,20 @@
         <ul>
           <!-- prettier-ignore -->
           <li class="title">Contact Us</li>
-          <li class="address">
-            Eindenhoutstraat 28,
+          <li class="address contacts">
+            <div v-html="require('~/assets/images/location.svg?include')" />Eindenhoutstraat 28,
             <br />2021 ML, Haarlem
-            <br />
+          </li>
+          <li class="mail contacts">
+            <div v-html="require('~/assets/images/mail.svg?include')" />
             <a
               href="mailto:info@greensoapcompany.com"
               target="_blank"
               rel="noopener noreferrer"
             >info@greensoapcompany.com</a>
-            <br />
+          </li>
+          <li class="phone contacts">
+            <div v-html="require('~/assets/images/call.svg?include')" />
             <a href="tel:0031207992888" target="_blank" rel="noopener noreferrer">+31 20 799 28 88</a>
           </li>
         </ul>
@@ -72,6 +76,13 @@ export default {}
   background: $color-black
   padding-left: var(--spacing-sides)
   padding-right: var(--spacing-sides)
+  svg
+    fill: white
+    width: 22px
+  .contacts
+    display: flex
+    > div
+      flex-basis: 38px
   @media screen and ( max-width: $breakpoint-mobile)
     padding-top: var(--spacing-four)
     padding-bottom: var(--spacing-four)

@@ -109,8 +109,11 @@ export default {}
   &-Container
     display: flex
     flex-direction: column
+    flex-wrap: wrap
     ul
-      flex-basis: 33.3333%
+      // flex-basis: 33.3333%
+      margin-right: var(--spacing-three)
+      flex-grow: 1
       @media screen and ( max-width: $breakpoint-mobile)
         flex-basis: 100% !important
         width: 100%

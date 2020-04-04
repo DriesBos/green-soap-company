@@ -1,13 +1,18 @@
 import Vue from "vue"
+import VueLazyload from "vue-lazyload"
 
-Vue.filter("resize", (image, size) => {
-  if (typeof image !== "undefined") {
-    return (
-      "//img2.storyblok.com/" + size + image.replace("//a.storyblok.com", "")
-    )
-  }
-  return null
+/*eslint-disable */
+Vue.filter("transformImage", (image, option) => {
+  if (!image) return ""
+  if (!option) return ""
+
+  let imageService = "//img2.storyblok.com/"
+  let path = image.replace("//a.storyblok.com", "")
+  return imageService + option + path
 })
+/* eslint-enable */
+
+Vue.use(VueLazyload)
 
 Vue.filter("dashify", function(value) {
   if (typeof value === "undefined") {

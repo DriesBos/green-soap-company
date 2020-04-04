@@ -129,6 +129,7 @@ export default {}
             text-decoration: underline
     ul:first-child
       @media screen and ( max-width: $breakpoint-mobile)
+        margin-top: var(--spacing-three)
         width: calc(100% / 2)
     ul:nth-child(2)
       @media screen and ( max-width: $breakpoint-mobile)

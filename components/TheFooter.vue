@@ -1,5 +1,6 @@
 <template>
   <footer class="footer contentContainer-Center">
+    <!-- prettier-ignore -->
     <div class="footer-Container contentContainer-Center_Wrapper">
       <div class="footer-RowOne">
         <ul>
@@ -7,9 +8,9 @@
         </ul>
         <ul>
           <!-- prettier-ignore -->
+          <li class="title">Green Soap Company</li>
           <li>
-            Green Soap Company
-            <br />Eindenhoutstraat 28,
+            Eindenhoutstraat 28,
             <br />2021 ML, Haarlem
             <br />
             <a
@@ -64,8 +65,11 @@ export default {}
 
 .footer
   background: $color-black
-  padding-left: var(--spacing-three)
-  padding-right: var(--spacing-three)
+  padding-left: var(--spacing-sides)
+  padding-right: var(--spacing-sides)
+  @media screen and ( max-width: $breakpoint-mobile)
+    padding-top: var(--spacing-four)
+    padding-bottom: var(--spacing-four)
   li, a
     color: white
     font-size: .8889rem
@@ -74,6 +78,7 @@ export default {}
       text-decoration: underline
   .title
     text-transform: uppercase
+    margin-bottom: 1rem
   &-Container
     display: flex
     flex-direction: column
@@ -85,8 +90,7 @@ export default {}
         flex-basis: 100% !important
         width: 100%
         margin-top: 0
-      li.title
-        margin-bottom: 1rem
+        margin-bottom: var(--spacing-four)
       li.link, a
         cursor: pointer
         text-decoration: none
@@ -96,16 +100,17 @@ export default {}
   &-RowOne
     display: flex
     justify-content: space-between
-    margin-top: var(--spacing-four)
-    padding-bottom: var(--spacing-three)
-    border-bottom: 1px solid white
+    @media screen and ( min-width: $breakpoint-mobile)
+      margin-top: var(--spacing-four)
+      padding-bottom: var(--spacing-three)
+      border-bottom: 1px solid white
     @media screen and ( max-width: $breakpoint-mobile)
       flex-wrap: wrap
-      border-bottom: 0
   &-RowTwo
     display: flex
-    margin-top: var(--spacing-three)
-    margin-bottom: var(--spacing-four)
+    @media screen and ( min-width: $breakpoint-mobile)
+      margin-top: var(--spacing-three)
+      margin-bottom: var(--spacing-four)
     @media screen and ( max-width: $content-container)
       ul:first-child
         display: none

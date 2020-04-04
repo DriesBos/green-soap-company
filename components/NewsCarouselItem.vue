@@ -122,7 +122,7 @@ export default {
       @media screen and ( max-width: $breakpoint-mobile)
         width: 100%
         margin-right: 0
-        margin-bottom: var(--spacing-three)
+        margin-bottom: var(--spacing-four)
         border-right: 0
       // &:hover
       //   @media ( hover: hover )

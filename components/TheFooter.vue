@@ -2,14 +2,48 @@
   <footer class="footer contentContainer-Center">
     <!-- prettier-ignore -->
     <div class="footer-Container contentContainer-Center_Wrapper">
-      <div class="footer-RowOne">
+      <div class="footer-RowTwo">
         <ul>
-          <img class="logo" src="~/assets/images/logo-white.png" />
+          <li class="title">Site</li>
+          <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
+          <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
+          <nuxt-link to="/brands" class="link" tag="li">Brands</nuxt-link>
+          <nuxt-link to="/about" class="link" tag="li">About & Team</nuxt-link>
+          <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
+          <nuxt-link to="/history" class="link" tag="li">GSC History</nuxt-link>
+          <br />
+          <nuxt-link to="/terms-conditions" class="link conditions" tag="li">Terms & Conditions</nuxt-link>
+          <nuxt-link to="/privacy-policy" class="link conditions" tag="li">Privacy Policy</nuxt-link>
+        </ul>
+        <ul>
+          <li class="title">Brands</li>
+          <nuxt-link to="/brands" class="link" tag="li">Overview</nuxt-link>
+          <li class="link">
+            <!-- prettier-ignore -->
+            <a
+              href="https://www.marcelsgreensoap.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Marcel's Green Soap</a>
+          </li>
+          <li class="link">
+            <!-- prettier-ignore -->
+            <a
+              href="https://www.driehoekzeep.nl/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Driehoek</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="title">Quick Links</li>
+          <nuxt-link to="/retail" class="link" tag="li">Join the revolution</nuxt-link>
+          <nuxt-link to="/careers" class="link" tag="li">Join our team</nuxt-link>
         </ul>
         <ul>
           <!-- prettier-ignore -->
-          <li class="title">Green Soap Company</li>
-          <li>
+          <li class="title">Contact Us</li>
+          <li class="address">
             Eindenhoutstraat 28,
             <br />2021 ML, Haarlem
             <br />
@@ -21,35 +55,6 @@
             <br />
             <a href="tel:0031207992888" target="_blank" rel="noopener noreferrer">+31 20 799 28 88</a>
           </li>
-        </ul>
-      </div>
-      <div class="footer-RowTwo">
-        <ul></ul>
-        <ul>
-          <li class="title">Site</li>
-          <nuxt-link to="/" class="link" tag="li">Home</nuxt-link>
-          <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
-          <nuxt-link to="/brands" class="link" tag="li">Brands</nuxt-link>
-          <nuxt-link to="/about" class="link" tag="li">About</nuxt-link>
-          <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
-          <nuxt-link to="/history" class="link" tag="li">History</nuxt-link>
-        </ul>
-        <ul>
-          <li class="title">Follow Us</li>
-          <li class="link">
-            <!-- prettier-ignore -->
-            <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer">instagram</a>
-          </li>
-          <li class="link">
-            <!-- prettier-ignore -->
-            <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">facebook</a>
-          </li>
-        </ul>
-        <ul>
-          <li class="title">Quick Links</li>
-          <li class="link">Start selling our products</li>
-          <li class="link">Join our team</li>
-          <li class="link">Press contact</li>
         </ul>
       </div>
     </div>
@@ -72,20 +77,27 @@ export default {}
     padding-bottom: var(--spacing-four)
   li, a
     color: white
-    font-size: .8889rem
+    font-size: 16px
+    line-height: 26px
   a:hover, .link:hover
     @media ( hover: hover )
       text-decoration: underline
   .title
     text-transform: uppercase
     margin-bottom: 1rem
+    font-size: 28px
+    line-height: 38px
+  .address
+    a
+      text-decoration: underline
+  .conditions
+    font-size: 12px
+    line-height: 21px
   &-Container
     display: flex
     flex-direction: column
     ul
-      flex-basis: 25%
-      @media screen and ( max-width: $content-container)
-        flex-basis: 33.3333%
+      flex-basis: 33.3333%
       @media screen and ( max-width: $breakpoint-mobile)
         flex-basis: 100% !important
         width: 100%

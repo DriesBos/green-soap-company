@@ -37,7 +37,7 @@ export default {
 
 .brandItem
   @media screen and ( max-width: $breakpoint-mobile)
-    margin-bottom: var(--spacing-five)
+    margin-top: var(--spacing-five)
   &-Image
     position: relative
     width: 100%

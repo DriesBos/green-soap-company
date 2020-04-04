@@ -3,7 +3,7 @@
   <section v-editable="blok" class="newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
       <div class="section-Header">
-        <h2 class="title">Latest news</h2>
+        <h1 class="title">Latest news</h1>
       </div>
       <ul class="newsCarousel-Container">
         <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item readmore-Wrapper">

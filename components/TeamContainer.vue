@@ -3,7 +3,7 @@
   <section v-editable="blok" class="team contentContainer-Center">
     <div class="team-Wrapper contentContainer-Center_Wrapper">
       <div class="section-Header">
-        <h2 class="title">Meet the team</h2>
+        <h1 class="title">Meet the team</h1>
       </div>
       <div class="team-PortraitsWrapper">
         <component

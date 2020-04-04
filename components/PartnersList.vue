@@ -3,7 +3,7 @@
   <section v-editable="blok" class="section partnerList contentContainer-Center">
     <div class="partnerList-Wrapper contentContainer-Center_Wrapper">
       <div class="section-Header">
-        <h2 v-if="blok.title" class="title">{{ blok.title }}</h2>
+        <h1 v-if="blok.title" class="title">{{ blok.title }}</h1>
       </div>
       <img class="contentDesktop" :src="blok.image" />
       <img class="contentMobile" :src="blok.image_mobile" />
@@ -32,6 +32,4 @@ export default {
   &-Wrapper
     width: 100%
     max-width: $content-container
-  .title
-    font-size: 3.5556em
 </style>

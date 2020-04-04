@@ -36,6 +36,8 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .brandItem
+  @media screen and ( max-width: $breakpoint-mobile)
+    margin-bottom: var(--spacing-five)
   &-Image
     position: relative
     width: 100%
@@ -49,6 +51,12 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
+  &-Text
+    @media screen and ( max-width: $breakpoint-mobile)
+      display: flex
+      flex-direction: column
+      a
+        align-self: flex-end
   &-Content
     display: flex
     @media screen and ( max-width: $breakpoint-mobile)
@@ -66,7 +74,7 @@ export default {
     @media screen and ( min-width: $breakpoint-mobile)
       padding-right: var(--spacing-three)
     h2
-      line-height: 1
+      line-height: 1.2
       @media screen and ( max-width: $breakpoint-mobile)
         margin-bottom: 1rem
 </style>

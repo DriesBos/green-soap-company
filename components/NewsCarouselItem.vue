@@ -43,6 +43,10 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .newsCarousel
+  @media screen and ( max-width: $breakpoint-mobile)
+    padding-right: var(--spacing-three)
+    padding-left: var(--spacing-three)
+
   p
     display: -webkit-box
     -webkit-line-clamp: 3
@@ -70,7 +74,8 @@ export default {
     margin-left: var(--spacing-three)
     margin-right: var(--spacing-three)
   .section-Header
-    padding-left: calc((100vw - #{$content-container}) / 2)
+    @media screen and ( min-width: $breakpoint-mobile)
+      padding-left: calc((100vw - #{$content-container}) / 2)
   &-Excerpt
     margin-bottom: var(--spacing-four)
     margin-left: var(--spacing-three)
@@ -106,6 +111,7 @@ export default {
         width: 100%
         margin-right: 0
         margin-bottom: var(--spacing-three)
+        border-right: 0
       &:hover
         @media ( hover: hover )
           background: $color-orange-hover

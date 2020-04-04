@@ -66,7 +66,8 @@ export default {
       flex-basis: 33.3333%
       .stats
         font-size: 3rem
-        margin-bottom: 1rem
+        margin-bottom: 1.5rem
+        overflow: visible
       .description
         padding-right: .5em
 </style>

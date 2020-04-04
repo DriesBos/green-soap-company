@@ -123,9 +123,9 @@ export default {}
     @media screen and ( min-width: $breakpoint-mobile)
       margin-top: var(--spacing-three)
       margin-bottom: var(--spacing-four)
-    @media screen and ( max-width: $content-container)
-      ul:first-child
-        display: none
+    // @media screen and ( max-width: $content-container)
+    //   ul:first-child
+    //     display: none
     @media screen and ( max-width: $breakpoint-mobile)
       flex-wrap: wrap
 </style>

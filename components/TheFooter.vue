@@ -2,64 +2,60 @@
   <footer class="footer contentContainer-Center">
     <!-- prettier-ignore -->
     <div class="footer-Container contentContainer-Center_Wrapper">
-        <ul>
-          <li class="title">Site</li>
-          <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
-          <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
-          <nuxt-link to="/brands" class="link" tag="li">Brands</nuxt-link>
-          <nuxt-link to="/about" class="link" tag="li">About & Team</nuxt-link>
-          <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
-          <nuxt-link to="/history" class="link" tag="li">GSC History</nuxt-link>
-          <br />
-          <nuxt-link to="/terms-conditions" class="link conditions" tag="li">Terms & Conditions</nuxt-link>
-          <nuxt-link to="/privacy-policy" class="link conditions" tag="li">Privacy Policy</nuxt-link>
-        </ul>
-        <ul>
-          <li class="title">Brands</li>
-          <nuxt-link to="/brands" class="link" tag="li">Overview</nuxt-link>
-          <li class="link">
-            <!-- prettier-ignore -->
-            <a
-              href="https://www.marcelsgreensoap.com/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Marcel's Green Soap</a>
-          </li>
-          <li class="link">
-            <!-- prettier-ignore -->
-            <a
-              href="https://www.driehoekzeep.nl/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Driehoek</a>
-          </li>
-        </ul>
-        <ul>
-          <li class="title">Quick Links</li>
-          <nuxt-link to="/retail" class="link" tag="li">Join the revolution</nuxt-link>
-          <nuxt-link to="/careers" class="link" tag="li">Join our team</nuxt-link>
-        </ul>
-        <ul>
+      <ul>
+        <li class="title">Site</li>
+        <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
+        <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
+        <nuxt-link to="/brands" class="link" tag="li">Brands</nuxt-link>
+        <nuxt-link to="/about" class="link" tag="li">About & Team</nuxt-link>
+        <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
+        <nuxt-link to="/history" class="link" tag="li">GSC History</nuxt-link>
+        <br />
+        <nuxt-link to="/terms-conditions" class="link conditions" tag="li">Terms & Conditions</nuxt-link>
+        <nuxt-link to="/privacy-policy" class="link conditions" tag="li">Privacy Policy</nuxt-link>
+      </ul>
+      <ul>
+        <li class="title">Brands</li>
+        <nuxt-link to="/brands" class="link" tag="li">Overview</nuxt-link>
+        <li class="link">
           <!-- prettier-ignore -->
-          <li class="title">Contact Us</li>
-          <li class="address contacts">
-            <div v-html="require('~/assets/images/location.svg?include')" />Eindenhoutstraat 28,
-            <br />2021 ML, Haarlem
-          </li>
-          <li class="mail contacts">
-            <div v-html="require('~/assets/images/mail.svg?include')" />
-            <a
-              href="mailto:info@greensoapcompany.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >info@greensoapcompany.com</a>
-          </li>
-          <li class="phone contacts">
-            <div v-html="require('~/assets/images/call.svg?include')" />
-            <a href="tel:0031207992888" target="_blank" rel="noopener noreferrer">+31 20 799 28 88</a>
-          </li>
-        </ul>
-      </div>
+          <a
+            href="https://www.marcelsgreensoap.com/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Marcel's Green Soap</a>
+        </li>
+        <li class="link">
+          <!-- prettier-ignore -->
+          <a href="https://www.driehoekzeep.nl/" target="_blank" rel="noopener noreferrer">Driehoek</a>
+        </li>
+      </ul>
+      <ul>
+        <li class="title">Quick Links</li>
+        <nuxt-link to="/retail" class="link" tag="li">Sell our products</nuxt-link>
+        <nuxt-link to="/careers" class="link" tag="li">Join our team</nuxt-link>
+      </ul>
+      <ul>
+        <!-- prettier-ignore -->
+        <li class="title">Contact Us</li>
+        <li class="address contacts">
+          <div v-html="require('~/assets/images/location.svg?include')" />Eindenhoutstraat 28,
+          <br />2021 ML, Haarlem
+        </li>
+        <li class="mail contacts">
+          <div v-html="require('~/assets/images/mail.svg?include')" />
+          <a
+            href="mailto:info@greensoapcompany.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >info@greensoapcompany.com</a>
+        </li>
+        <li class="phone contacts">
+          <div v-html="require('~/assets/images/call.svg?include')" />
+          <a href="tel:0031207992888" target="_blank" rel="noopener noreferrer">+31 20 799 28 88</a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
 

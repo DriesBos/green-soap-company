@@ -22,13 +22,10 @@
             </div>
           </nuxt-link>
         </li>
-        <nuxt-link
-          class="newsCarousel-Buttons next button"
-          to="/news"
-          tag="li"
-        >
+        <nuxt-link class="newsCarousel-Buttons next button" to="/news" tag="li">
           <div class="button-Background"></div>
-          <div class="button-Text">read our blog
+          <div class="button-Text">
+            All news items
             <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
@@ -146,9 +143,9 @@ export default {
       //     background: $color-green-hover
       a
         text-decoration: none
-    li:nth-child(n+6)
-      display: none
-    li:nth-child(n+4)
+        li: nth-child(n+6)
+        display: none
+        li: nth-child(n+4)
       @media screen and ( max-width: $breakpoint-mobile)
         display: none
     li:last-child

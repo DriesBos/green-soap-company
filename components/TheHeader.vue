@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-Logo">
       <nuxt-link to="/" tag="div" class="header-Logo_Wrapper">
-        <img class="logo" src="~/assets/images/logo.png" />
+        <img class="logo" src="~/assets/images/green-soap-company.svg" />
       </nuxt-link>
     </div>
   </header>
@@ -27,4 +27,6 @@ export default {}
     // max-width: $content-container
     width: 100%
     padding: var(--spacing-three)
+    img
+      height: 2.5rem
 </style>

@@ -11,7 +11,6 @@
           alt
         />
       </picture>
-      <!-- <img :src="blok.image" /> -->
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
           v-if="this.$route.name === 'retail-slug'"
@@ -44,23 +43,13 @@
           </div>
         </nuxt-link>
         <nuxt-link
-          v-if="this.$route.path === '/careers'"
-          class="landingItem-Buttons prev button desktop"
-          to="/retail"
-        >
-          <div class="button-Background"></div>
-          <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the revolution
-          </div>
-        </nuxt-link>
-        <nuxt-link
           v-if="this.$route.path === '/retail'"
           class="landingItem-Buttons prev button desktop"
           to="/"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
+            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>Home
           </div>
         </nuxt-link>
         <nuxt-link
@@ -80,18 +69,18 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            join the revolution
+            Sell our products
             <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
-          v-if="this.$route.path === '/retail'"
-          class="landingItem-Buttons next button desktop"
-          to="/careers"
+          v-if="this.$route.path === '/careers'"
+          class="landingItem-Buttons next button desktop hide"
+          to="/"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            join the team
+            Home
             <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
@@ -102,7 +91,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            news
+            Home
             <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
@@ -137,7 +126,6 @@ export default {
   padding-right: 0
   &-Wrapper
     position: relative
-    // margin-top: var(--spacing-three)
     height: calc(100vh - (144px + #{var(--spacing-three)}))
     height: calc(100vh - (#{var(--spacing-three)} * 2))
     height: 100vh
@@ -152,6 +140,8 @@ export default {
     &.desktop
       @media screen and ( max-width: $breakpoint-mobile)
         display: none
+    &.hide
+      visibility: hidden
     &_Wrapper
       width: 100%
       top: 50%

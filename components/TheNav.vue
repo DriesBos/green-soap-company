@@ -18,7 +18,7 @@
     <div class="menu-overlay" :class="{ open: menuOpen }" @click="toggleMenu">
       <div class="menu-links">
         <nuxt-link class="title" to="/">Home</nuxt-link>
-        <nuxt-link class="title" to="/news">Blog</nuxt-link>
+        <nuxt-link class="title" to="/news">News</nuxt-link>
         <nuxt-link class="title" to="/retail">Retail</nuxt-link>
         <nuxt-link class="title" to="/brands">Brands</nuxt-link>
         <nuxt-link class="title" to="/about">About</nuxt-link>

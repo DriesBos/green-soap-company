@@ -58,9 +58,6 @@ export default {
     return {
       story: { content: {} }
     }
-  },
-  mounted() {
-    console.log("career item", this.story.content.body)
   }
 }
 </script>

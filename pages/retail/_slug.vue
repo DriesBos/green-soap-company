@@ -44,9 +44,6 @@ export default {
     return {
       story: { content: {} }
     }
-  },
-  mounted() {
-    console.log("retail item", this.story.content.body)
   }
 }
 </script>

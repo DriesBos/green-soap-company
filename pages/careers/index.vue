@@ -89,8 +89,6 @@ export default {
   },
   mounted() {
     this.arrayLoop(this.stories)
-    console.log("careerlist", this.careerList)
-    console.log("vacencylist", this.vacancyList)
   }
 }
 </script>

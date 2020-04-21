@@ -39,9 +39,6 @@
 export default {
   props: {
     blok: {}
-  },
-  mounted() {
-    console.log("NEWSCAROUSELITEM", this.blok)
   }
 }
 </script>
@@ -144,7 +141,7 @@ export default {
       a
         text-decoration: none
         li: nth-child(n+6)
-        display: none
+          display: none
         li: nth-child(n+4)
       @media screen and ( max-width: $breakpoint-mobile)
         display: none

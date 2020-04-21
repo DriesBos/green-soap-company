@@ -6,20 +6,26 @@
       </div>
       <!-- prettier-ignore -->
       <ul class="newsPage-Container">
-          <nuxt-link v-for="post in newsList" :id="post.content.id" :key="post.content.id" :to="post.full_slug" tag="li">
-            <div class="newsPage-Image">
-              <img :src="post.content.image" />
-            </div>
-            <div class="newsPage-Title">
-              <h3 class="title">{{ post.content.title }}</h3>
-            </div>
-            <div class="newsPage-Excerpt">
-              <p>{{ post.content.text }}</p>
-            </div>
-            <div class="newsPage-ReadMore">
-              <p class="title readmore">Read More</p>
-            </div>
-          </nuxt-link>
+        <nuxt-link
+          v-for="post in newsList"
+          :id="post.content.id"
+          :key="post.content.id"
+          :to="post.full_slug"
+          tag="li"
+        >
+          <div class="newsPage-Image">
+            <img :src="post.content.image" />
+          </div>
+          <div class="newsPage-Title">
+            <h3 class="title">{{ post.content.title }}</h3>
+          </div>
+          <div class="newsPage-Excerpt">
+            <p>{{ post.content.text }}</p>
+          </div>
+          <div class="newsPage-ReadMore">
+            <p class="title readmore">Read More</p>
+          </div>
+        </nuxt-link>
       </ul>
     </div>
   </section>
@@ -153,7 +159,6 @@ export default {
   },
   mounted() {
     this.arrayLoop(this.stories)
-    console.log("newsList", this.newsList)
   }
 }
 </script>

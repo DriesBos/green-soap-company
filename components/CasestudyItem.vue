@@ -12,9 +12,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    console.log("Casestudy item", this.blok)
   }
 }
 </script>

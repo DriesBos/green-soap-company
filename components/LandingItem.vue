@@ -11,6 +11,10 @@
           alt
         />
       </picture>
+      <div class="landingItem-LetsScroll">
+        <h4 class="title landingItem-LetsScroll_Title">SCROLL</h4>
+        <div class="landingItem-LetsScroll_Line"></div>
+      </div>
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
           v-if="this.$route.name === 'retail-slug'"
@@ -133,6 +137,18 @@ export default {
     width: 100%
     height: 100%
     object-fit: cover
+  &-LetsScroll
+    position: absolute
+    left: 50%
+    bottom: 1rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    &_Line
+      width: 1px
+      height: 4rem
+      margin-top: 1rem
+      background: $color-black
   &-Buttons
     // top: 50%
     @media screen and ( max-width: $content-container)

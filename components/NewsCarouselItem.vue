@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
-      <div class="newsCarousel-Scroll">
+      <div class="newsCarousel-Scroll contentDesktop">
         <div class="icon-NewsCarousel" v-html="require('~/assets/images/next.svg?include')" />
       </div>
       <div class="section-Header">

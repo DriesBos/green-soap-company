@@ -31,16 +31,26 @@
         </nuxt-link>
         <ul>
           <li class="title">Pages</li>
-          <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
-          <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
-          <nuxt-link to="/brands" class="link" tag="li">All Brands</nuxt-link>
-          <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
-          <nuxt-link to="/about" class="link" tag="li">Our Team</nuxt-link>
-          <nuxt-link to="/history" class="link" tag="li">Our History</nuxt-link>
+          <nuxt-link to="/" class="link" @click.native="toggleHeader" tag="li">Home & News</nuxt-link>
+          <nuxt-link to="/retail" class="link" @click.native="toggleHeader" tag="li">Retail</nuxt-link>
+          <nuxt-link to="/brands" class="link" @click.native="toggleHeader" tag="li">All Brands</nuxt-link>
+          <nuxt-link to="/careers" class="link" @click.native="toggleHeader" tag="li">Careers</nuxt-link>
+          <nuxt-link to="/about" class="link" @click.native="toggleHeader" tag="li">Our Team</nuxt-link>
+          <nuxt-link to="/history" class="link" @click.native="toggleHeader" tag="li">Our History</nuxt-link>
           <br />
-          <nuxt-link to="/press" class="link conditions" tag="li">Press</nuxt-link>
-          <nuxt-link to="/terms-conditions" class="link conditions" tag="li">Terms & Conditions</nuxt-link>
-          <nuxt-link to="/privacy-policy" class="link conditions" tag="li">Privacy Policy</nuxt-link>
+          <nuxt-link to="/press" class="link" @click.native="toggleHeader" tag="li">Press</nuxt-link>
+          <nuxt-link
+            to="/terms-conditions"
+            class="link"
+            @click.native="toggleHeader"
+            tag="li"
+          >Terms & Conditions</nuxt-link>
+          <nuxt-link
+            to="/privacy-policy"
+            class="link"
+            @click.native="toggleHeader"
+            tag="li"
+          >Privacy Policy</nuxt-link>
         </ul>
         <ul>
           <li class="mail contacts">

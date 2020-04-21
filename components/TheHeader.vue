@@ -3,7 +3,10 @@
   <header class="header">
     <div class="headerFolded">
       <nuxt-link to="/" tag="div" class="headerFolded-Logo">
-        <div v-html="require('~/assets/images/green-soap-company.svg?include')" />
+        <div
+          class="icon icon-Logo"
+          v-html="require('~/assets/images/green-soap-company.svg?include')"
+        />
       </nuxt-link>
     </div>
     <div class="headerToggle" @click="toggleHeader">
@@ -21,7 +24,10 @@
     <div class="ends headerUnfolded contentContainer-Center" :class="{ active: headerActive}">
       <div class="headerUnfolded-Container ends-Container contentContainer-Center_Wrapper">
         <nuxt-link to="/" tag="div" class="headerUnfolded-Logo">
-          <div v-html="require('~/assets/images/green-soap-company.svg?include')" />
+          <div
+            class="icon icon-Logo"
+            v-html="require('~/assets/images/green-soap-company.svg?include')"
+          />
         </nuxt-link>
         <ul>
           <li class="title">Pages</li>
@@ -87,6 +93,8 @@ export default {
   li, a, svg, img
     color: white
     text-decoration: none
+  .link
+    cursor: pointer
   .icon
     fill: white
     width: 22px
@@ -98,12 +106,14 @@ export default {
     margin-bottom: 1rem
     font-size: 28px
     line-height: 38px
-    @media screen and ( max-width: $breakpoint-mobile)
+    @media screen and ( max-width: $breakpoint-header)
       margin-bottom: 0
   .contacts
     display: flex
     margin-left: -38px
     text-decoration: none
+    @media screen and ( max-width: $breakpoint-header)
+      margin-left: 0
     > div
       flex-basis: 38px
   .conditions
@@ -125,8 +135,11 @@ export default {
     right: 0
     transform: translateY(-100%)
     background: $color-black
-    transition: transform .33s ease
+    transition: transform $transition-nav
     z-index: +2
+    &-Container
+      @media screen and ( max-width: $breakpoint-header)
+        flex-direction: column
     &.active
       transform: translateY(0%)
     ul
@@ -137,11 +150,10 @@ export default {
       flex-direction: column
       justify-content: flex-end
     &-Logo
-      flex-basis: 50%
       padding-top: var(--spacing-four)
       padding-bottom: var(--spacing-four)
-      svg
-        height: 2.5rem
+      @media screen and ( min-width: $breakpoint-header)
+        flex-basis: 50%
   .headerFolded
     position: absolute
     top: 0
@@ -150,6 +162,4 @@ export default {
     &-Logo
       width: 100%
       padding: var(--spacing-four)
-      img, svg
-        height: 2.5rem
 </style>

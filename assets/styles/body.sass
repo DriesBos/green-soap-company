@@ -76,14 +76,6 @@ p, h1, h2, h3, h4, h5
     z-index: +1
     pointer-events: none
 
-.contentDesktop
-  @media screen and ( max-width: $breakpoint-mobile)
-    display: none
-.contentMobile
-  display: none
-  @media screen and ( max-width: $breakpoint-mobile)
-    display: inherit
-
 .icon
   cursor: pointer
   &-Hamburger, &-Close, &-NewsCarousel
@@ -96,6 +88,17 @@ p, h1, h2, h3, h4, h5
   &-NewsCarousel
     svg
       transform: translate(-1px, -1px)
+  &-Hamburger
+    svg
+      transform: translate(-1px, 0)
+  &-Logo
+    transform: translateY(7px)
+    img, svg
+      height: 2.5rem
+      @media screen and ( max-width: $breakpoint-header)
+        height: 1.6rem
+  &-Hamburger, &-Close
+    transform: translateY(-3px)
 
 .contentContainer
   &-Center
@@ -115,13 +118,10 @@ p, h1, h2, h3, h4, h5
     &_Wrapper
       width: 100%
 
-// .view
-//   &-Page
-//     section:first-child.textItem
-//       margin-top: var(--spacing-five)
-//       margin-bottom: var(--spacing-five)
-//       @media screen and ( max-width: $breakpoint-mobile)
-//         margin-top: var(--spacing-four)
-//         margin-bottom: var(--spacing-four)
-//     .brandItem
-//       margin-bottom: var(--spacing-five3)
+.contentDesktop
+  @media screen and ( max-width: $breakpoint-mobile)
+    display: none
+.contentMobile
+  display: none
+  @media screen and ( max-width: $breakpoint-mobile)
+    display: inherit

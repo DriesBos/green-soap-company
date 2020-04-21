@@ -1,9 +1,9 @@
 <template>
-  <footer class="footer contentContainer-Center">
+  <footer class="footer ends contentContainer-Center">
     <!-- prettier-ignore -->
-    <div class="footer-Container contentContainer-Center_Wrapper">
+    <div class="footer-Container ends-Container contentContainer-Center_Wrapper">
       <ul>
-        <li class="title">Site</li>
+        <li class="title">Pages</li>
         <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
         <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
         <nuxt-link to="/brands" class="link" tag="li">All Brands</nuxt-link>
@@ -40,11 +40,11 @@
         <!-- prettier-ignore -->
         <li class="title">Contact Us</li>
         <li class="address contacts">
-          <div v-html="require('~/assets/images/location.svg?include')" />Eindenhoutstraat 28,
+          <div class="icon" v-html="require('~/assets/images/location.svg?include')" />Eindenhoutstraat 28,
           <br />2021 ML, Haarlem
         </li>
         <li class="mail contacts">
-          <div v-html="require('~/assets/images/mail.svg?include')" />
+          <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
           <a
             href="mailto:info@greensoapcompany.com"
             target="_blank"
@@ -52,7 +52,7 @@
           >info@greensoapcompany.com</a>
         </li>
         <li class="phone contacts">
-          <div v-html="require('~/assets/images/call.svg?include')" />
+          <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
           <a href="tel:0031235422304" target="_blank" rel="noopener noreferrer">+31(0)235422304</a>
         </li>
       </ul>
@@ -69,15 +69,6 @@ export default {}
 
 .footer
   background: $color-black
-  padding-left: var(--spacing-sides)
-  padding-right: var(--spacing-sides)
-  svg
-    fill: white
-    width: 22px
-  .contacts
-    display: flex
-    > div
-      flex-basis: 38px
   @media screen and ( max-width: $breakpoint-mobile)
     padding-top: var(--spacing-four)
     padding-bottom: var(--spacing-four)
@@ -85,33 +76,14 @@ export default {}
     color: white
     font-size: 16px
     line-height: 26px
-  li.address, li.mail, li.phone
-    transform: translateX(-38px)
-  a:hover, .link:hover
-    @media ( hover: hover )
-      text-decoration: underline
-  .title
-    text-transform: uppercase
-    margin-bottom: 1rem
-    font-size: 28px
-    line-height: 38px
-    @media screen and ( max-width: $breakpoint-mobile)
-      margin-bottom: 0
   .address
     a
       text-decoration: underline
-  .conditions
-    font-size: 12px
-    line-height: 21px
   &-Container
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
     @media screen and ( min-width: $breakpoint-mobile)
       margin-top: var(--spacing-four)
       margin-bottom: var(--spacing-four)
     ul
-      width: calc(100% / 4)
       padding-right: var(--spacing-three)
       @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
         width: calc(100% / 3)

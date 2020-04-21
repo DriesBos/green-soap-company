@@ -86,11 +86,16 @@ p, h1, h2, h3, h4, h5
 
 .icon
   cursor: pointer
-  &-Hamburger, &-Close
+  &-Hamburger, &-Close, &-NewsCarousel
     background: $color-black
     border-radius: 1000px
     width: 47px
     height: 47px
+  &-Hamburger, &-NewsCarousel
+    border: 1px solid white
+  &-NewsCarousel
+    svg
+      transform: translate(-1px, -1px)
 
 .contentContainer
   &-Center

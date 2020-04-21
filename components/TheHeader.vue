@@ -3,7 +3,7 @@
   <header class="header">
     <div class="headerFolded">
       <nuxt-link to="/" tag="div" class="headerFolded-Logo">
-        <img class="icon-Logo" src="~/assets/images/green-soap-company.svg" />
+        <div v-html="require('~/assets/images/green-soap-company.svg?include')" />
       </nuxt-link>
     </div>
     <div class="headerToggle" @click="toggleHeader">
@@ -60,7 +60,7 @@
 export default {
   data() {
     return {
-      headerActive: true
+      headerActive: false
     }
   },
   methods: {

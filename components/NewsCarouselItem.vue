@@ -2,6 +2,9 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
+      <div class="newsCarousel-Scroll">
+        <div class="icon-NewsCarousel" v-html="require('~/assets/images/next.svg?include')" />
+      </div>
       <div class="section-Header">
         <h1 class="title">Latest news</h1>
       </div>
@@ -56,6 +59,12 @@ export default {
     -webkit-line-clamp: 1
     -webkit-box-orient: vertical
     overflow: hidden
+  &-Scroll
+    position: absolute
+    bottom: var(--spacing-four)
+    transform: translateY(-50%)
+    right: var(--spacing-four)
+    z-index: +1
   &-Buttons
     width: auto !important
     svg
@@ -87,6 +96,8 @@ export default {
       padding-left: calc((100vw - #{$content-container}) / 2)
     @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
       padding-left: var(--spacing-sides)
+  &-Wrapper
+    position: relative
   &-Excerpt
     margin-bottom: var(--spacing-three)
     margin-left: var(--spacing-three)
@@ -106,6 +117,7 @@ export default {
     @media screen and ( max-width: $breakpoint-mobile)
       margin-right: var(--spacing-four)
   ul
+    position: relative
     display: flex
     flex-wrap: nowrap
     align-items: center
@@ -126,7 +138,6 @@ export default {
       position: relative
       width: calc(373px + #{var(--spacing-three)}
       flex: 0 0 auto
-      // margin-right: var(--spacing-three)
       border-right: var(--spacing-three) solid white
       background: $color-orange
       transition: background $transition-hover
@@ -135,10 +146,6 @@ export default {
         margin-right: 0
         margin-bottom: var(--spacing-four)
         border-right: 0
-      // &:hover
-      //   @media ( hover: hover )
-      //     background: $color-green-hover
-      a
         text-decoration: none
         li: nth-child(n+6)
           display: none

@@ -57,6 +57,8 @@ export default {
     display: -webkit-box
     -webkit-line-clamp: 3
     -webkit-box-orient: vertical
+  a
+    text-decoration: none
   h1, h2, h3
     display: -webkit-box
     -webkit-line-clamp: 1
@@ -162,7 +164,6 @@ export default {
         margin-right: 0
         margin-bottom: var(--spacing-four)
         border-right: 0
-        text-decoration: none
         &:nth-child(n+4)
           display: none
         &:last-child

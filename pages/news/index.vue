@@ -110,6 +110,7 @@
     margin-right: var(--spacing-three)
     @media screen and ( max-width: $breakpoint-mobile)
       margin-right: var(--spacing-four)
+      margin-bottom: var(--spacing-three)
 </style>
 
 <script>

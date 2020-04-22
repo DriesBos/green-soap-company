@@ -40,7 +40,7 @@
         <!-- prettier-ignore -->
         <li class="title">Contact Us</li>
         <li class="address contacts">
-          <div class="icon" v-html="require('~/assets/images/location.svg?include')" />Eindenhoutstraat 28,
+          <div class="icon" v-html="require('~/assets/images/location.svg?include')" />Voorhelmstraat 25,
           <br />2021 ML, Haarlem
         </li>
         <li class="mail contacts">

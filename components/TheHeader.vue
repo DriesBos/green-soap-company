@@ -162,4 +162,7 @@ export default {
     &-Logo
       flex-basis: 50%
       padding-bottom: var(--spacing-three)
+      @media screen and ( max-width: 700px)
+        flex-basis: 100%
+        padding-bottom: var(--spacing-four)
 </style>

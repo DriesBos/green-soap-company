@@ -129,13 +129,14 @@ export default {
   padding-right: 0
   &-Wrapper
     position: relative
-    height: calc(100vh - (144px + #{var(--spacing-three)}))
-    height: calc(100vh - (#{var(--spacing-three)} * 2))
+    // height: calc(100vh - (144px + #{var(--spacing-three)}))
+    // height: calc(100vh - (#{var(--spacing-three)} * 2))
     height: 100vh
   img
     width: 100%
     height: 100%
     object-fit: cover
+    padding-bottom: 3rem
   &-LetsScroll
     position: absolute
     left: 50%

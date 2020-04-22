@@ -31,12 +31,12 @@
         </nuxt-link>
         <ul>
           <li class="title">Pages</li>
-          <nuxt-link to="/" class="link" @click.native="toggleHeader" tag="li">Home & News</nuxt-link>
-          <nuxt-link to="/retail" class="link" @click.native="toggleHeader" tag="li">Retail</nuxt-link>
-          <nuxt-link to="/brands" class="link" @click.native="toggleHeader" tag="li">All Brands</nuxt-link>
-          <nuxt-link to="/careers" class="link" @click.native="toggleHeader" tag="li">Careers</nuxt-link>
-          <nuxt-link to="/about" class="link" @click.native="toggleHeader" tag="li">Our Team</nuxt-link>
-          <nuxt-link to="/history" class="link" @click.native="toggleHeader" tag="li">Our History</nuxt-link>
+          <nuxt-link to="/" class="link" tag="li" @click.native="toggleHeader">Home & News</nuxt-link>
+          <nuxt-link to="/retail" class="link" tag="li" @click.native="toggleHeader">Retail</nuxt-link>
+          <nuxt-link to="/brands" class="link" tag="li" @click.native="toggleHeader">All Brands</nuxt-link>
+          <nuxt-link to="/careers" class="link" tag="li" @click.native="toggleHeader">Careers</nuxt-link>
+          <nuxt-link to="/about" class="link" tag="li" @click.native="toggleHeader">Our Team</nuxt-link>
+          <nuxt-link to="/history" class="link" tag="li" @click.native="toggleHeader">Our History</nuxt-link>
         </ul>
         <ul class="header-Contacts">
           <li class="mail contacts">
@@ -62,6 +62,11 @@ export default {
   data() {
     return {
       headerActive: false
+    }
+  },
+  watch: {
+    $route() {
+      this.headerActive = false
     }
   },
   methods: {
@@ -162,6 +167,9 @@ export default {
     &-Logo
       flex-basis: 50%
       padding-bottom: var(--spacing-three)
+      pointer-events: none
+      .icon
+        pointer-events: auto
       @media screen and ( max-width: 700px)
         flex-basis: 100%
         padding-bottom: var(--spacing-four)

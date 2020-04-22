@@ -12,7 +12,7 @@
       </picture>
       <div class="landingItem-LetsScroll">
         <h4 class="title landingItem-LetsScroll_Title">SCROLL</h4>
-        <div class="landingItem-LetsScroll_Line"></div>
+        <div class="icon icon-ArrowLong" v-html="require('~/assets/images/arrow-long.svg?include')"></div>
       </div>
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
@@ -22,7 +22,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -32,7 +32,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -42,7 +42,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -52,7 +52,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>Home
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>Home
           </div>
         </nuxt-link>
         <nuxt-link
@@ -62,7 +62,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the team
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the team
           </div>
         </nuxt-link>
         <nuxt-link
@@ -73,7 +73,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             Sell our products
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
@@ -84,7 +84,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             Home
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
@@ -95,7 +95,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             Home
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
           </div>
         </nuxt-link>
       </div>
@@ -151,7 +151,7 @@ export default {
     position: absolute
     left: 50%
     transform: translateX(-50%)
-    bottom: -2rem
+    bottom: -39px
     display: flex
     flex-direction: column
     align-items: center
@@ -160,6 +160,8 @@ export default {
       height: 4rem
       margin-top: 1rem
       background: $color-black
+    & .icon-ArrowLong
+      margin-top: 1rem
   &-Buttons
     // top: 50%
     @media screen and ( max-width: $content-container)
@@ -191,5 +193,5 @@ export default {
         margin-left: .5em
         transform: translateY(.18em)
     svg
-      width: 1em
+      width: 20px
 </style>

@@ -59,17 +59,26 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .statsItem
   ul
     display: flex
+    flex-wrap: wrap
     li
       flex-basis: 33.3333%
       flex-shrink: 0
+      overflow: hidden
+      @media screen and ( max-width: $breakpoint-mobile)
+        flex-basis: 50%
       .stats
         font-size: 40px
         line-height: 50px
         margin-bottom: .25rem
         flex-shrink: 0
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
       .description
         padding-right: .5em
 </style>

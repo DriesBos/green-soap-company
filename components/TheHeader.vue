@@ -116,12 +116,13 @@ export default {
     top: 0
     right: 0
     padding: var(--spacing-four)
-    z-index: +3
+    z-index: +7
 
   .headerFolded
     position: absolute
     top: 0
     left: 0
+    z-index: +5
     &-Logo
       width: 100%
       padding: var(--spacing-four)
@@ -138,6 +139,7 @@ export default {
     padding-bottom: var(--spacing-three)
     background: $color-black
     transition: transform $transition-nav
+    z-index: +6
     &-Container
       display: flex
       flex-wrap: wrap

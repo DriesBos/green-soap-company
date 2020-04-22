@@ -2,9 +2,7 @@
   <!-- prettier-ignore -->
   <section v-editable="blok" class="newsCarousel contentContainer-Right">
     <div class="newsCarousel-Wrapper contentContainer-Right_Wrapper">
-      <div class="newsCarousel-Scroll contentDesktop">
-        <div class="icon-NewsCarousel" v-html="require('~/assets/images/next.svg?include')" />
-      </div>
+      <div class="newsCarousel-Scroll contentDesktop"></div>
       <div class="section-Header">
         <h1 class="title">Latest news</h1>
       </div>
@@ -33,6 +31,10 @@
           </div>
         </nuxt-link>
       </ul>
+      <div class="newsCarousel-LetsScroll">
+        <h4 class="title newsCarousel-LetsScroll_Title">SCROLL</h4>
+        <div class="newsCarousel-LetsScroll_Line"></div>
+      </div>
     </div>
     <!-- prettier-ignore -->
   </section>
@@ -60,12 +62,6 @@ export default {
     -webkit-line-clamp: 1
     -webkit-box-orient: vertical
     overflow: hidden
-  &-Scroll
-    position: absolute
-    bottom: var(--spacing-four)
-    transform: translateY(-50%)
-    right: var(--spacing-four)
-    z-index: +1
   &-Buttons
     width: auto !important
     svg
@@ -85,6 +81,20 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
+  &-LetsScroll
+    width: 140px
+    margin-left: auto
+    margin-top: var(--spacing-three)
+    display: flex
+    @media screen and ( max-width: $breakpoint-mobile)
+      display: none
+    &_Line
+      height: 1px
+      width: 4rem
+      background: $color-black
+      margin-top: 7px
+      margin-left: 16px
+      margin-right: 16px
   &-Title
     margin-bottom: var(--spacing-one)
     margin-left: var(--spacing-three)
@@ -117,6 +127,7 @@ export default {
     margin-right: var(--spacing-three)
     @media screen and ( max-width: $breakpoint-mobile)
       margin-right: var(--spacing-four)
+      margin-bottom: var(--spacing-three)
   ul
     position: relative
     display: flex
@@ -142,14 +153,20 @@ export default {
       border-right: var(--spacing-three) solid white
       background: $color-orange
       transition: background $transition-hover
+      &:nth-child(n+6)
+        display: none
+      &:last-child
+        display: flex
       @media screen and ( max-width: $breakpoint-mobile)
         width: 100%
         margin-right: 0
         margin-bottom: var(--spacing-four)
         border-right: 0
         text-decoration: none
-    li:last-child
-      display: flex
+        &:nth-child(n+4)
+          display: none
+        &:last-child
+          display: flex
   ul::-webkit-scrollbar
     display: none
 </style>

@@ -2,7 +2,6 @@
   <!-- prettier-ignore -->
   <nuxt-link :to="blok.hyperlink.cached_url" tag="div" class="casestudy-Item readmore-Wrapper">
     <div class="casestudy-Content">
-      <!-- <h3 class="title">{{ blok.title }}</h3> -->
       <div class="casestudy-Image">
         <picture>
           <img

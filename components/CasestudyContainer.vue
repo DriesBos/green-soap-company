@@ -42,28 +42,17 @@ export default {
     position: relative
     background: $color-blue
     width: calc(50% - #{var(--spacing-two)})
-    height: 0
-    padding-top: 35%
     margin-bottom: var(--spacing-three)
     cursor: pointer
     transition: background $transition-hover
     @media screen and ( max-width: $breakpoint-mobile)
       margin-bottom: var(--spacing-three)
       width: 100%
-      padding-top: 75%
-  &-Item:last-child
-    margin-bottom: 0
   &-Content
-    position: absolute
-    display: flex
-    flex-direction: column
-    align-items: center
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-    text-align: center
-    h3
-      margin-bottom: var(--spacing-two)
+    width: 100%
+    height: 0
+    padding-top: 75%
+    overflow: hidden
   &-Readmore
     position: absolute
     bottom: 1rem
@@ -75,10 +64,10 @@ export default {
     left: 50%
     top: 50%
     transform: translate(-50%, -50%)
-    width: 8rem
-    height: 8rem
-    im
-    width: 100%
-    height: 100%
-    object-fit: contain
+    width: 40%
+    height: 40%
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
 </style>

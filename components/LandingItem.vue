@@ -140,6 +140,7 @@ export default {
   &-LetsScroll
     position: absolute
     left: 50%
+    transform: translateX(-50%)
     bottom: 1rem
     display: flex
     flex-direction: column

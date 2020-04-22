@@ -2,7 +2,14 @@
   <!-- prettier-ignore -->
   <div class="history-Item">
     <div class="history-Item_Image">
-      <img :src="blok.image" />
+      <picture>
+        <img
+          :srcset="`${transformImage(blok.image, '1140x0')} 1140w, ${transformImage(blok.image, '570x0')} 570w`"
+          sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+          :data-src="blok.image | transformImage('1140x0')"
+          alt
+        />
+      </picture>
     </div>
     <div class="history-Item_Text">
       <markdown :input="blok.text" />
@@ -14,6 +21,16 @@
 export default {
   props: {
     blok: Object
+  },
+  methods: {
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+
+      let imageService = "//img2.storyblok.com/"
+      let path = image.replace("//a.storyblok.com", "")
+      return imageService + option + path
+    }
   }
 }
 </script>

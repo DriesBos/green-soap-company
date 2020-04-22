@@ -14,7 +14,14 @@
           tag="li"
         >
           <div class="newsPage-Image">
-            <img :src="post.content.image" />
+            <picture>
+              <img
+                :srcset="`${transformImage(post.content.image, '750x0')} 750w, ${transformImage(post.content.image, '375x0')} 375w`"
+                sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+                :data-src="post.content.image | transformImage('750x0')"
+                alt
+              />
+            </picture>
           </div>
           <div class="newsPage-Title">
             <h3 class="title">{{ post.content.title }}</h3>
@@ -30,6 +37,65 @@
     </div>
   </section>
 </template>
+
+<script>
+import storyblokLivePreview from "@/mixins/storyblokLivePreview"
+
+export default {
+  components: {},
+  mixins: [storyblokLivePreview],
+  asyncData(context) {
+    return context.app.$storyapi
+      .get("cdn/stories/", {
+        version: "draft"
+      })
+      .then(res => {
+        return res.data
+      })
+      .catch(res => {
+        if (!res.response) {
+          console.error(res)
+          context.error({
+            statusCode: 404,
+            message: "Failed to receive content form api"
+          })
+        } else {
+          console.error(res.response.data)
+          context.error({
+            statusCode: res.response.status,
+            message: res.response.data
+          })
+        }
+      })
+  },
+  data() {
+    return {
+      stories: { content: {} },
+      newsList: {}
+    }
+  },
+  methods: {
+    arrayLoop(array) {
+      this.newsList = array.filter(function(el) {
+        if (el.content.component === "page-news") {
+          return true
+        }
+      })
+    },
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+
+      let imageService = "//img2.storyblok.com/"
+      let path = image.replace("//a.storyblok.com", "")
+      return imageService + option + path
+    }
+  },
+  mounted() {
+    this.arrayLoop(this.stories)
+  }
+}
+</script>
 
 <style lang="sass">
 @import '~/assets/styles/variables.sass'
@@ -112,54 +178,3 @@
       margin-right: var(--spacing-four)
       margin-bottom: var(--spacing-three)
 </style>
-
-<script>
-import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-
-export default {
-  components: {},
-  mixins: [storyblokLivePreview],
-  asyncData(context) {
-    return context.app.$storyapi
-      .get("cdn/stories/", {
-        version: "draft"
-      })
-      .then(res => {
-        return res.data
-      })
-      .catch(res => {
-        if (!res.response) {
-          console.error(res)
-          context.error({
-            statusCode: 404,
-            message: "Failed to receive content form api"
-          })
-        } else {
-          console.error(res.response.data)
-          context.error({
-            statusCode: res.response.status,
-            message: res.response.data
-          })
-        }
-      })
-  },
-  data() {
-    return {
-      stories: { content: {} },
-      newsList: {}
-    }
-  },
-  methods: {
-    arrayLoop(array) {
-      this.newsList = array.filter(function(el) {
-        if (el.content.component === "page-news") {
-          return true
-        }
-      })
-    }
-  },
-  mounted() {
-    this.arrayLoop(this.stories)
-  }
-}
-</script>

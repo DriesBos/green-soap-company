@@ -2,7 +2,15 @@
   <section v-editable="blok" class="section brandItem contentContainer-Center">
     <div class="brandItem-Wrapper contentContainer-Center_Wrapper">
       <div class="brandItem-Image">
-        <img class="portrait" :src="blok.image" />
+        <!-- prettier-ignore -->
+        <picture>
+          <img
+            :srcset="`${transformImage(blok.image, '2880x0')} 2880w, ${transformImage(blok.image, '2560x0')} 2560w, ${transformImage(blok.image, '1920x0')} 1920w, ${transformImage(blok.image, '1680x0')} 1680w, ${transformImage(blok.image, '1370x0')} 1370w, ${transformImage(blok.image, '900x0')} 900w`"
+            sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+            :data-src="blok.image | transformImage('1440x0')"
+            alt
+          />
+        </picture>
       </div>
       <div class="brandItem-Content">
         <div class="brandItem-Title">
@@ -25,6 +33,16 @@
 export default {
   props: {
     blok: Object
+  },
+  methods: {
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+
+      let imageService = "//img2.storyblok.com/"
+      let path = image.replace("//a.storyblok.com", "")
+      return imageService + option + path
+    }
   }
 }
 </script>

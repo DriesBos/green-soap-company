@@ -2,8 +2,22 @@
   <!-- prettier-ignore -->
   <div class="team-Item">
     <div class="team-Item_Portrait">
-      <img v-if="blok.portrait" class="portrait" :src="blok.portrait" />
-      <img v-if="blok.portrait_on_hover" class="portrait-Hover" :src="blok.portrait_on_hover" />
+      <picture v-if="blok.portrait" class="portrait">
+        <img
+          :srcset="`${transformImage(blok.portrait, '650x0')} 650w, ${transformImage(blok.portrait, '325x0')} 325w`"
+          sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+          :data-src="blok.portrait | transformImage('650x0')"
+          alt
+        />
+      </picture>
+      <picture v-if="blok.portrait_on_hover" class="portrait-Hover">
+        <img
+          :srcset="`${transformImage(blok.portrait_on_hover, '650x0')} 650w, ${transformImage(blok.portrait_on_hover, '325x0')} 325w`"
+          sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+          :data-src="blok.portrait_on_hover | transformImage('650x0')"
+          alt
+        />
+      </picture>
     </div>
     <div class="team-Item_Content">
       <p v-if="blok.name" class="title">{{ blok.name }}</p>
@@ -17,6 +31,16 @@
 export default {
   props: {
     blok: Object
+  },
+  methods: {
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+
+      let imageService = "//img2.storyblok.com/"
+      let path = image.replace("//a.storyblok.com", "")
+      return imageService + option + path
+    }
   }
 }
 </script>

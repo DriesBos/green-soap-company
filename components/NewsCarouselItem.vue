@@ -10,7 +10,14 @@
         <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item readmore-Wrapper">
           <nuxt-link :to="post.full_slug">
             <div class="newsCarousel-Image">
-              <img :src="post.content.image" />
+              <picture>
+                <img
+                  :srcset="`${transformImage(post.content.image, '750x0')} 750w, ${transformImage(post.content.image, '375x0')} 375w`"
+                  sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+                  :data-src="post.content.image | transformImage('750x0')"
+                  alt
+                />
+              </picture>
             </div>
             <div class="newsCarousel-Title">
               <h3 class="title">{{ post.content.title }}</h3>
@@ -44,6 +51,16 @@
 export default {
   props: {
     blok: {}
+  },
+  methods: {
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+
+      let imageService = "//img2.storyblok.com/"
+      let path = image.replace("//a.storyblok.com", "")
+      return imageService + option + path
+    }
   }
 }
 </script>

@@ -92,13 +92,14 @@ p, h1, h2, h3, h4, h5
     svg
       transform: translate(-1px, 0)
   &-Logo
-    transform: translateY(7px)
+    padding-right: var(--spacing-three)
     img, svg
-      height: 2.5rem
-      @media screen and ( max-width: $breakpoint-header)
-        height: 1.6rem
-  &-Hamburger, &-Close
-    transform: translateY(-3px)
+      width: 100%
+      max-width: 500px
+      height: auto
+  &-Close
+    @media screen and ( min-width: 750px)
+      transform: translateY(-10px)
 
 .contentContainer
   &-Center

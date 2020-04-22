@@ -8,6 +8,9 @@
           v-html="require('~/assets/images/green-soap-company.svg?include')"
         />
       </nuxt-link>
+      <div class="headerFolded-Toggle" @click="toggleHeader">
+        <div class="icon icon-Hamburger" v-html="require('~/assets/images/hamburger.svg?include')" />
+      </div>
     </div>
     <div class="headerToggle" @click="toggleHeader">
       <div
@@ -48,6 +51,9 @@
             <a href="tel:0031235422304">call</a>
           </li>
         </ul>
+      </div>
+      <div class="headerUnfolded-Toggle" @click="toggleHeader">
+        <div class="icon icon-Close" v-html="require('~/assets/images/close.svg?include')" />
       </div>
     </div>
   </header>
@@ -108,21 +114,19 @@ export default {
     line-height: 21px
 
 .header
-  .headerToggle
-    position: fixed
-    top: 0
-    right: 0
-    padding: var(--spacing-four)
-    z-index: +7
-
   .headerFolded
     position: absolute
+    display: flex
     top: 0
     left: 0
+    right: 0
     z-index: +5
     &-Logo
       width: 100%
       padding: var(--spacing-four)
+    &-Toggle
+      padding: var(--spacing-four)
+      z-index: +7
 
   .headerUnfolded // Layout CSS only. Rest shared with "ends"
     position: fixed
@@ -137,6 +141,18 @@ export default {
     background: $color-black
     transition: transform $transition-nav
     z-index: +6
+    & .title
+      @media screen and ( min-width: 700px)
+        line-height: .8
+    &-Toggle
+      position: absolute
+      top: 0
+      right: 0
+      padding: var(--spacing-four)
+      z-index: +7
+      @media screen and ( max-width: 750px)
+        top: auto
+        bottom: 0
     &-Container
       display: flex
       flex-wrap: wrap

@@ -43,7 +43,7 @@ export default {
     background: $color-blue
     width: calc(50% - #{var(--spacing-two)})
     height: 0
-    padding-top: 25%
+    padding-top: 35%
     margin-bottom: var(--spacing-three)
     cursor: pointer
     transition: background $transition-hover
@@ -53,9 +53,6 @@ export default {
       padding-top: 75%
   &-Item:last-child
     margin-bottom: 0
-    padding-top: 35%
-    @media screen and ( max-width: $breakpoint-mobile)
-      padding-top: 75%
   &-Content
     position: absolute
     display: flex
@@ -80,8 +77,8 @@ export default {
     transform: translate(-50%, -50%)
     width: 8rem
     height: 8rem
-    img
-      width: 100%
-      height: 100%
-      object-fit: contain
+    im
+    width: 100%
+    height: 100%
+    object-fit: contain
 </style>

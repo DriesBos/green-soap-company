@@ -167,7 +167,7 @@ export default {
       position: absolute
       display: flex
       justify-content: space-between
-      padding: var(--spacing-three)
+      padding: var(--spacing-four)
     &.prev
       left: 0
       z-index: 999

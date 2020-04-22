@@ -37,22 +37,8 @@
           <nuxt-link to="/careers" class="link" @click.native="toggleHeader" tag="li">Careers</nuxt-link>
           <nuxt-link to="/about" class="link" @click.native="toggleHeader" tag="li">Our Team</nuxt-link>
           <nuxt-link to="/history" class="link" @click.native="toggleHeader" tag="li">Our History</nuxt-link>
-          <br />
-          <nuxt-link to="/press" class="link" @click.native="toggleHeader" tag="li">Press</nuxt-link>
-          <nuxt-link
-            to="/terms-conditions"
-            class="link"
-            @click.native="toggleHeader"
-            tag="li"
-          >Terms & Conditions</nuxt-link>
-          <nuxt-link
-            to="/privacy-policy"
-            class="link"
-            @click.native="toggleHeader"
-            tag="li"
-          >Privacy Policy</nuxt-link>
         </ul>
-        <ul>
+        <ul class="header-Contacts">
           <li class="mail contacts">
             <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
             <a
@@ -61,7 +47,6 @@
               rel="noopener noreferrer"
             >mail</a>
           </li>
-          <br />
           <li class="phone contacts">
             <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
             <a href="tel:0031235422304" target="_blank" rel="noopener noreferrer">call</a>
@@ -91,23 +76,17 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .ends
-  padding-left: var(--spacing-sides)
-  padding-right: var(--spacing-sides)
-  width: 100%
-  z-index: +10
-  &-Container
-    display: flex
-    flex-wrap: wrap
-    ul
-      flex-basis: 25%
-  li, a, svg, img
-    color: white
-    text-decoration: none
-  .link
+  .link, a
     cursor: pointer
+    text-decoration: none
+  li, a
+    color: white
+  li, a
+    font-size: 16px
+    line-height: 26px
   .icon
+    color: white
     fill: white
-    width: 22px
   a:hover, .link:hover
     @media ( hover: hover )
       text-decoration: underline
@@ -120,10 +99,6 @@ export default {
       margin-bottom: 0
   .contacts
     display: flex
-    margin-left: -38px
-    text-decoration: none
-    @media screen and ( max-width: $breakpoint-header)
-      margin-left: 0
     > div
       flex-basis: 38px
   .conditions
@@ -131,45 +106,60 @@ export default {
     line-height: 21px
 
 .header
-  z-index: +1
   .headerToggle
     position: fixed
     top: 0
     right: 0
     padding: var(--spacing-four)
     z-index: +3
-  .headerUnfolded
+
+  .headerFolded
+    position: absolute
+    top: 0
+    left: 0
+    &-Logo
+      width: 100%
+      padding: var(--spacing-four)
+
+  .headerUnfolded // Layout CSS only. Rest shared with "ends"
     position: fixed
     left: 0
     top: 0
     right: 0
     transform: translateY(-100%)
+    padding-left: var(--spacing-sides)
+    padding-right: var(--spacing-sides)
+    padding-top: var(--spacing-four)
+    padding-bottom: var(--spacing-three)
     background: $color-black
     transition: transform $transition-nav
-    z-index: +2
     &-Container
-      @media screen and ( max-width: $breakpoint-header)
-        flex-direction: column
+      display: flex
+      flex-wrap: wrap
+      @media screen and ( max-width: 750px)
+        justify-content: flex-end
+      @media screen and ( max-width: 700px)
+        justify-content: flex-start
     &.active
       transform: translateY(0%)
     ul
-      padding-top: var(--spacing-four)
-      padding-bottom: var(--spacing-four)
-    ul:last-child
+      flex-basis: 25%
+      padding-bottom: var(--spacing-three)
+      @media screen and ( max-width: 1000px)
+        flex-basis: auto
+        flex-grow: 1
+      @media screen and ( max-width: 750px)
+        flex-basis: 50%
+        flex-grow: 0
+      @media screen and ( max-width: 700px)
+        flex-basis: 100%
+    ul.header-Contacts
       display: flex
       flex-direction: column
       justify-content: flex-end
+      .mail
+        margin-bottom: .5rem
     &-Logo
-      padding-top: var(--spacing-four)
-      padding-bottom: var(--spacing-four)
-      @media screen and ( min-width: $breakpoint-header)
-        flex-basis: 50%
-  .headerFolded
-    position: absolute
-    top: 0
-    left: 0
-    z-index: +1
-    &-Logo
-      width: 100%
-      padding: var(--spacing-four)
+      flex-basis: 50%
+      padding-bottom: var(--spacing-three)
 </style>

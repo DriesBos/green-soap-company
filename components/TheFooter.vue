@@ -36,7 +36,7 @@
         <nuxt-link to="/retail" class="link" tag="li">Sell our products</nuxt-link>
         <nuxt-link to="/careers" class="link" tag="li">Join our team</nuxt-link>
       </ul>
-      <ul>
+      <ul class="footer-Contacts">
         <!-- prettier-ignore -->
         <li class="title">Contact Us</li>
         <li class="address contacts">
@@ -67,42 +67,28 @@ export default {}
 <style lang="sass">
 @import '~/assets/styles/variables.sass'
 
-.footer
+.footer // Layout CSS only. Rest shared with "ends"
+  padding-left: var(--spacing-sides)
+  padding-right: var(--spacing-sides)
+  padding-top: var(--spacing-four)
+  padding-bottom: var(--spacing-three)
   background: $color-black
-  @media screen and ( max-width: $breakpoint-mobile)
-    padding-top: var(--spacing-four)
-    padding-bottom: var(--spacing-four)
-  li, a
-    color: white
-    font-size: 16px
-    line-height: 26px
-  .address
-    a
-      text-decoration: underline
   &-Container
-    @media screen and ( min-width: $breakpoint-mobile)
-      margin-top: var(--spacing-four)
-      margin-bottom: var(--spacing-four)
+    display: flex
+    flex-wrap: wrap
     ul
+      flex-basis: 25%
       padding-right: var(--spacing-three)
-      @media screen and ( min-width: $breakpoint-mobile) and ( max-width: $content-container)
-        width: calc(100% / 3)
-        margin-bottom: var(--spacing-three)
-      @media screen and ( max-width: $breakpoint-mobile)
-        width: 100%
-        margin-top: 0
-        margin-bottom: var(--spacing-four)
-      li.link, a
-        cursor: pointer
-        text-decoration: none
-        &::hover
-          @media ( hover: hover )
-            text-decoration: underline
-    ul:first-child
-      @media screen and ( max-width: $breakpoint-mobile)
-        margin-top: var(--spacing-three)
-        width: calc(100% / 2)
-    ul:nth-child(2)
-      @media screen and ( max-width: $breakpoint-mobile)
-        width: calc(100% / 2)
+      margin-bottom: var(--spacing-three)
+      @media screen and ( max-width: 1125px)
+        flex-basis: 33.3333%
+      @media screen and ( max-width: 750px)
+        flex-basis: 50%
+      @media screen and ( max-width: 500px)
+        flex-basis: 100%
+    ul.footer-Contacts
+      @media screen and ( max-width: 1125px)
+        flex-basis: 100%
+        .contacts
+          margin-left: 0
 </style>

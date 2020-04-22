@@ -12,8 +12,7 @@
             <div class="newsCarousel-Image">
               <picture>
                 <img
-                  :srcset="`${transformImage(post.content.image, '750x0')} 750w, ${transformImage(post.content.image, '375x0')} 375w`"
-                  sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+                  :srcset="`${transformImage(post.content.image, '750x0')} 325w`"
                   :data-src="post.content.image | transformImage('750x0')"
                   alt
                 />

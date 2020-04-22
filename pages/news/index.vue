@@ -16,9 +16,8 @@
           <div class="newsPage-Image">
             <picture>
               <img
-                :srcset="`${transformImage(post.content.image, '750x0')} 750w, ${transformImage(post.content.image, '375x0')} 375w`"
-                sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
-                :data-src="post.content.image | transformImage('750x0')"
+                :srcset="`${transformImage(post.content.image, '2880x0')} 2880w, ${transformImage(post.content.image, '2560x0')} 2560w, ${transformImage(post.content.image, '1920x0')} 1920w, ${transformImage(post.content.image, '1680x0')} 1680w, ${transformImage(post.content.image, '1370x0')} 1370w, ${transformImage(post.content.image, '900x0')} 900w`"
+                :data-src="post.content.image | transformImage('1440x0')"
                 alt
               />
             </picture>

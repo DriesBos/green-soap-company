@@ -49,6 +49,7 @@ export default {
 <style lang="sass">
 @import '~/assets/styles/variables.sass'
 
+// prettier-ignore
 .newsCarousel
   p
     display: -webkit-box
@@ -147,11 +148,6 @@ export default {
         margin-bottom: var(--spacing-four)
         border-right: 0
         text-decoration: none
-        li: nth-child(n+6)
-          display: none
-        li: nth-child(n+4)
-      @media screen and ( max-width: $breakpoint-mobile)
-        display: none
     li:last-child
       display: flex
   ul::-webkit-scrollbar

@@ -12,18 +12,6 @@
         <div class="icon icon-Hamburger" v-html="require('~/assets/images/hamburger.svg?include')" />
       </div>
     </div>
-    <div class="headerToggle" @click="toggleHeader">
-      <div
-        v-if="headerActive"
-        class="icon icon-Close"
-        v-html="require('~/assets/images/close.svg?include')"
-      />
-      <div
-        v-else
-        class="icon icon-Hamburger"
-        v-html="require('~/assets/images/hamburger.svg?include')"
-      />
-    </div>
     <div class="ends headerUnfolded contentContainer-Center" :class="{ active: headerActive}">
       <div class="headerUnfolded-Container ends-Container contentContainer-Center_Wrapper">
         <nuxt-link to="/" tag="div" class="headerUnfolded-Logo">

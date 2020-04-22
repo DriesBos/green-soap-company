@@ -125,23 +125,33 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .landingItem
+  position: relative
   padding-left: 0
   padding-right: 0
+  height: 56.25vw
+  max-height: 90vh
+  @media screen and ( max-width: $content-container)
+    padding-top: 66.25vw
+  @media screen and ( max-width: $breakpoint-mobile)
+    padding-top: 100vw
   &-Wrapper
-    position: relative
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
     // height: calc(100vh - (144px + #{var(--spacing-three)}))
     // height: calc(100vh - (#{var(--spacing-three)} * 2))
-    height: 100vh
+    // height: 100vh
   img
     width: 100%
     height: 100%
     object-fit: cover
-    padding-bottom: 3rem
   &-LetsScroll
     position: absolute
     left: 50%
     transform: translateX(-50%)
-    bottom: 1rem
+    bottom: -2rem
     display: flex
     flex-direction: column
     align-items: center

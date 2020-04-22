@@ -29,7 +29,7 @@
         <nuxt-link
           v-if="this.$route.name === 'news-slug'"
           class="landingItem-Buttons prev button"
-          to="/"
+          to="/news"
         >
           <div class="button-Background"></div>
           <div class="button-Text">

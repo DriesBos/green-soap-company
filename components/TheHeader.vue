@@ -41,15 +41,11 @@
         <ul class="header-Contacts">
           <li class="mail contacts">
             <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
-            <a
-              href="mailto:info@greensoapcompany.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >mail</a>
+            <a href="mailto:info@greensoapcompany.com" rel="noopener noreferrer">mail</a>
           </li>
           <li class="phone contacts">
             <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
-            <a href="tel:0031235422304" target="_blank" rel="noopener noreferrer">call</a>
+            <a href="tel:0031235422304">call</a>
           </li>
         </ul>
       </div>
@@ -105,7 +101,8 @@ export default {
   .contacts
     display: flex
     > div
-      flex-basis: 38px
+      flex-shrink: 0
+      margin-right: 1rem
   .conditions
     font-size: 12px
     line-height: 21px

@@ -7,7 +7,7 @@
         <nuxt-link to="/" class="link" tag="li">Home & News</nuxt-link>
         <nuxt-link to="/retail" class="link" tag="li">Retail</nuxt-link>
         <nuxt-link to="/brands" class="link" tag="li">All Brands</nuxt-link>
-        <nuxt-link to="/career" class="link" tag="li">Careers</nuxt-link>
+        <nuxt-link to="/careers" class="link" tag="li">Careers</nuxt-link>
         <nuxt-link to="/about" class="link" tag="li">Our Team</nuxt-link>
         <nuxt-link to="/history" class="link" tag="li">Our History</nuxt-link>
         <br />
@@ -47,13 +47,12 @@
           <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
           <a
             href="mailto:info@greensoapcompany.com"
-            target="_blank"
             rel="noopener noreferrer"
           >info@greensoapcompany.com</a>
         </li>
         <li class="phone contacts">
           <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
-          <a href="tel:0031235422304" target="_blank" rel="noopener noreferrer">+31(0)235422304</a>
+          <a href="tel:0031235422304" rel="noopener noreferrer">+31(0)235422304</a>
         </li>
       </ul>
     </div>

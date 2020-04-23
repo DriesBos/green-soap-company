@@ -128,6 +128,7 @@ export default {
       width: 100%
       padding: var(--spacing-four)
       padding-right: 0
+      color: currentColor
     &-Toggle
       padding: var(--spacing-four)
       visibility: hidden

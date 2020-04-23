@@ -140,28 +140,27 @@ export default {
     top: 0
     right: 0
     bottom: 0
-    // height: calc(100vh - (144px + #{var(--spacing-three)}))
-    // height: calc(100vh - (#{var(--spacing-three)} * 2))
-    // height: 100vh
   img
     width: 100%
     height: 100%
     object-fit: cover
   &-LetsScroll
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    bottom: -39px
-    display: flex
-    flex-direction: column
-    align-items: center
-    &_Line
-      width: 1px
-      height: 4rem
-      margin-top: 1rem
-      background: $color-black
-    & .icon-ArrowLong
-      margin-top: 1rem
+    display: none
+    @media screen and ( orientation: landscape)
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -39px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .landingItem-LetsScroll_Line
+        width: 1px
+        height: 4rem
+        margin-top: 1rem
+        background: $color-black
+      & .icon-ArrowLong
+        margin-top: 1rem
   &-Buttons
     // top: 50%
     @media screen and ( max-width: $content-container)

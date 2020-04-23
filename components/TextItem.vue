@@ -20,5 +20,6 @@ export default {
 <style lang="sass">
 .textItem
   .section-Header
+    margin-top: 0
     margin-bottom: var(--spacing-one)
 </style>

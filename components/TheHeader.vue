@@ -1,6 +1,9 @@
 <template>
   <!-- prettier-ignore -->
   <header class="header">
+    <div class="headerToggle" @click="toggleHeader">
+      <div class="icon icon-Hamburger" v-html="require('~/assets/images/hamburger.svg?include')" />
+    </div>
     <div class="headerFolded">
       <nuxt-link to="/" tag="div" class="headerFolded-Logo">
         <div
@@ -8,7 +11,7 @@
           v-html="require('~/assets/images/green-soap-company.svg?include')"
         />
       </nuxt-link>
-      <div class="headerFolded-Toggle" @click="toggleHeader">
+      <div class="headerFolded-Toggle">
         <div class="icon icon-Hamburger" v-html="require('~/assets/images/hamburger.svg?include')" />
       </div>
     </div>
@@ -102,6 +105,15 @@ export default {
     line-height: 21px
 
 .header
+
+  .headerToggle
+    position: fixed
+    display: flex
+    top: 0
+    right: 0
+    z-index: +5
+    padding: var(--spacing-four)
+
   .headerFolded
     position: absolute
     display: flex
@@ -109,12 +121,16 @@ export default {
     left: 0
     right: 0
     z-index: +5
+    pointer-events: none
+    .icon-Logo
+      pointer-events: auto
     &-Logo
       width: 100%
       padding: var(--spacing-four)
+      padding-right: 0
     &-Toggle
       padding: var(--spacing-four)
-      z-index: +7
+      visibility: hidden
 
   .headerUnfolded // Layout CSS only. Rest shared with "ends"
     position: fixed

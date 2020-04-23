@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+.textItem
+  .section-Header
+    margin-bottom: var(--spacing-one)
+</style>

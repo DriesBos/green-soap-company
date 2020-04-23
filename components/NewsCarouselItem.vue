@@ -39,7 +39,10 @@
       </ul>
       <div class="newsCarousel-LetsScroll">
         <h4 class="title newsCarousel-LetsScroll_Title">SCROLL</h4>
-        <div class="newsCarousel-LetsScroll_Line"></div>
+        <div
+          class="icon icon-ArrowLong newsCarousel-LetsScroll_Line"
+          v-html="require('~/assets/images/arrow-long-right.svg?include')"
+        ></div>
       </div>
     </div>
     <!-- prettier-ignore -->
@@ -104,15 +107,13 @@ export default {
     margin-left: auto
     margin-top: var(--spacing-three)
     display: flex
+    align-items: center
+    margin-right: 1rem
+    line-height: .9
     @media screen and ( max-width: $breakpoint-mobile)
       display: none
     &_Line
-      height: 1px
-      width: 4rem
-      background: $color-black
-      margin-top: 7px
-      margin-left: 16px
-      margin-right: 16px
+      margin-left: 1rem
   &-Title
     margin-bottom: var(--spacing-one)
     margin-left: var(--spacing-three)

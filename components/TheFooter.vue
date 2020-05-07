@@ -40,8 +40,8 @@
         <!-- prettier-ignore -->
         <li class="title">Contact Us</li>
         <li class="address contacts">
-          <div class="icon" v-html="require('~/assets/images/location.svg?include')" />Voorhelmstraat 25,
-          <br />2021 ML, Haarlem
+          <div class="icon" v-html="require('~/assets/images/location.svg?include')" />Voorhelmstraat 25-002,
+          <br />2012 ZM, Haarlem
         </li>
         <li class="mail contacts">
           <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
@@ -72,6 +72,8 @@ export default {}
   padding-top: var(--spacing-four)
   padding-bottom: var(--spacing-three)
   background: $color-black
+  .mail
+    hyphens: auto
   &-Container
     display: flex
     flex-wrap: wrap

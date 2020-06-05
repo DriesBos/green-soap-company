@@ -29,18 +29,18 @@
             </div>
           </nuxt-link>
         </li>
-        <nuxt-link class="newsCarousel-Buttons next button" to="/news" tag="li">
+        <nuxt-link class="newsCarousel-Buttons next button" to="/news" tag="li" title="to news page">
           <div class="button-Background"></div>
           <div class="button-Text">
             All news items
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
       </ul>
-      <div class="newsCarousel-LetsScroll">
+      <div class="newsCarousel-LetsScroll" title="scroll right">
         <h4 class="title newsCarousel-LetsScroll_Title">SCROLL</h4>
         <div
-          class="icon icon-ArrowLong newsCarousel-LetsScroll_Line"
+          class="icon icon-ArrowLongRight newsCarousel-LetsScroll_Line"
           v-html="require('~/assets/images/arrow-long-right.svg?include')"
         ></div>
       </div>

@@ -10,7 +10,7 @@
           alt
         />
       </picture>
-      <div class="landingItem-LetsScroll">
+      <div class="landingItem-LetsScroll" title="scroll down">
         <h4 class="title landingItem-LetsScroll_Title">SCROLL</h4>
         <div class="icon icon-ArrowLong" v-html="require('~/assets/images/arrow-long.svg?include')"></div>
       </div>
@@ -19,83 +19,91 @@
           v-if="this.$route.name === 'retail-slug'"
           class="landingItem-Buttons prev button"
           to="/retail"
+          title="to previous page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.name === 'news-slug'"
           class="landingItem-Buttons prev button"
           to="/news"
+          title="to previous page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.name === 'careers-slug'"
           class="landingItem-Buttons prev button"
           to="/careers"
+          title="to previous page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/retail'"
           class="landingItem-Buttons prev button desktop"
           to="/"
+          title="to home page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>Home
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>Home
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/'"
           class="landingItem-Buttons prev button desktop"
           to="/careers"
+          title="to careers page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the team
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>join the team
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/'"
           class="landingItem-Buttons next button desktop"
           to="/retail"
+          title="to retail page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
             Sell our products
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/careers'"
           class="landingItem-Buttons next button desktop hide"
           to="/"
+          title="to homr page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
             Home
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
           v-if="this.$route.path === '/careers'"
           class="landingItem-Buttons next button desktop"
           to="/"
+          title="to home page"
         >
           <div class="button-Background"></div>
           <div class="button-Text">
             Home
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
       </div>

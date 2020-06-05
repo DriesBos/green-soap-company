@@ -24,11 +24,12 @@
             href="https://www.marcelsgreensoap.com/en/"
             target="_blank"
             rel="noopener noreferrer"
+            title="go to Marcel's Green Soap"
           >Marcel's Green Soap</a>
         </li>
         <li class="link">
           <!-- prettier-ignore -->
-          <a href="https://www.driehoekzeep.nl/" target="_blank" rel="noopener noreferrer">Driehoek</a>
+          <a href="https://www.driehoekzeep.nl/" target="_blank" rel="noopener noreferrer" title="go to Driehoek">Driehoek</a>
         </li>
       </ul>
       <ul>
@@ -48,11 +49,12 @@
           <a
             href="mailto:info@greensoapcompany.com"
             rel="noopener noreferrer"
+            title="mail info@greensoapcompany.com"
           >info@greensoapcompany.com</a>
         </li>
         <li class="phone contacts">
           <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
-          <a href="tel:0031235422304" rel="noopener noreferrer">+31(0)235422304</a>
+          <a href="tel:0031235422304" rel="noopener noreferrer" title="call +31235422304">+31(0)235422304</a>
         </li>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <!-- prettier-ignore -->
   <header class="header">
-    <div class="headerToggle" @click="toggleHeader">
+    <div class="headerToggle" @click="toggleHeader" title="open menu">
       <div class="icon icon-Hamburger" v-html="require('~/assets/images/hamburger.svg?include')" />
     </div>
     <div class="headerFolded">
@@ -43,7 +43,7 @@
           </li>
         </ul>
       </div>
-      <div class="headerUnfolded-Toggle" @click="toggleHeader">
+      <div class="headerUnfolded-Toggle" @click="toggleHeader" title="close menu">
         <div class="icon icon-Close" v-html="require('~/assets/images/close.svg?include')" />
       </div>
     </div>

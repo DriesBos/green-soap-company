@@ -11,7 +11,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -21,7 +21,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -31,7 +31,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>back
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -41,7 +41,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the revolution
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>join the revolution
           </div>
         </nuxt-link>
         <nuxt-link
@@ -51,7 +51,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>news
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>news
           </div>
         </nuxt-link>
         <nuxt-link
@@ -61,7 +61,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>join the team
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>join the team
           </div>
         </nuxt-link>
         <nuxt-link
@@ -72,7 +72,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             join the revolution
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
@@ -83,7 +83,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             join the team
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
@@ -94,7 +94,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             news
-            <div class="icon arrow" v-html="require('~/assets/images/icon-arrow.svg?include')"></div>
+            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
       </div>

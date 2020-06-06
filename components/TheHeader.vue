@@ -1,8 +1,11 @@
 <template>
   <!-- prettier-ignore -->
   <header class="header">
-    <div class="headerToggle" @click="toggleHeader" title="open menu">
+    <div class="headerToggle" title="open menu" @click="toggleHeader">
+      <div class="headerToggle-Icon">
       <div class="icon icon-Hamburger" v-html="require('~/assets/images/hamburger.svg?include')" />
+        
+      </div>
     </div>
     <div class="headerFolded">
       <nuxt-link to="/" tag="div" class="headerFolded-Logo">
@@ -34,17 +37,19 @@
         </ul>
         <ul class="header-Contacts">
           <li class="mail contacts">
-            <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
+            <div class="icon icon-Mail" v-html="require('~/assets/images/mail.svg?include')" />
             <a href="mailto:info@greensoapcompany.com" rel="noopener noreferrer">mail</a>
           </li>
           <li class="phone contacts">
-            <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
+            <div class="icon icon-Call" v-html="require('~/assets/images/call.svg?include')" />
             <a href="tel:0031235422304">call</a>
           </li>
         </ul>
       </div>
-      <div class="headerUnfolded-Toggle" @click="toggleHeader" title="close menu">
+      <div class="headerUnfolded-Toggle" title="close menu" @click="toggleHeader">
+        <div class="headerUnfolded-Toggle-Icon">
         <div class="icon icon-Close" v-html="require('~/assets/images/close.svg?include')" />
+        </div>
       </div>
     </div>
   </header>
@@ -113,6 +118,10 @@ export default {
     right: 0
     z-index: +5
     padding: var(--spacing-four)
+    border: 1px green solid
+    &-Icon
+      background: $color-black
+      padding: 1rem
 
   .headerFolded
     position: absolute
@@ -132,6 +141,8 @@ export default {
     &-Toggle
       padding: var(--spacing-four)
       visibility: hidden
+      &-Icon
+        padding: 1rem
 
   .headerUnfolded // Layout CSS only. Rest shared with "ends"
     position: fixed
@@ -155,6 +166,10 @@ export default {
       right: 0
       padding: var(--spacing-four)
       z-index: +7
+      border: 1px solid orange
+      &-Icon
+        padding: 1rem
+        border: 1px solid orange
       @media screen and ( max-width: 750px)
         top: auto
         bottom: 0

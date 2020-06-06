@@ -41,11 +41,11 @@
         <!-- prettier-ignore -->
         <li class="title">Contact Us</li>
         <li class="address contacts">
-          <div class="icon" v-html="require('~/assets/images/location.svg?include')" />Voorhelmstraat 25-002,
+          <div class="icon icon-Location" v-html="require('~/assets/images/location.svg?include')" />Voorhelmstraat 25-002,
           <br />2012 ZM, Haarlem
         </li>
         <li class="mail contacts">
-          <div class="icon" v-html="require('~/assets/images/mail.svg?include')" />
+          <div class="icon icon-Mail" v-html="require('~/assets/images/mail.svg?include')" />
           <a
             href="mailto:info@greensoapcompany.com"
             rel="noopener noreferrer"
@@ -53,7 +53,7 @@
           >info@greensoapcompany.com</a>
         </li>
         <li class="phone contacts">
-          <div class="icon" v-html="require('~/assets/images/call.svg?include')" />
+          <div class="icon icon-Call" v-html="require('~/assets/images/call.svg?include')" />
           <a href="tel:0031235422304" rel="noopener noreferrer" title="call +31235422304">+31(0)235422304</a>
         </li>
       </ul>

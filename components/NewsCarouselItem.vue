@@ -33,7 +33,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             All news items
-            <div class="icon arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
           </div>
         </nuxt-link>
       </ul>
@@ -85,10 +85,8 @@ export default {
     overflow: hidden
   &-Buttons
     width: auto !important
-    svg
-      margin-left: .5em
-      transform: translateY(.18em)
-      width: 1em
+    .icon
+      margin-left: .5rem
   &-Image
     position: relative
     height: 0

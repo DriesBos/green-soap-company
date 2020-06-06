@@ -12,7 +12,7 @@
       </picture>
       <div class="landingItem-LetsScroll" title="scroll down">
         <h4 class="title landingItem-LetsScroll_Title">SCROLL</h4>
-        <div class="icon icon-ArrowLong" v-html="require('~/assets/images/arrow-long.svg?include')"></div>
+        <div class="icon icon-ArrowLongDown" v-html="require('~/assets/images/arrow-long.svg?include')"></div>
       </div>
       <div class="landingItem-Buttons_Wrapper">
         <nuxt-link
@@ -23,7 +23,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-left.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -34,7 +34,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-left.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -45,7 +45,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>back
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-left.svg?include')"></div>back
           </div>
         </nuxt-link>
         <nuxt-link
@@ -56,7 +56,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>Home
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-left.svg?include')"></div>Home
           </div>
         </nuxt-link>
         <nuxt-link
@@ -67,7 +67,7 @@
         >
           <div class="button-Background"></div>
           <div class="button-Text">
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>join the team
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-left.svg?include')"></div>join the team
           </div>
         </nuxt-link>
         <nuxt-link
@@ -79,7 +79,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             Sell our products
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-right.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
@@ -91,7 +91,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             Home
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-right.svg?include')"></div>
           </div>
         </nuxt-link>
         <nuxt-link
@@ -103,7 +103,7 @@
           <div class="button-Background"></div>
           <div class="button-Text">
             Home
-            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow.svg?include')"></div>
+            <div class="icon icon-Arrow" v-html="require('~/assets/images/arrow-right.svg?include')"></div>
           </div>
         </nuxt-link>
       </div>
@@ -190,15 +190,11 @@ export default {
     &.prev
       left: 0
       z-index: 999
-      svg
-        transform: rotate(180deg) translateY(-0.18em)
-        margin-right: .5em
+      .icon
+        margin-right: .5rem
     &.next
       right: 0
       z-index: 999
-      svg
-        margin-left: .5em
-        transform: translateY(.18em)
-    svg
-      width: 20px
+      .icon
+        margin-left: .5rem
 </style>

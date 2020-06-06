@@ -48,7 +48,7 @@ p, h1, h2, h3, h4, h5
   position: relative
   display: inline-flex
   align-items: center
-  padding: 7px 9px
+  padding: .5rem 1rem
   color: white !important
   text-decoration: none
   font-family: Francois, 'Gorgia', 'Times New Roman', Times, serif  !important
@@ -60,7 +60,7 @@ p, h1, h2, h3, h4, h5
     text-decoration: underline
   &-Background
     position: absolute
-    border: 1px solid white
+    // border: 1px solid white
     top: 0
     left: 0
     width: 100%
@@ -75,6 +75,8 @@ p, h1, h2, h3, h4, h5
     display: flex
     z-index: +1
     pointer-events: none
+    display: flex
+    align-items: center
 
 .icon
   position: relative
@@ -87,16 +89,15 @@ p, h1, h2, h3, h4, h5
     width: 100%
     height: 100%
     border: 1px solid blue
-  &-Hamburger, &-Close, &-NewsCarousel, &-Arrow
-    background: $color-black
-    border-radius: 1000px
+  &-Hamburger, &-Close, &-NewsCarousel, &-Mail, &-Call, &-Location, &-Arrow
     width: var(--spacing-icon-one)
     height: var(--spacing-icon-one)
   &-ArrowLongRight
     width: var(--spacing-icon-three)
     height: var(--spacing-icon-one)
-  &-Hamburger, &-NewsCarousel
-    border: 1px solid white
+  &-ArrowLongDown
+    width: var(--spacing-icon-one)
+    height: var(--spacing-icon-three)
   &-NewsCarousel
     svg
       transform: translate(-1px, -1px)
@@ -110,9 +111,9 @@ p, h1, h2, h3, h4, h5
       width: 100%
       max-width: 500px
       height: auto
-  &-Close
-    @media screen and ( min-width: 750px)
-      transform: translateY(-10px)
+  // &-Close
+  //   @media screen and ( min-width: 750px)
+  //     transform: translateY(-10px)
 
 .contentContainer
   &-Center

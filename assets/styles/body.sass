@@ -22,11 +22,21 @@ section
     @media screen and ( max-width: $breakpoint-mobile)
       margin-bottom: var(--spacing-three)
 
+main
+  min-height: 100vh
+
 img
   max-width: 100%
   &.logo
     height: 5rem
     cursor: pointer
+
+.vueLazy img
+  opacity: 0
+  transition: opacity .25s ease-in-out
+
+img[lazy=loaded]
+  opacity: 1
 
 p, h1, h2, h3, h4, h5
   max-width: $max-text-width

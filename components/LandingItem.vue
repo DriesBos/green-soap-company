@@ -1,13 +1,13 @@
 <template>
   <!-- prettier-ignore -->
   <section v-editable="blok" class="item landingItem">
-    <div class="landingItem-Wrapper vueLazy" v-lazy-container="{ selector: 'img' }">
+    <div v-lazy-container="{ selector: 'img' }" class="landingItem-Wrapper vueLazy">
       <!-- image -->
       <picture>
         <img
-          :srcset="`${transformImage(blok.image, '2880x0')} 2880w, ${transformImage(blok.image, '2560x0')} 2560w, ${transformImage(blok.image, '1920x0')} 1920w, ${transformImage(blok.image, '1680x0')} 1680w, ${transformImage(blok.image, '1370x0')} 1370w, ${transformImage(blok.image, '900x0')} 900w`"
-          :data-src="blok.image | transformImage('1440x0')"
-          alt
+          :srcset="`${transformImage(blok.image, '2880x0/filters:format(jpg):quality(50)')} 2880w, ${transformImage(blok.image, '2560x0/filters:format(jpg):quality(50)')} 2560w, ${transformImage(blok.image, '1920x0/filters:format(jpg):quality(50)')} 1920w, ${transformImage(blok.image, '1680x0/filters:format(jpg):quality(50)')} 1680w, ${transformImage(blok.image, '1370x0/filters:format(jpg):quality(50)')} 1370w, ${transformImage(blok.image, '900x0/filters:format(jpg):quality(50)')} 900w`"
+          sizes="100vw"
+          :data-src="blok.image | transformImage('1440x0/filters:format(jpg):quality(50)')"
         />
       </picture>
       <div class="landingItem-LetsScroll">

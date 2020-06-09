@@ -1,14 +1,13 @@
 <template>
   <section v-editable="blok" class="section brandItem contentContainer-Center">
     <div class="brandItem-Wrapper contentContainer-Center_Wrapper">
-      <div class="brandItem-Image">
-        <!-- prettier-ignore -->
+      <!-- prettier-ignore -->
+      <div v-lazy-container="{ selector: 'img' }" class="brandItem-Image vueLazy">
         <picture>
           <img
-            :srcset="`${transformImage(blok.image, '2880x0')} 2880w, ${transformImage(blok.image, '2560x0')} 2560w, ${transformImage(blok.image, '1920x0')} 1920w, ${transformImage(blok.image, '1680x0')} 1680w, ${transformImage(blok.image, '1370x0')} 1370w, ${transformImage(blok.image, '900x0')} 900w`"
-            sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
-            :data-src="blok.image | transformImage('1440x0')"
-            alt
+            :srcset="`${transformImage(blok.image, '2880x0/filters:format(jpg):quality(80)')} 2880w, ${transformImage(blok.image, '2560x0/filters:format(jpg):quality(80)')} 2560w, ${transformImage(blok.image, '1920x0/filters:format(jpg):quality(80)')} 1920w, ${transformImage(blok.image, '1680x0/filters:format(jpg):quality(80)')} 1680w, ${transformImage(blok.image, '1370x0/filters:format(jpg):quality(80)')} 1370w, ${transformImage(blok.image, '900x0/filters:format(jpg):quality(80)')} 900w`"
+            sizes="100vw"
+            :data-src="blok.image | transformImage('1440x0/filters:format(jpg):quality(80)')"
           />
         </picture>
       </div>
@@ -38,7 +37,6 @@ export default {
     transformImage(image, option) {
       if (!image) return ""
       if (!option) return ""
-
       let imageService = "//img2.storyblok.com/"
       let path = image.replace("//a.storyblok.com", "")
       return imageService + option + path

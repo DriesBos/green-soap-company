@@ -1,7 +1,7 @@
 <template>
   <!-- prettier-ignore -->
   <div class="team-Item">
-    <div class="team-Item_Portrait">
+    <div v-lazy-container="{ selector: 'img' }" class="team-Item_Portrait vueLazy">
       <picture v-if="blok.portrait" class="portrait">
         <img
           :srcset="`${transformImage(blok.portrait, '650x0')} 650w, ${transformImage(blok.portrait, '325x0')} 325w`"
@@ -13,7 +13,7 @@
       <picture v-if="blok.portrait_on_hover" class="portrait-Hover">
         <img
           :srcset="`${transformImage(blok.portrait_on_hover, '650x0')} 650w, ${transformImage(blok.portrait_on_hover, '325x0')} 325w`"
-          sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
+          sizes="(max-width: 800px) 50vw, 325px"
           :data-src="blok.portrait_on_hover | transformImage('650x0')"
           alt
         />

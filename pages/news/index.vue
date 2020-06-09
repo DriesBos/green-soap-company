@@ -13,12 +13,12 @@
           :to="post.full_slug"
           tag="li"
         >
-          <div class="newsPage-Image">
+          <div v-lazy-container="{ selector: 'img' }" class="newsPage-Image vueLazy">
             <picture>
               <img
-                :srcset="`${transformImage(post.content.image, '2880x0')} 2880w, ${transformImage(post.content.image, '2560x0')} 2560w, ${transformImage(post.content.image, '1920x0')} 1920w, ${transformImage(post.content.image, '1680x0')} 1680w, ${transformImage(post.content.image, '1370x0')} 1370w, ${transformImage(post.content.image, '900x0')} 900w`"
+                :srcset="`${transformImage(post.content.image, '750x0')} 325w`"
+                sizes="(max-width: 800px) 100vw, 325px"
                 :data-src="post.content.image | transformImage('1440x0')"
-                alt
               />
             </picture>
           </div>
@@ -73,6 +73,9 @@ export default {
       newsList: {}
     }
   },
+  mounted() {
+    this.arrayLoop(this.stories)
+  },
   methods: {
     arrayLoop(array) {
       this.newsList = array.filter(function(el) {
@@ -89,9 +92,6 @@ export default {
       let path = image.replace("//a.storyblok.com", "")
       return imageService + option + path
     }
-  },
-  mounted() {
-    this.arrayLoop(this.stories)
   }
 }
 </script>

@@ -1,12 +1,12 @@
 <template>
   <!-- prettier-ignore -->
   <div class="history-Item">
-    <div class="history-Item_Image">
+    <div v-lazy-container="{ selector: 'img' }" class="history-Item_Image vueLazy">
       <picture>
         <img
-          :srcset="`${transformImage(blok.image, '1140x0')} 1140w, ${transformImage(blok.image, '570x0')} 570w`"
-          sizes="(max-width: 1025px) 100vw, (min-width: 1025px) 100vw"
-          :data-src="blok.image | transformImage('1140x0')"
+          :srcset="`${transformImage(blok.image, '1140x0/filters:format(jpg):quality(80)')} 1140w, ${transformImage(blok.image, '570x0/filters:format(jpg):quality(80)')} 570w`"
+          sizes="(max-width: 800px) 100vw, 50vw"
+          :data-src="blok.image | transformImage('1140x0/filters:format(jpg):quality(80)')"
           alt
         />
       </picture>

@@ -9,12 +9,12 @@
       <ul class="newsCarousel-Container">
         <li v-for="post in blok" :key="post._uid" class="newsCarousel-Item readmore-Wrapper">
           <nuxt-link :to="post.full_slug">
-            <div class="newsCarousel-Image">
+            <div v-lazy-container="{ selector: 'img' }" class="newsCarousel-Image vueLazy">
               <picture>
                 <img
                   :srcset="`${transformImage(post.content.image, '750x0')} 325w`"
+                  sizes="325px"
                   :data-src="post.content.image | transformImage('750x0')"
-                  alt
                 />
               </picture>
             </div>

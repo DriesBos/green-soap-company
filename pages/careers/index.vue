@@ -6,7 +6,7 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <section class="vacancyList contentContainer-Center">
+    <section v-if="vacancyList" class="vacancyList contentContainer-Center">
       <ul class="contentContainer-Center_Wrapper">
         <div class="section-Header">
           <h1 class="title">Open Positions</h1>

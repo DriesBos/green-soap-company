@@ -58,7 +58,7 @@ module.exports = {
       {
         accessToken:
           process.env.NODE_ENV === "production" // Generate new token
-            ? process.env.PREVIEWKEY
+            ? process.env.PUBLICKEY
             : process.env.PREVIEWKEY,
         cacheProvider: "memory"
       }
@@ -66,7 +66,7 @@ module.exports = {
   ],
   generate: {
     routes: function(callback) {
-      const token = process.env.PREVIEWKEY
+      const token = process.env.PUBLICKEY
       const per_page = 100
       const version = "draft"
       let cache_version = 0

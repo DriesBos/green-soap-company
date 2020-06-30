@@ -6,12 +6,12 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <section v-if="vacancyList" class="vacancyList contentContainer-Center">
+    <!-- prettier-ignore -->
+    <section v-if="vacancyList.length" class="vacancyList contentContainer-Center">
       <ul class="contentContainer-Center_Wrapper">
         <div class="section-Header">
           <h1 class="title">Open Positions</h1>
         </div>
-        <!-- prettier-ignore -->
         <nuxt-link
           v-for="item in vacancyList"
           :key="item.id"
@@ -76,6 +76,7 @@ export default {
   },
   mounted() {
     this.arrayLoop(this.stories)
+    console.log(this.vacancyList.length)
   },
   methods: {
     arrayLoop(array) {

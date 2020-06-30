@@ -58,7 +58,7 @@ module.exports = {
       {
         accessToken:
           process.env.NODE_ENV === "production" // Generate new token
-            ? process.env.PUBLICKEY
+            ? process.env.PREVIEWKEY
             : process.env.PREVIEWKEY,
         cacheProvider: "memory"
       }

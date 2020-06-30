@@ -13,9 +13,9 @@
         </div>
         <!-- prettier-ignore -->
         <nuxt-link
-          :to="item.full_slug"
           v-for="item in vacancyList"
           :key="item.id"
+          :to="item.full_slug"
           tag="li"
           class="vacancyList-Item readmore-Wrapper"
         >
@@ -42,9 +42,11 @@ export default {
   components: {},
   mixins: [storyblokLivePreview],
   asyncData(context) {
+    // prettier-ignore
+    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     return context.app.$storyapi
       .get("cdn/stories/", {
-        version: "draft"
+        version: version
       })
       .then(res => {
         return res.data
@@ -72,6 +74,9 @@ export default {
       vacancyList: {}
     }
   },
+  mounted() {
+    this.arrayLoop(this.stories)
+  },
   methods: {
     arrayLoop(array) {
       let filteredArray = array.filter(function(el) {
@@ -86,9 +91,6 @@ export default {
       })
       this.careerList = filteredArray[0].content
     }
-  },
-  mounted() {
-    this.arrayLoop(this.stories)
   }
 }
 </script>

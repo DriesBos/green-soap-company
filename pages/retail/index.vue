@@ -16,9 +16,11 @@ export default {
   components: {},
   mixins: [storyblokLivePreview],
   asyncData(context) {
+    // prettier-ignore
+    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
     return context.app.$storyapi
       .get("cdn/stories/", {
-        version: "draft"
+        version: version
       })
       .then(res => {
         return res.data
@@ -46,6 +48,9 @@ export default {
       caseList: {}
     }
   },
+  mounted() {
+    this.arrayLoop(this.stories)
+  },
   methods: {
     arrayLoop(array) {
       let filteredArray = array.filter(function(el) {
@@ -60,9 +65,6 @@ export default {
       })
       this.retailList = filteredArray[0].content
     }
-  },
-  mounted() {
-    this.arrayLoop(this.stories)
   }
 }
 </script>

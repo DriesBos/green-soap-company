@@ -5,10 +5,10 @@ import VueLazyload from "vue-lazyload"
 Vue.filter("transformImage", (image, option) => {
   if (!image) return ""
   if (!option) return ""
-
   let imageService = "//img2.storyblok.com/"
-  let path = image.replace("//a.storyblok.com", "")
-  return imageService + option + path
+  let pathOne = image.replace("https://a.storyblok.com", "")
+  let pathTwo = pathOne.replace("//a.storyblok.com", "")
+  return imageService + option + pathTwo
 })
 /* eslint-enable */
 

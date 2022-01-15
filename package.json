@@ -23,7 +23,7 @@
     "gsap": "^3.2.6",
     "imagemin-svgo": "^7.0.0",
     "jquery": "^3.4.1",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "nuxt": "^2.11.0",
     "storyblok-nuxt": "^1.0.2",
     "vue-carousel": "^0.18.0",
